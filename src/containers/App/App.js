@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { fetchBio } from './helpers/apiCalls';
-import * as actions from './actions/index';
+import { Switch, Route, withRouter } from 'react-router-dom';
+import { fetchBio } from '../../helpers/apiCalls';
+import Header from '../../components/Header/Header.js';
+import Homepage from '../../components/Homepage/Homepage';
+import * as actions from '../../actions/index';
 import './App.css';
 
 export class App extends Component {
   constructor() {
-    super() 
-
+    super();
   }
 
   fetchData = async () => {
@@ -16,7 +17,6 @@ export class App extends Component {
       const bio = await fetchBio();
       await this.props.fetchCompanyBio(bio)
     } catch (error) {
-      // not sure this is working
       this.props.handleError(error.message)
     }
   }
@@ -28,9 +28,10 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+        <Header />
+        <Switch>
+          <Route exact path='/' component={Homepage}/>
+        </Switch>
       </div>
     );
   }
