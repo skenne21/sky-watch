@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route, withRouter } from 'react-router-dom';
-import { fetchBio } from '../../helpers/apiCalls';
+import { fetchBio, fetchSpaceXVeidos } from '../../helpers/apiCalls';
 import Header from '../../components/Header/Header.js';
 import Homepage from '../../components/Homepage/Homepage';
 import * as actions from '../../actions/index';
@@ -21,8 +21,18 @@ export class App extends Component {
     }
   }
 
+  fetchVideos = async () => {
+    try {
+      const videos = await fetchSpaceXVeidos();
+      console.log(videos)
+    } catch(error) {
+      console.log(error)
+    }
+  }
+
   componentDidMount() {
-    this.fetchData()
+    this.fetchData();
+    this.fetchVideos()
   }
 
   render() {
