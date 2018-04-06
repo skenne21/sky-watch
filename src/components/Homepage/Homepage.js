@@ -13,16 +13,17 @@ export class Homepage extends Component {
       headquarters,
       summary 
     } = this.props.companyBio[0]; 
+    const html = this.props.missionVideos[0].id
     const state = headquarters.state;
     const address = headquarters.address;
-    
     return (
       <div className='Homepage'>
         <section className='bio'>
           <h1>{name}</h1>
           <h2>{founder}</h2>
-          <img src="../../assets/starman.png"/>
+          <img src="../assets/starman.png"/>
           <h3>{`Location: ${address}, ${state}`}</h3>
+          <iframe src={`https://www.youtube.com/embed/${html}`}/>
           <p>{summary}</p>
         </section>
       </div>
@@ -47,8 +48,10 @@ export class Homepage extends Component {
   } 
 }
 
-export const mapStateToProps = ({ companyBio }) => ({
-  companyBio
+export const mapStateToProps = ({ companyBio, missionVideos }) => ({
+  companyBio,
+  missionVideos
+
 });
 
 export const mapDispatchToProps = dispatch =>({

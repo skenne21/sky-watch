@@ -3,7 +3,12 @@ export const addCompanyBio = (bio) => ({
   bio
 })
 
-export const companyError = (message) => {
+export const companyError = (message) => ({
   type: 'ADD_ERROR_BIO',
   message
-}
+})
+
+export const upLoadVideos = (videos) => ({
+  type: 'ADD_VIDEOS',
+  videos
+})

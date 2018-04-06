@@ -3,7 +3,8 @@ import * as apiKeys from '../apiKeys';
 export const fetchBio = async () => {
   try {
     const response = await fetch(`https://api.spacexdata.com/v2/info`)
-    const bio = await response.json();
+    const info = await response.json();
+    const bio = await cleanBios(info);
     return bio;
   } catch(error) {
     throw error
@@ -12,27 +13,36 @@ export const fetchBio = async () => {
 
 export const fetchSpaceXVeidos = async () => {
   try {
-
-    // GET {base_URL}/search?part=snippet
-                     // &q=soccer
-                     // &type=channel
-                     // &key={YOUR_API_KEY}
-    const key = apiKeys.youTubeKey
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet
-                    &q=spaceXmissions
-                    &key=${key}`)
-
+    const baseUrl = 'https://www.googleapis.com/youtube/v3/search';
+    const condtions = 'part=snippet&order=viewCount';
+    const veidoInfo = 'q=spaceX+missions&type=video&videoDefinition=high';
+    const key = apiKeys.youTubeKey;
+    const response = await fetch(`${baseUrl}?${condtions}&${veidoInfo}&key=${key}`);
     const info = await response.json();
-    const veidos = await cleanVeidos(info.items)
-    return veidos
+    const videos = await cleanVeidos(info.items);
+    return videos
   } catch(error) {
     throw error;
   }
 }
 
-const cleanVeidos = async (items) => {
-  items.map(veido => {
-    console.log(veido)
-  })
-  debugger
+const cleanVeidos = async (videoInfo) => {
+  const videos = videoInfo.map(video => ({
+    id: video.id.videoId,
+    title: video.snippet.title,
+    description: video.snippet.description,
+    date: video.snippet.publishedAt,
+    image: video.snippet.thumbnails.high
+  }))
+  return videos
+}
+
+const cleanBios = async (info) => {
+  return {
+    name: info.name,
+    founder: info.founder,
+    founded: info.founded,
+    summary: info.summary,
+    headquarters: info.headquarters
+  }
 }

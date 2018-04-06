@@ -24,9 +24,9 @@ export class App extends Component {
   fetchVideos = async () => {
     try {
       const videos = await fetchSpaceXVeidos();
-      console.log(videos)
+      await this.props.fetchMissionVideos(videos)
     } catch(error) {
-      console.log(error)
+      this.props.handleError(error.message)
     }
   }
 
@@ -48,11 +48,13 @@ export class App extends Component {
 }
 
 export const  mapStateToProps = state => ({
-  companyBio: state.companyBio
+  companyBio: state.companyBio,
+  missionVideos: state.missionVideos
 })
 
 export const  mapDispatchToProps = dispatch => ({
   fetchCompanyBio: (bio) => dispatch(actions.addCompanyBio(bio)),
+  fetchMissionVideos: (videos) => dispatch(actions.upLoadVideos(videos)),
   handleError: (message) => dispatch(actions.companyError(message))
 })
 
