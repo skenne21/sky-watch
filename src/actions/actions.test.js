@@ -10,7 +10,7 @@ describe('Actions', () =>{
       bio
     };
 
-    expect(actions.addCompanyBio(bio)).toEqual(expected)
+    expect(actions.addCompanyBio(bio)).toEqual(expected);
   });
 
   it('Should add an array of videos', () => {
@@ -20,7 +20,7 @@ describe('Actions', () =>{
       videos
     };
 
-  expect(actions.upLoadVideos(videos)).toEqual(expected)
+    expect(actions.upLoadVideos(videos)).toEqual(expected);
   });
 
   it('Should add a error message', () => {
@@ -29,8 +29,6 @@ describe('Actions', () =>{
       type: 'ADD_ERROR',
       message
     };
-    expect(actions.addError(message)).toEqual(expected)
+    expect(actions.addError(message)).toEqual(expected);
   });
-
-
 });
