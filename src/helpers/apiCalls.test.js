@@ -83,7 +83,7 @@ describe('apiCalls', () => {
     })
 
     it('Should return an array of clean videos', async () => {
-      const expected = mocks.veido;
+      const expected = [mocks.veido];
       const veidos = await apiCalls.fetchSpaceXVeidos();
       expect(veidos).toEqual(expected)
     })

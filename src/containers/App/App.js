@@ -55,7 +55,7 @@ export const  mapStateToProps = state => ({
 export const  mapDispatchToProps = dispatch => ({
   fetchCompanyBio: (bio) => dispatch(actions.addCompanyBio(bio)),
   fetchMissionVideos: (videos) => dispatch(actions.upLoadVideos(videos)),
-  handleError: (message) => dispatch(actions.companyError(message))
+  handleError: (message) => dispatch(actions.addError(message))
 })
 
 

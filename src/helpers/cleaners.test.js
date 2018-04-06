@@ -6,7 +6,7 @@ describe('cleaners', () => {
   describe('cleanVeidos', () => {
 
     it.skip('Should return a clean veido', () => {
-      const recevied = mocks.rawVeido;
+      const recevied = mocks.rawVeido.items;
       const expected = [mocks.veido]
       const veidos = cleanVeidos(recevied);
       expect(veidos).toEqual(expected);

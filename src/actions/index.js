@@ -3,8 +3,8 @@ export const addCompanyBio = (bio) => ({
   bio
 })
 
-export const companyError = (message) => ({
-  type: 'ADD_ERROR_BIO',
+export const addError = (message) => ({
+  type: 'ADD_ERROR',
   message
 })
 
