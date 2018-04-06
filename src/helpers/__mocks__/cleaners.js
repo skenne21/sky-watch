@@ -1,5 +1,5 @@
-import {veido, bio} from '../../mockData';
+import { video, bio } from '../../mockData';
 
-export const cleanVeidos = jest.fn().mockImplementation(() => [veido])
+export const cleanVideos = jest.fn().mockImplementation(() => [video])
 
 export const cleanBios = jest.fn().mockImplementation(() => bio)

@@ -12,7 +12,6 @@ describe('videosReducer', () => {
   it('Should return an array with videos inside it', () => {
     const videos = mocks.videos;
     const expected = mocks.videos;
-    console.log(expected)
     const called = videosReducer(undefined, actions.upLoadVideos(videos));
     expect(called).toEqual(expected);
   })

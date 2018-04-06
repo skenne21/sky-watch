@@ -1,5 +1,5 @@
 import * as apiCalls from './apiCalls';
-import { cleanBios, cleanVeidos } from './cleaners';
+import { cleanBios, cleanVideos } from './cleaners';
 import { youTubeKey } from '../apiKeys';
 import * as mocks from '../mockData';
 
@@ -12,7 +12,7 @@ describe('apiCalls', () => {
     let response, url;
 
     beforeEach(() => {
-      response = mocks.rawBiol;
+      response = mocks.rawBio;
       url = 'https://api.spacexdata.com/v2/info';
 
       window.fetch = jest.fn().mockImplementation(() => (
@@ -59,16 +59,16 @@ describe('apiCalls', () => {
     });
   });
 
-  describe('fetchSpaceXVeidos', () => {
-    let url, base, condtions, veidoInfo, key, response;
+  describe('fetchSpaceXVideos', () => {
+    let url, base, condtions, videoInfo, key, response;
 
     beforeEach(() => {
       key = youTubeKey;
       base = 'https://www.googleapis.com/youtube/v3/search';
       condtions = 'part=snippet&order=viewCount';
-      veidoInfo = 'q=spaceX+missions&type=video&videoDefinition=high';
-      url = `${base}?${condtions}&${veidoInfo}&key=${key}`;
-      response = mocks.rawVeido;
+      videoInfo = 'q=spaceX+missions&type=video&videoDefinition=high';
+      url = `${base}?${condtions}&${videoInfo}&key=${key}`;
+      response = mocks.rawVideo;
       window.fetch = jest.fn().mockImplementation(() => (
         Promise.resolve({
           ok: true,
@@ -78,19 +78,20 @@ describe('apiCalls', () => {
     });
 
     it('Should fetch with the correct url', () =>{
-      apiCalls.fetchSpaceXVeidos();
+      apiCalls.fetchSpaceXVideos();
       expect(window.fetch).toHaveBeenCalledWith(url)
     })
 
     it('Should return an array of clean videos', async () => {
-      const expected = [mocks.veido];
-      const veidos = await apiCalls.fetchSpaceXVeidos();
-      expect(veidos).toEqual(expected)
+      const expected = [mocks.video];
+      const videos = await apiCalls.fetchSpaceXVideos();
+      expect(videos).toEqual(expected)
     })
 
-    it('Should call cleanVeidos with the correct params', () =>{
-      apiCalls.fetchSpaceXVeidos();
-      expect(cleanVeidos).toHaveBeenCalledWith(response.items)
+    it('Should call cleanVideos with the correct params', () =>{
+      apiCalls.fetchSpaceXVideos();
+
+      expect(cleanVideos).toHaveBeenCalledWith(response.items)
     })
 
     it('Should throw an error if the status is above 200', () =>{
@@ -105,7 +106,7 @@ describe('apiCalls', () => {
         status: 500,
         message: 'Error'
       };
-      const apiCall = apiCalls.fetchSpaceXVeidos();
+      const apiCall = apiCalls.fetchSpaceXVideos();
 
       expect(apiCall).rejects.toEqual(expected)
 
