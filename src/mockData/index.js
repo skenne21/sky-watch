@@ -1,24 +1,26 @@
-export const rawVeido = [{
-  id:{
-    kind: "youtube#video", videoId: "XcVpMJp9Th4"
-  },
-  snippet: {
-    channelId:"UC3OhT2ErtjLhvvkULJCCBlw",
-    description:"Elon Musk gives...",
-    publishedAt:"2017-09-29T06:05:03.000Z",
-    thumbnails:{
-      high: {
-        url:"https://i.ytimg.com/vi/XcVpMJp9Th4/hqdefault.jpg",
-        width: 480,
-      }, 
-      medium: {
-        url:"https://i.ytimg.com/vi/XcVpMJp9Th4/mqdefault.jpg",
-        width: 320,
-      },
+export const rawVeido = {
+  items: [{
+    id:{
+      kind: "youtube#video", videoId: "XcVpMJp9Th4"
     },
-    title:"Elon Musk Gives...",
-  }
-}]
+    snippet: {
+      channelId:"UC3OhT2ErtjLhvvkULJCCBlw",
+      description:"Elon Musk gives...",
+      publishedAt:"2017-09-29T06:05:03.000Z",
+      thumbnails:{
+        high: {
+          url:"https://i.ytimg.com/vi/XcVpMJp9Th4/hqdefault.jpg",
+          width: 480,
+        }, 
+        medium: {
+          url:"https://i.ytimg.com/vi/XcVpMJp9Th4/mqdefault.jpg",
+          width: 320,
+        },
+      },
+      title:"Elon Musk Gives...",
+    }
+  }]
+};
 
 export const veido = {
   id: "XcVpMJp9Th4",

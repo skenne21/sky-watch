@@ -20,6 +20,7 @@ export const fetchSpaceXVeidos = async () => {
     const key = apiKeys.youTubeKey;
     const response = await fetch(`${baseUrl}?${condtions}&${veidoInfo}&key=${key}`);
     const info = await response.json();
+    console.log(info)
     const videos = await cleaners.cleanVeidos(info.items);
     return videos
   } catch(error) {
