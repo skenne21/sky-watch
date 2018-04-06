@@ -1,4 +1,4 @@
-export const rawVeido = {
+export const rawVideo = {
   items: [{
     id:{
       kind: "youtube#video", videoId: "XcVpMJp9Th4"
@@ -22,7 +22,7 @@ export const rawVeido = {
   }]
 };
 
-export const veido = {
+export const video = {
   id: "XcVpMJp9Th4",
   title: "Elon Musk",
   description: "Elon Musk gives new details, about SpaceX Mission...",
@@ -34,7 +34,7 @@ export const veido = {
   } 
 } 
 
-export const veidos = [{
+export const videos = [{
   id: "XcVpMJp9Th4",
   title: "Elon Musk",
   description: "Elon Musk gives new details, about SpaceX Mission...",
