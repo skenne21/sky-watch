@@ -20,7 +20,7 @@ export const cleanBios = async (bioInfo) => {
 }
 
 //  not tested
-export const cleanRocket = async (rockets) => {
+export const cleanRocket = (rockets) => {
   return rockets.map(rocket => ({
     name: rocket.name,
     active: rocket.active,
@@ -30,15 +30,16 @@ export const cleanRocket = async (rockets) => {
     country: rocket.country,
     summary: rocket.description,
     stats: {
-      diameter: rocket.diameter,
-      engines: rocket.engines,
-      mass: rocket.mass,
+      diameter: rocket.diameter.feet,
+      engines: cleanEngines(rocket.engines),
+      mass: rocket.mass.lb,
       payload: rocket.payload_weights[0],
-      height: rocket.height,
+      height: rocket.height.feet,
       boosters: rocket.boosters,
-      secondStage: rocket.second_stage,
+      // secondStage: rocket.second_stage,
     }
-  }))
+
+  }));
 }
 
 // not tested
@@ -48,4 +49,14 @@ export const cleanDate = (date) => {
   spiltDate.push(year);
   const recombined = spiltDate.join(', ')
   return recombined;
+}
+
+export const cleanEngines = engine => {
+  return {
+    type: engine.type,
+    propellant1: engine.propellant_1,
+    propellant2: engine.propellant_2,
+    thrustAtSea: engine.thrust_sea_level.lbf,
+    thrustVaccum: engine.thrust_vacuum.lbf,
+  }
 }

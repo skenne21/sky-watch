@@ -32,7 +32,7 @@ export const video = {
     width: 480,
     height: 360
   } 
-} 
+};
 
 export const videos = [{
   id: "XcVpMJp9Th4",
@@ -54,7 +54,7 @@ export const videos = [{
     width: 480,
     height: 360
   } 
-}]
+}];
 
 export const rawBio = {
   ceo:"Elon Musk",
@@ -75,7 +75,7 @@ export const rawBio = {
   test_sites:1,
   valuation:15000000000,
   vehicles:3,
-}
+};
 
 export const bio = [{
   name: "SpaceX",
@@ -87,4 +87,191 @@ export const bio = [{
     city: "Hawthorne",
     state: "California",
   }
-}]
+}];
+
+export const rawRockets = [
+{
+  active:false,
+  boosters:0,
+  company:"SpaceX",
+  cost_per_launch:6700000,
+  country:"Republic of the Marshall Islands",
+  description:"The Falcon 1 was an expendable launch system privately",
+  name:"Falcon 1",
+  first_flight:"2006-03-24"
+},{
+  active:false,
+  boosters:0,
+  company:"SpaceX",
+  cost_per_launch:6700000,
+  country:"Republic of the Marshall Islands",
+  description:"The Falcon 1 was an expendable launch system privately",
+  name:"Falcon 1",
+  first_flight:"2006-03-24"
+}];
+
+export const cleanRocket = {
+  name: "Falcon 1",
+  active: false,
+  fristFight: "03, 24, 2006",
+  costLaunch: 6700000,
+  stages: 2,
+  country: "Republic of the Marshall Islands",
+  summary: "The Falcon 1 was an expendable...",
+}
+
+export const cleanRockets = :
+active
+:
+false
+costLaunch
+:
+6700000
+country
+:
+"Republic of the Marshall Islands"
+fristFight
+:
+"03, 24, 2006"
+name
+:
+"Falcon 1"
+stages
+:
+2
+stats
+:
+boosters
+:
+0
+diameter
+:
+5.5
+engines
+:
+propellant1
+:
+"liquid oxygen"
+propellant2
+:
+"RP-1 kerosene"
+thrustAtSea
+:
+94000
+thrustVaccum
+:
+110000
+type
+:
+"merlin"
+__proto__
+:
+Object
+height
+:
+73
+mass
+:
+66460
+payload
+:
+id
+:
+"leo"
+kg
+:
+450
+lb
+:
+992
+name
+:
+"Low Earth Orbit"
+__proto__
+:
+Object
+__proto__
+:
+Object
+summary
+:
+"The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009.
+
+
+
+// second
+active
+:
+true
+costLaunch
+:
+61200000
+country
+:
+"United States"
+fristFight
+:
+"06, 04, 2010"
+name
+:
+"Falcon 9"
+stages
+:
+2
+stats
+:
+boosters
+:
+0
+diameter
+:
+12
+engines
+:
+propellant1
+:
+"liquid oxygen"
+propellant2
+:
+"RP-1 kerosene"
+thrustAtSea
+:
+190000
+thrustVaccum
+:
+205500
+type
+:
+"merlin"
+__proto__
+:
+Object
+height
+:
+229.6
+mass
+:
+1207920
+payload
+:
+id
+:
+"leo"
+kg
+:
+22800
+lb
+:
+50265
+name
+:
+"Low Earth Orbit"
+__proto__
+:
+Object
+__proto__
+:
+Object
+summary
+:
+"Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliabl
