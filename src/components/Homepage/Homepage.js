@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import { fetchRockets } from '../../helpers/apiCalls';
 import * as actions from '../../actions/index';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
 export class Homepage extends Component {
+  constructor() {
+    super();
+  }
 
-  createCards = () => {
+
+
+  createBio = () => {
     const { 
       name,
       founder,
@@ -38,12 +44,41 @@ export class Homepage extends Component {
       </div>
     )
   }
+
+  handleClick = async (event) => {
+    const { name } = event.target;
+    switch(name) {
+      case'rockets':
+        const rockets = await fetchRockets();
+        console.log(rockets)
+      default:
+        return name;
+    }
+
+    debugger;
+  }
+
   
   render() {
     const { companyBio } = this.props
 
     return ( 
-      companyBio.length > 0 ? this.createCards() : this.createLoadingImage()
+      <div className='Homepage'>
+      {
+        companyBio.length > 0 ? this.createBio() : this.createLoadingImage()
+      }
+        <form>
+          <NavLink
+            name='rockets' 
+            className='rockets'
+            activeClassName='isActive'
+            to='/rockets'
+            onClick={this.handleClick}
+          >
+            ROCKETS
+          </NavLink>
+        </form>
+      </div>
     )
   } 
 }

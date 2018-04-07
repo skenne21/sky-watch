@@ -27,3 +27,14 @@ export const fetchSpaceXVideos = async () => {
   }
 }
 
+export const fetchRockets= async () => {
+  try {
+    const response = await fetch('https://api.spacexdata.com/v2/rockets');
+    const info = await response.json();
+    const rockets = await cleaners.cleanRocket(info);
+    return rockets;
+  } catch (error) {
+    throw error;
+  }
+}
+
