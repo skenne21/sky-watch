@@ -1,5 +1,5 @@
 import * as apiCalls from './apiCalls';
-import { cleanBios, cleanVideos } from './cleaners';
+import { cleanBios, cleanVideos, cleanRockets } from './cleaners';
 import { youTubeKey } from '../apiKeys';
 import * as mocks from '../mockData';
 
@@ -135,6 +135,7 @@ describe('apiCalls', () => {
     it('Should return a clean rockets', async () => {
       const expected = mocks.cleanRockets;
       const rockets = await apiCalls.fetchRockets();
+      console.log()
       expect(rockets).toEqual(expected)
     });
 
