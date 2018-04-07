@@ -45,17 +45,9 @@ export class Homepage extends Component {
     )
   }
 
-  handleClick = async (event) => {
-    const { name } = event.target;
-    switch(name) {
-      case'rockets':
-        const rockets = await fetchRockets();
-        console.log(rockets)
-      default:
-        return name;
-    }
+  handleRockets = async (event) => {
+    const rockets = await fetchRockets();
 
-    debugger;
   }
 
   
@@ -73,7 +65,7 @@ export class Homepage extends Component {
             className='rockets'
             activeClassName='isActive'
             to='/rockets'
-            onClick={this.handleClick}
+            onClick={this.handleRockets}
           >
             ROCKETS
           </NavLink>
