@@ -1,5 +1,5 @@
 import * as apiCalls from './apiCalls';
-import { cleanBios, cleanVideos } from './cleaners';
+import { cleanBios, cleanVideos, cleanRockets } from './cleaners';
 import { youTubeKey } from '../apiKeys';
 import * as mocks from '../mockData';
 
@@ -85,14 +85,14 @@ describe('apiCalls', () => {
     it('Should return an array of clean videos', async () => {
       const expected = [mocks.video];
       const videos = await apiCalls.fetchSpaceXVideos();
-      expect(videos).toEqual(expected)
-    })
+      expect(videos).toEqual(expected);
+    }); 
 
     it('Should call cleanVideos with the correct params', () =>{
       apiCalls.fetchSpaceXVideos();
 
-      expect(cleanVideos).toHaveBeenCalledWith(response.items)
-    })
+      expect(cleanVideos).toHaveBeenCalledWith(response.items);
+    });
 
     it('Should throw an error if the status is above 200', () =>{
       window.fetch = jest.fn().mockImplementation(() => (
@@ -108,9 +108,56 @@ describe('apiCalls', () => {
       };
       const apiCall = apiCalls.fetchSpaceXVideos();
 
-      expect(apiCall).rejects.toEqual(expected)
+      expect(apiCall).rejects.toEqual(expected);
 
-    })
-  })
+    });
+  });
+
+  describe('fetchRockets', () => {
+    let url, response;
+
+    beforeEach(() => {
+      url = 'https://api.spacexdata.com/v2/rockets'
+      response = mocks.rawRockets;
+      window.fetch = jest.fn().mockImplementation(() =>(
+        Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(response)
+        })
+      ));
+    });
+
+    it('Should fetch with the correct url', () => {
+      apiCalls.fetchRockets();
+      expect(window.fetch).toHaveBeenCalledWith(url);
+    });
+
+    it('Should return a clean rockets', async () => {
+      const expected = mocks.rockets;
+      const rockets = await apiCalls.fetchRockets();
+      expect(rockets).toEqual(expected);
+    });
+
+    it('Should call cleanRockets with the correct params', () => {
+      apiCalls.fetchRockets();
+      expect(cleanRockets).toHaveBeenCalledWith(response);
+    });
+
+    it('Should throw an error if the status is above 200', () => {
+      window.fetch = jest.fn().mockImplementation(() => (
+        Promise.reject({
+          status:500,
+          message:'Error'
+        })
+      ));
+
+      const call = apiCalls.fetchRockets();
+      const expected = {
+        status:500,
+        message:'Error'
+      };
+      expect(call).rejects.toEqual(expected);
+    });
+  });
 
 });

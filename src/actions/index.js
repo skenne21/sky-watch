@@ -1,14 +1,20 @@
-export const addCompanyBio = (bio) => ({
+export const addCompanyBio = bio => ({
   type: 'ADD_COMPANY_BIO',
   bio
 });
 
-export const addError = (message) => ({
+export const addError = message => ({
   type: 'ADD_ERROR',
   message
 });
 
-export const upLoadVideos = (videos) => ({
+export const upLoadVideos = videos => ({
   type: 'ADD_VIDEOS',
   videos
+});
+
+// not tested
+export const addRockets = rockets => ({
+  type: 'ADD_ROCKETS',
+  rockets
 });

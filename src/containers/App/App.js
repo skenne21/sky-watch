@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route, withRouter } from 'react-router-dom';
-import { fetchBio, fetchSpaceXVeidos } from '../../helpers/apiCalls';
+import { fetchBio, fetchSpaceXVideos } from '../../helpers/apiCalls';
 import Header from '../../components/Header/Header.js';
 import Homepage from '../../components/Homepage/Homepage';
 import * as actions from '../../actions/index';
@@ -23,7 +23,7 @@ export class App extends Component {
 
   fetchVideos = async () => {
     try {
-      const videos = await fetchSpaceXVeidos();
+      const videos = await fetchSpaceXVideos();
       await this.props.fetchMissionVideos(videos)
     } catch(error) {
       this.props.handleError(error.message)
@@ -53,9 +53,9 @@ export const  mapStateToProps = state => ({
 })
 
 export const  mapDispatchToProps = dispatch => ({
-  fetchCompanyBio: (bio) => dispatch(actions.addCompanyBio(bio)),
-  fetchMissionVideos: (videos) => dispatch(actions.upLoadVideos(videos)),
-  handleError: (message) => dispatch(actions.addError(message))
+  fetchCompanyBio: bio => dispatch(actions.addCompanyBio(bio)),
+  fetchMissionVideos: videos => dispatch(actions.upLoadVideos(videos)),
+  handleError: message => dispatch(actions.addError(message))
 })
 
 

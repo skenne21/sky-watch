@@ -3,7 +3,7 @@ export const spaceXReducer = (state = [], action) => {
     case 'ADD_COMPANY_BIO':
       return [...state, action.bio];
     case 'ADD_ERROR':
-      return [...state, action.message]
+      return [...state, action.message];
     default:
       return state;
   }

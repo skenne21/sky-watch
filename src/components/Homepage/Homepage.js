@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { fetchRockets } from '../../helpers/apiCalls';
 import * as actions from '../../actions/index';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
 export class Homepage extends Component {
 
-  createCards = () => {
+  createBio = () => {
     const { 
       name,
       founder,
@@ -38,23 +39,50 @@ export class Homepage extends Component {
       </div>
     )
   }
+
+  handleRockets = async (event) => {
+    try {
+      const rockets = await fetchRockets();
+      this.props.getRockets(rockets);
+    } catch (error) {
+      this.props.handleError(error.message)
+    } 
+  }
+
   
   render() {
     const { companyBio } = this.props
 
     return ( 
-      companyBio.length > 0 ? this.createCards() : this.createLoadingImage()
+      <div className='Homepage'>
+      {
+        companyBio.length > 0 ? this.createBio() : this.createLoadingImage()
+      }
+        <form>
+          <NavLink
+            name='rockets' 
+            className='rockets'
+            activeClassName='isActive'
+            to='/rockets'
+            onClick={this.handleRockets}
+          >
+            ROCKETS
+          </NavLink>
+        </form>
+      </div>
     )
   } 
 }
 
-export const mapStateToProps = ({ companyBio, missionVideos }) => ({
-  companyBio,
-  missionVideos
-
+export const mapStateToProps = state => ({
+  companyBio: state.companyBio,
+  missionVideos: state.missionVideos,
+  rockets: state.rockets
 });
 
 export const mapDispatchToProps = dispatch =>({
+  getRockets: rockets => dispatch(actions.addRockets(rockets)),
+  handleError: message => dispatch(actions.addError(message))
 
 })
 
