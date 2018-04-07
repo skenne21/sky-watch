@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { fetchBio, fetchSpaceXVideos } from '../../helpers/apiCalls';
 import Header from '../../components/Header/Header.js';
-import Homepage from '../../components/Homepage/Homepage';
+import Homepage from '../Homepage/Homepage';
+import { RocketContainer }  from '../RocketContainer/RocketContainer';
 import * as actions from '../../actions/index';
 import './App.css';
 
@@ -41,6 +42,7 @@ export class App extends Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Homepage}/>
+          <Route path='/rockets' component={RocketContainer}/>
         </Switch>
       </div>
     );
