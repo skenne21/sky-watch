@@ -6,11 +6,6 @@ import { connect } from 'react-redux';
 
 
 export class Homepage extends Component {
-  constructor() {
-    super();
-  }
-
-
 
   createBio = () => {
     const { 
@@ -46,8 +41,12 @@ export class Homepage extends Component {
   }
 
   handleRockets = async (event) => {
-    const rockets = await fetchRockets();
-
+    try {
+      const rockets = await fetchRockets();
+      this.props.getRockets(rockets);
+    } catch (error) {
+      this.props.handleError(error.message)
+    } 
   }
 
   
@@ -75,13 +74,15 @@ export class Homepage extends Component {
   } 
 }
 
-export const mapStateToProps = ({ companyBio, missionVideos }) => ({
-  companyBio,
-  missionVideos
-
+export const mapStateToProps = state => ({
+  companyBio: state.companyBio,
+  missionVideos: state.missionVideos,
+  rockets: state.rockets
 });
 
 export const mapDispatchToProps = dispatch =>({
+  getRockets: rockets => dispatch(actions.addRockets(rockets)),
+  handleError: message => dispatch(actions.addError(message))
 
 })
 

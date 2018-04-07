@@ -1,8 +1,8 @@
-export const rocketReducer = (state =[], action) => {
+export const rocketsReducer = (state =[], action) => {
   switch(action.type) {
     case 'ADD_ROCKETS':
-      return [...state, action.rockets]
-    case default:
+      return [...state, ...action.rockets]
+    default:
       return state;
   }
 }

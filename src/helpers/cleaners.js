@@ -19,6 +19,7 @@ export const cleanBios = async (bioInfo) => {
   }
 }
 
+//  not tested
 export const cleanRocket = async (rockets) => {
   return rockets.map(rocket => ({
     name: rocket.name,
@@ -40,6 +41,7 @@ export const cleanRocket = async (rockets) => {
   }))
 }
 
+// not tested
 export const cleanDate = (date) => {
   const spiltDate = date.split('-');
   const year = spiltDate.shift();

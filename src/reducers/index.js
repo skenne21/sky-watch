@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { spaceXReducer } from './spaceXReducer';
 import { videosReducer } from './videosReducer';
-import { rocketReducer } from './rocketReducer';
+import { rocketsReducer } from './rocketsReducer';
 
 const rootReducer = combineReducers({
   companyBio: spaceXReducer,
-  rockets: rocketReducer,
+  rockets: rocketsReducer,
   missionVideos: videosReducer
 });
 
