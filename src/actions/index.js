@@ -13,7 +13,7 @@ export const upLoadVideos = videos => ({
   videos
 });
 
-// not tested
+
 export const addRockets = rockets => ({
   type: 'ADD_ROCKETS',
   rockets

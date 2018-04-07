@@ -31,4 +31,13 @@ describe('Actions', () =>{
     };
     expect(actions.addError(message)).toEqual(expected);
   });
+
+  it('Should add Rockets to the store', () =>{
+    const rockets = mocks.rockets;
+    const expected = {
+      type: 'ADD_ROCKETS',
+      rockets
+    }
+    expect(actions.addRockets(rockets)).toEqual(expected);
+  })
 });

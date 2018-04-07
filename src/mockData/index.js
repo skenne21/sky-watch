@@ -163,25 +163,24 @@ export const cleanRocket = {
   country:"Republic of the Marshall Islands",
   fristFight:"03, 24, 2006",
   name:"Falcon 1",
-  stages:2,
   stats: {
     boosters:0,
     diameter:5.5,
-    engines: {
-      propellant1:"liquid oxygen",
-      propellant2:"RP-1 kerosene",
-      thrustAtSea:94000,
-      thrustVaccum:110000,
-      type:"merlin",
-    },
+    // engines: {
+    //   propellant1:"liquid oxygen",
+    //   propellant2:"RP-1 kerosene",
+    //   thrustAtSea:94000,
+    //   thrustVaccum:110000,
+    //   type:"merlin",
+    // },
     height:73,
     mass:66460,
-    payload: {
-      id:"leo",
-      kg:450,
-      lb:992,
-      name:"Low Earth Orbit",
-    },
+    // payload: {
+    //   id:"leo",
+    //   kg:450,
+    //   lb:992,
+    //   name:"Low Earth Orbit",
+    // },
   },
   summary:"The Falcon 1 was an expendable ..."
 }
@@ -193,25 +192,24 @@ export const rockets = [
   country:"Republic of the Marshall Islands",
   fristFight:"03, 24, 2006",
   name:"Falcon 1",
-  stages:2,
   stats: {
     boosters:0,
     diameter:5.5,
-    engines: {
-      propellant1:"liquid oxygen",
-      propellant2:"RP-1 kerosene",
-      thrustAtSea:94000,
-      thrustVaccum:110000,
-      type:"merlin",
-    },
+    // engines: {
+    //   propellant1:"liquid oxygen",
+    //   propellant2:"RP-1 kerosene",
+    //   thrustAtSea:94000,
+    //   thrustVaccum:110000,
+    //   type:"merlin",
+    // },
     height:73,
     mass:66460,
-    payload: {
-      id:"leo",
-      kg:450,
-      lb:992,
-      name:"Low Earth Orbit",
-    }
+    // payload: {
+    //   id:"leo",
+    //   kg:450,
+    //   lb:992,
+    //   name:"Low Earth Orbit",
+    // }
   },
   summary:"The Falcon 1 was an expendable ..."
 } , {
@@ -220,25 +218,24 @@ export const rockets = [
   country:"United States",
   fristFight:"06, 04, 2010",
   name:"Falcon 9",
-  stages:2,
   stats: {
     boosters:0,
     diameter:12,
-    engines: {
-      propellant1:"liquid oxygen",
-      propellant2:"RP-1 kerosene",
-      thrustAtSea:190000,
-      thrustVaccum:205500,
-      type:"merlin",
-    },
+    // engines: {
+    //   propellant1:"liquid oxygen",
+    //   propellant2:"RP-1 kerosene",
+    //   thrustAtSea:190000,
+    //   thrustVaccum:205500,
+    //   type:"merlin",
+    // },
     height:229.6,
     mass:1207920,
-    payload: {
-      id:"leo",
-      kg:22800,
-      lb:50265,
-      name:"Low Earth Orbit",
-    },
+    // payload: {
+    //   id:"leo",
+    //   kg:22800,
+    //   lb:50265,
+    //   name:"Low Earth Orbit",
+    // },
   },
   summary:"Falcon 9 is a two-stage rocket designed...",
 }]
