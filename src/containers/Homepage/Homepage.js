@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchRockets } from '../../helpers/apiCalls';
+import { fetchRockets, fetchCapsules } from '../../helpers/apiCalls';
 import * as actions from '../../actions/index';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -13,6 +13,7 @@ export class Homepage extends Component {
       headquarters,
       summary 
     } = this.props.companyBio[0]; 
+    
     const html = this.props.missionVideos[0].id
     const state = headquarters.state;
     const address = headquarters.address;
@@ -39,13 +40,22 @@ export class Homepage extends Component {
     )
   }
 
-  handleRockets = async (event) => {
+  handleRockets = async ( ) => {
     try {
       const rockets = await fetchRockets();
       this.props.getRockets(rockets);
     } catch (error) {
       this.props.handleError(error.message)
     } 
+  }
+
+  handleCapsules = async () => {
+    try {
+      const capsules = await fetchCapsules();
+      console.log(capsules)
+    } catch (error) {
+      this.props.handleError(error.message)
+    }
   }
 
   
@@ -65,6 +75,15 @@ export class Homepage extends Component {
             onClick={this.handleRockets}
           >
             ROCKETS
+          </NavLink>
+          <NavLink
+            name='capsules'
+            className="capsules"
+            activeClassName='isActive'
+            to='/capsules'
+            onClick={this.handleCapsules}
+          >
+            CAPSULES
           </NavLink>
         </form>
       </div>
