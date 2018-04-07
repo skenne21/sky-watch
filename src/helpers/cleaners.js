@@ -1,3 +1,5 @@
+// tests not passing!!!! Yay!!!!JOY!!!! :(, such a sad face; 
+
 export const cleanVideos = async (videoInfo) => {
   const videos = videoInfo.map(video => ({
     id: video.id.videoId,
@@ -19,7 +21,7 @@ export const cleanBios = async (bioInfo) => {
   }
 }
 
-//  not tested
+
 export const cleanRockets = (rockets) => {
   return rockets.map(rocket => ({
     name: rocket.name,
@@ -31,18 +33,17 @@ export const cleanRockets = (rockets) => {
     summary: rocket.description,
     stats: {
       diameter: rocket.diameter.feet,
-      engines: cleanEngines(rocket.engines),
+      // engines: cleanEngines(rocket.engines),
       mass: rocket.mass.lb,
-      payload: rocket.payload_weights[0],
+      // payload: rocket.payload_weights[0],
       height: rocket.height.feet,
       boosters: rocket.boosters,
       // secondStage: rocket.second_stage,
-    }
-
+    } 
   }));
 }
 
-// not tested
+
 export const cleanDate = (date) => {
   const spiltDate = date.split('-');
   const year = spiltDate.shift();

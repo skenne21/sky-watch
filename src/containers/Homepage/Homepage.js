@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 
 
 export class Homepage extends Component {
-
   createBio = () => {
     const { 
       name,
@@ -34,7 +33,7 @@ export class Homepage extends Component {
   createLoadingImage = () => {
     return (
       <div className='loading'>
-        <img src="../../assets/starman.png"/>
+        <img src="../../assets/starman.png" alt="Picture of starman"/>
         <p> Loading </p>
       </div>
     )
@@ -52,7 +51,6 @@ export class Homepage extends Component {
   
   render() {
     const { companyBio } = this.props
-
     return ( 
       <div className='Homepage'>
       {
