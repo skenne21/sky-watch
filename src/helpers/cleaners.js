@@ -21,8 +21,6 @@ export const cleanBios = async (bioInfo) => {
 
 //  not tested
 export const cleanRockets = (rockets) => {
-  console.log(rockets)
-  debugger
   return rockets.map(rocket => ({
     name: rocket.name,
     active: rocket.active,

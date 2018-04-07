@@ -186,7 +186,7 @@ export const cleanRocket = {
   summary:"The Falcon 1 was an expendable ..."
 }
 
-export const cleanRockets = [
+export const rockets = [
 {
   active:false,
   costLaunch:6700000,

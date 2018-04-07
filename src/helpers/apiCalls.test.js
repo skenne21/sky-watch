@@ -133,18 +133,30 @@ describe('apiCalls', () => {
     });
 
     it('Should return a clean rockets', async () => {
-      const expected = mocks.cleanRockets;
+      const expected = mocks.rockets;
       const rockets = await apiCalls.fetchRockets();
-      console.log()
-      expect(rockets).toEqual(expected)
+      expect(rockets).toEqual(expected);
     });
 
     it('Should call cleanRockets with the correct params', () => {
-
+      apiCalls.fetchRockets();
+      expect(cleanRockets).toHaveBeenCalledWith(response);
     });
 
     it('Should throw an error if the status is above 200', () => {
+      window.fetch = jest.fn().mockImplementation(() => (
+        Promise.reject({
+          status:500,
+          message:'Error'
+        })
+      ));
 
+      const call = apiCalls.fetchRockets();
+      const expected = {
+        status:500,
+        message:'Error'
+      };
+      expect(call).rejects.toEqual(expected);
     });
   });
 
