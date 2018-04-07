@@ -77,6 +77,18 @@ export const rawBio = {
   vehicles:3,
 };
 
+export const cleanBip = {
+  name: "SpaceX",
+  founder: "Elon Musk",
+  founded: 2002,
+  summary: "SpaceX designs, manufactures and launches advanced...",
+  headquarters:{
+    address: "Rocket Road",
+    city: "Hawthorne",
+    state: "California",
+  }
+}
+
 export const bio = [{
   name: "SpaceX",
   founder: "Elon Musk",
