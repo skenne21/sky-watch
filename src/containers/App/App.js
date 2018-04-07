@@ -4,7 +4,7 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import { fetchBio, fetchSpaceXVideos } from '../../helpers/apiCalls';
 import Header from '../../components/Header/Header.js';
 import Homepage from '../Homepage/Homepage';
-import { RocketContainer }  from '../RocketContainer/RocketContainer';
+import  CardsContainer   from '../CardsContainer/CardsContainer';
 import * as actions from '../../actions/index';
 import './App.css';
 
@@ -42,7 +42,7 @@ export class App extends Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Homepage}/>
-          <Route path='/rockets' component={RocketContainer}/>
+          <Route path='/rockets' component={CardsContainer}/>
         </Switch>
       </div>
     );

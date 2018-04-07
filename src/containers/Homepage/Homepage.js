@@ -60,7 +60,7 @@ export class Homepage extends Component {
           <NavLink
             name='rockets' 
             className='rockets'
-            activeClassName='isActive'
+            // activeClassName='isActive'
             to='/rockets'
             onClick={this.handleRockets}
           >

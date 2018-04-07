@@ -33,9 +33,9 @@ export const cleanRockets = (rockets) => {
     summary: rocket.description,
     stats: {
       diameter: rocket.diameter.feet,
-      engines: cleanEngines(rocket.engines),
+      // engines: cleanEngines(rocket.engines),
       mass: rocket.mass.lb,
-      payload: rocket.payload_weights[0],
+      // payload: rocket.payload_weights[0],
       height: rocket.height.feet,
       boosters: rocket.boosters,
       // secondStage: rocket.second_stage,
