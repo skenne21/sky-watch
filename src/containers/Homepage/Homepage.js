@@ -52,7 +52,7 @@ export class Homepage extends Component {
   handleCapsules = async () => {
     try {
       const capsules = await fetchCapsules();
-      console.log(capsules)
+      this.props.getCapsules(capsules);
     } catch (error) {
       this.props.handleError(error.message)
     }
@@ -94,11 +94,13 @@ export class Homepage extends Component {
 export const mapStateToProps = state => ({
   companyBio: state.companyBio,
   missionVideos: state.missionVideos,
-  rockets: state.rockets
+  rockets: state.rockets,
+  capsules: state.capsules
 });
 
 export const mapDispatchToProps = dispatch =>({
   getRockets: rockets => dispatch(actions.addRockets(rockets)),
+  getCapsules: capsules => dispatch(actions.addCapsules(capsules)),
   handleError: message => dispatch(actions.addError(message))
 
 })
