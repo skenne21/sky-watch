@@ -6,6 +6,7 @@ import Header from '../../components/Header/Header.js';
 import Homepage from '../Homepage/Homepage';
 import RocketsContainer  from '../RocketsContainer/RocketsContainer';
 import CapsulesContainer from '../CapsulesContainer/CapsulesContainer';
+import LaunchpadsContainer from '../LaunchpadsContainer/LaunchpadsContainer';
 import * as actions from '../../actions/index';
 import './App.css';
 
@@ -42,6 +43,7 @@ export class App extends Component {
           <Route exact path='/' component={Homepage}/>
           <Route path='/rockets' component={RocketsContainer}/>
           <Route path='/capsules' component={CapsulesContainer}/>
+          <Route path='/launchpads' component={LaunchpadsContainer}/>
         </Switch>
       </div>
     );

@@ -75,11 +75,13 @@ export const cleanCapsules = capsules => {
 }
 
 export const cleanLaunchpads = launchpads => {
+  console.log(launchpads)
   return launchpads.map(launchpad => ({
     name: launchpad.full_name,
     location:`${launchpad.location.region}: ${launchpad.location.name}`,
     details: launchpad.details,
     status: launchpad.status,
-    vehicles: launchpad.vehicles
+    vehicles: launchpad.vehicles_launched
+
   }))
 }

@@ -101,7 +101,7 @@ export class Homepage extends Component {
             name='launchpad'
             className='launchpad'
             activeClassName='isActive'
-            to='/launchpad'
+            to='/launchpads'
             onClick={this.handleLaunchpads}
           >
             LANDINGPADS 
