@@ -27,17 +27,13 @@ export const cleanRockets = (rockets) => {
     active: rocket.active,
     fristFight: cleanDate(rocket.first_flight),
     costLaunch: rocket.cost_per_launch,
-    // stages: rocket.stages,
     country: rocket.country,
     summary: rocket.description,
     stats: {
       diameter: rocket.diameter.feet,
-      // engines: cleanEngines(rocket.engines),
       mass: rocket.mass.lb,
-      // payload: rocket.payload_weights[0],
       height: rocket.height.feet,
       boosters: rocket.boosters
-      // secondStage: rocket.second_stage,
     } 
   }));
 };
@@ -51,15 +47,15 @@ export const cleanDate = (date) => {
   return recombined;
 };
 
-export const cleanEngines = engine => {
-  return {
-    type: engine.type,
-    propellant1: engine.propellant_1,
-    propellant2: engine.propellant_2,
-    thrustAtSea: engine.thrust_sea_level.lbf,
-    thrustVaccum: engine.thrust_vacuum.lbf
-  };
-};
+// export const cleanEngines = engine => {
+//   return {
+//     type: engine.type,
+//     propellant1: engine.propellant_1,
+//     propellant2: engine.propellant_2,
+//     thrustAtSea: engine.thrust_sea_level.lbf,
+//     thrustVaccum: engine.thrust_vacuum.lbf
+//   };
+// };
 
 export const cleanCapsules = capsules => {
   return capsules.map( capsule => ({

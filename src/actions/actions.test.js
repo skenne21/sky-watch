@@ -40,4 +40,22 @@ describe('Actions', () =>{
     };
     expect(actions.addRockets(rockets)).toEqual(expected);
   });
+
+  it('Should add capsules to the store', () => {
+    const capsules = mocks.cleanCapsules;
+    const expected = {
+      type: 'ADD_CAPSULES',
+      capsules
+    };
+    expect(actions.addCapsules(capsules)).toEqual(expected);
+  })
+
+  it('Should add launchpads to the store', () => {
+    const launchpads = mocks.cleanLaunchpads;
+    const expected = {
+      type:'ADD_LAUNCHPADS',
+      launchpads
+    };
+    expect(actions.addLaunchPads(launchpads)).toEqual(expected);
+  });
 });

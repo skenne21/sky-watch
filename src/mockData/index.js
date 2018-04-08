@@ -178,21 +178,8 @@ export const cleanRocket = {
   stats: {
     boosters:0,
     diameter:5.5,
-    // engines: {
-    //   propellant1:"liquid oxygen",
-    //   propellant2:"RP-1 kerosene",
-    //   thrustAtSea:94000,
-    //   thrustVaccum:110000,
-    //   type:"merlin",
-    // },
     height:73,
     mass:66460
-    // payload: {
-    //   id:"leo",
-    //   kg:450,
-    //   lb:992,
-    //   name:"Low Earth Orbit",
-    // },
   },
   summary:"The Falcon 1 was an expendable ..."
 };
@@ -207,21 +194,8 @@ export const rockets = [
     stats: {
       boosters:0,
       diameter:5.5,
-      // engines: {
-      //   propellant1:"liquid oxygen",
-      //   propellant2:"RP-1 kerosene",
-      //   thrustAtSea:94000,
-      //   thrustVaccum:110000,
-      //   type:"merlin",
-      // },
       height:73,
       mass:66460
-      // payload: {
-      //   id:"leo",
-      //   kg:450,
-      //   lb:992,
-      //   name:"Low Earth Orbit",
-      // }
     },
     summary:"The Falcon 1 was an expendable ..."
   }, {
@@ -233,22 +207,139 @@ export const rockets = [
     stats: {
       boosters:0,
       diameter:12,
-      // engines: {
-      //   propellant1:"liquid oxygen",
-      //   propellant2:"RP-1 kerosene",
-      //   thrustAtSea:190000,
-      //   thrustVaccum:205500,
-      //   type:"merlin",
-      // },
       height:229.6,
       mass:1207920
-      // payload: {
-      //   id:"leo",
-      //   kg:22800,
-      //   lb:50265,
-      //   name:"Low Earth Orbit",
-      // },
     },
     summary:"Falcon 9 is a two-stage rocket designed..."
   }
 ];
+
+export const rawCapsules = [
+  {
+    active:true,
+    crew_capacity:0,
+    diameter: {
+      feet:12,
+      meters:3.7
+    },
+    heat_shield: {
+      material:"PICA-X",
+      size_meters:3.6,
+      temp_degrees:3000
+    },
+    height_w_trunk: {
+      feet:23.6,
+      meters:7.2
+    },
+    name:"Dragon 1",
+    orbit_duration_yr: 2,
+    payload_mass:  {
+      kg: 3000,
+      lb: 6614
+    },
+  }, {
+    active:true,
+    crew_capacity:0,
+    diameter: {
+      feet:12,
+      meters:3.7
+    },
+    heat_shield: {
+      material:"PICA-X",
+      size_meters:3.6,
+      temp_degrees:3000
+    },
+    height_w_trunk: {
+      feet:23.6,
+      meters:7.2
+    },
+    name:"Dragon 1",
+    orbit_duration_yr: 2,
+    payload_mass:  {
+      kg: 3000,
+      lb: 6614
+    },
+  }
+];
+
+export const cleanCapsules = [
+  {
+    crew:0,
+    diameter:12,
+    heatShield:3000,
+    height:23.6,
+    mass:6000,
+    name:"Dragon 1",
+    yearInOrbit:2,
+  },{
+    crew:0,
+    diameter:12,
+    heatShield:3000,
+    height:23.6,
+    mass:6000,
+    name:"Dragon 2",
+    yearInOrbit:2
+  }
+];
+
+export const capsule = {
+  crew:0,
+  diameter:12,
+  heatShield:3000,
+  height:23.6,
+  mass:6000,
+  name:"Dragon 1",
+  yearInOrbit:2,
+};
+
+export const rawLaunchpads = [
+  {
+    details:"SpaceX original launch site...",
+    full_name:"Kwajalein Atoll Omelek Island",
+    id:"kwajalein_atoll",
+    location: {
+      latitude:9.0477206,
+      longitude:167.7431292,
+      name:"Omelek Island",
+      region:"Marshall Islands"
+    },
+    status:"retired",
+    vehicles_launched: ['Falcon 1']
+  }, {
+    details:"SpaceX original launch site...",
+    full_name:"Kwajalein Atoll Omelek Island",
+    id:"kwajalein_atoll",
+    location: {
+      latitude:9.0477206,
+      longitude:167.7431292,
+      name:"Omelek Island",
+      region:"Marshall Islands"
+    },
+    status:"retired",
+    vehicles_launched: ['Falcon 1']
+  }
+];
+
+export const cleanLaunchpads = [
+  {
+    details:"SpaceX original launch site..", 
+    location:"Marshall Islands: Omelek Island",
+    name:"Kwajalein Atoll Omelek Island",
+    status:"retired",
+    vehicles:["Falcon 1"]
+  }, {
+    details:"SpaceX east coast landing...", 
+    location:"Florida: Cape Canaveral",
+    name:"Cape Canaveral Air Force Station, Space Launch Complex 13",
+    status:"active",
+    vehicles:["Falcon 9"]
+  } 
+];
+
+export const launchpad = {
+  details:"SpaceX east coast landing...", 
+  location:"Florida: Cape Canaveral",
+  name:"Cape Canaveral Air Force Station, Space Launch Complex 13",
+  status:"active",
+  vehicles:["Falcon 9"]
+}
