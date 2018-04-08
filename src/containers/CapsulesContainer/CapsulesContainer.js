@@ -5,10 +5,11 @@ import Capsule from '../../components/Capsule/Capsule';
 
 
 export class CapsulesContainer extends Component {
-  
+
   createComponent = () => {
-    const createCapsules = this.props.capsules.map((capsule, index) => {
-      return (<Capsule key={capsule.name+index} capsule={capsule} />)
+    const { capsules } = this.props;
+    return capsules.map((capsule, index) => {
+      return <Capsule key={capsule.name+index} capsule={capsule} />
     })
   }
 

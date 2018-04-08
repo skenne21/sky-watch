@@ -9,12 +9,6 @@ const Rocket = ({ rocket }) => {
     costLunch,
     fristFight,
   } = rocket;
-
-  const { 
-    diameter,
-    height,
-    mass,
-  } = rocket.stats;
   
   const tags = Object.keys(rocket.stats).map( (stat,index) => {
     return <p key={stat+index}>{rocket.stats[stat]}</p>
