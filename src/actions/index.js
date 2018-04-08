@@ -23,3 +23,8 @@ export const addCapsules = capsules => ({
   type: 'ADD_CAPSULES',
   capsules
 });
+
+export const addLaunchPads = launchpads => ({
+  type: 'ADD_LAUNCHPADS',
+  launchpads
+})

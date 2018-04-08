@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { fetchRockets, fetchCapsules } from '../../helpers/apiCalls';
+import { 
+  fetchRockets,
+  fetchCapsules,
+  fetchLaunchpads } from '../../helpers/apiCalls';
 import * as actions from '../../actions/index';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -54,7 +57,16 @@ export class Homepage extends Component {
       const capsules = await fetchCapsules();
       this.props.getCapsules(capsules);
     } catch (error) {
-      this.props.handleError(error.message)
+      this.props.handleError(error.message);
+    }
+  }
+
+  handleLaunchpads = async () => {
+    try {
+      const launchpads = await fetchLaunchpads();
+      this.props.getLaunchpads(launchpads)
+    } catch (error) {
+      this.props.handleError(error.message);
     }
   }
 
@@ -85,6 +97,15 @@ export class Homepage extends Component {
           >
             CAPSULES
           </NavLink>
+          <NavLink
+            name='launchpad'
+            className='launchpad'
+            activeClassName='isActive'
+            to='/launchpads'
+            onClick={this.handleLaunchpads}
+          >
+            LANDINGPADS 
+          </NavLink>
         </form>
       </div>
     )
@@ -95,14 +116,15 @@ export const mapStateToProps = state => ({
   companyBio: state.companyBio,
   missionVideos: state.missionVideos,
   rockets: state.rockets,
-  capsules: state.capsules
+  capsules: state.capsules,
+  launchpad: state.launchpad
 });
 
 export const mapDispatchToProps = dispatch =>({
   getRockets: rockets => dispatch(actions.addRockets(rockets)),
   getCapsules: capsules => dispatch(actions.addCapsules(capsules)),
+  getLaunchpads: launchpads => dispatch(actions.addLaunchPads(launchpads)),
   handleError: message => dispatch(actions.addError(message))
+});
 
-})
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Homepage))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Homepage));

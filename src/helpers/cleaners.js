@@ -73,3 +73,15 @@ export const cleanCapsules = capsules => {
     mass: capsule.launch_payload_mass.kg,
   }));
 }
+
+export const cleanLaunchpads = launchpads => {
+  console.log(launchpads)
+  return launchpads.map(launchpad => ({
+    name: launchpad.full_name,
+    location:`${launchpad.location.region}: ${launchpad.location.name}`,
+    details: launchpad.details,
+    status: launchpad.status,
+    vehicles: launchpad.vehicles_launched
+
+  }))
+}
