@@ -25,20 +25,19 @@ describe('apiCalls', () => {
 
     it('Should fetch with the right url', () => {
       apiCalls.fetchBio();
-      expect(window.fetch).toHaveBeenCalledWith(url)
+      expect(window.fetch).toHaveBeenCalledWith(url);
     });
 
-    it('Should return a clean bio', async () =>{
+    it('Should return a clean bio', async () => {
       const expected = mocks.bio;
       const bio = await apiCalls.fetchBio();
       expect(bio).toEqual(expected);
-    })
+    });
 
     it('Should call cleanBio with the correct params', () => {
-
       apiCalls.fetchBio();
       expect(cleanBios).toHaveBeenCalledWith(response);
-    })
+    });
 
     it('Should throw an error if the status is above 200', () => {
 
@@ -79,8 +78,8 @@ describe('apiCalls', () => {
 
     it('Should fetch with the correct url', () =>{
       apiCalls.fetchSpaceXVideos();
-      expect(window.fetch).toHaveBeenCalledWith(url)
-    })
+      expect(window.fetch).toHaveBeenCalledWith(url);
+    });
 
     it('Should return an array of clean videos', async () => {
       const expected = [mocks.video];
@@ -90,7 +89,6 @@ describe('apiCalls', () => {
 
     it('Should call cleanVideos with the correct params', () =>{
       apiCalls.fetchSpaceXVideos();
-
       expect(cleanVideos).toHaveBeenCalledWith(response.items);
     });
 
@@ -107,9 +105,7 @@ describe('apiCalls', () => {
         message: 'Error'
       };
       const apiCall = apiCalls.fetchSpaceXVideos();
-
       expect(apiCall).rejects.toEqual(expected);
-
     });
   });
 
@@ -117,7 +113,7 @@ describe('apiCalls', () => {
     let url, response;
 
     beforeEach(() => {
-      url = 'https://api.spacexdata.com/v2/rockets'
+      url = 'https://api.spacexdata.com/v2/rockets';
       response = mocks.rawRockets;
       window.fetch = jest.fn().mockImplementation(() =>(
         Promise.resolve({
@@ -159,5 +155,4 @@ describe('apiCalls', () => {
       expect(call).rejects.toEqual(expected);
     });
   });
-
 });

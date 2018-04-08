@@ -7,17 +7,17 @@ export const rawVideo = {
       channelId:"UC3OhT2ErtjLhvvkULJCCBlw",
       description:"Elon Musk gives...",
       publishedAt:"2017-09-29T06:05:03.000Z",
-      thumbnails:{
+      thumbnails: {
         high: {
           url:"https://i.ytimg.com/vi/XcVpMJp9Th4/hqdefault.jpg",
-          width: 480,
+          width: 480
         }, 
         medium: {
           url:"https://i.ytimg.com/vi/XcVpMJp9Th4/mqdefault.jpg",
-          width: 320,
-        },
+          width: 320
+        }
       },
-      title:"Elon Musk Gives...",
+      title:"Elon Musk Gives..."
     }
   }]
 };
@@ -44,7 +44,7 @@ export const videos = [{
     width: 480,
     height: 360
   } 
-},{
+}, {
   id: "0PWu3BRxn60",
   title: "ZUMA Mission",
   description: "SpaceX is targeting launch...",
@@ -74,7 +74,7 @@ export const rawBio = {
   summary:"SpaceX designs, manufactures...",
   test_sites:1,
   valuation:15000000000,
-  vehicles:3,
+  vehicles:3
 };
 
 export const cleanBip = {
@@ -85,9 +85,9 @@ export const cleanBip = {
   headquarters:{
     address: "Rocket Road",
     city: "Hawthorne",
-    state: "California",
+    state: "California"
   }
-}
+};
 
 export const bio = [{
   name: "SpaceX",
@@ -97,7 +97,7 @@ export const bio = [{
   headquarters:{
     address: "Rocket Road",
     city: "Hawthorne",
-    state: "California",
+    state: "California"
   }
 }];
 
@@ -119,19 +119,19 @@ export const rawRockets = [{
     propellant_2:"RP-1 kerosene",
     thrust_sea_level: {
       kN:420,
-      lbf:94000,
+      lbf:94000
     },
     thrust_vacuum: {
       kN:480,
-      lbf:110000,
+      lbf:110000
     },
-    type:"merlin",
+    type:"merlin"
   },
   height: {
     feet:73
   },
   mass: {
-    lb:66460,
+    lb:66460
   },
   payload_weights: [{id:1}]
 }, {
@@ -152,22 +152,22 @@ export const rawRockets = [{
     propellant_2:"RP-1 kerosene",
     thrust_sea_level: {
       kN:420,
-      lbf:94000,
+      lbf:94000
     },
     thrust_vacuum: {
       kN:480,
-      lbf:110000,
+      lbf:110000
     },
-    type:"merlin",
+    type:"merlin"
   },
   height: {
-    feet:73,
+    feet:73
   },
   mass: {
-    lb:66460,
+    lb:66460
   },
   payload_weights: [{id:1}]
-}]
+}];
 
 export const cleanRocket = {
   active:false,
@@ -186,7 +186,7 @@ export const cleanRocket = {
     //   type:"merlin",
     // },
     height:73,
-    mass:66460,
+    mass:66460
     // payload: {
     //   id:"leo",
     //   kg:450,
@@ -195,59 +195,60 @@ export const cleanRocket = {
     // },
   },
   summary:"The Falcon 1 was an expendable ..."
-}
+};
 
 export const rockets = [
-{
-  active:false,
-  costLaunch:6700000,
-  country:"Republic of the Marshall Islands",
-  fristFight:"03, 24, 2006",
-  name:"Falcon 1",
-  stats: {
-    boosters:0,
-    diameter:5.5,
-    // engines: {
-    //   propellant1:"liquid oxygen",
-    //   propellant2:"RP-1 kerosene",
-    //   thrustAtSea:94000,
-    //   thrustVaccum:110000,
-    //   type:"merlin",
-    // },
-    height:73,
-    mass:66460,
-    // payload: {
-    //   id:"leo",
-    //   kg:450,
-    //   lb:992,
-    //   name:"Low Earth Orbit",
-    // }
-  },
-  summary:"The Falcon 1 was an expendable ..."
-} , {
-  active:true,
-  costLaunch:61200000,
-  country:"United States",
-  fristFight:"06, 04, 2010",
-  name:"Falcon 9",
-  stats: {
-    boosters:0,
-    diameter:12,
-    // engines: {
-    //   propellant1:"liquid oxygen",
-    //   propellant2:"RP-1 kerosene",
-    //   thrustAtSea:190000,
-    //   thrustVaccum:205500,
-    //   type:"merlin",
-    // },
-    height:229.6,
-    mass:1207920,
-    // payload: {
-    //   id:"leo",
-    //   kg:22800,
-    //   lb:50265,
-    //   name:"Low Earth Orbit",
-    // },
-  },
-  summary:"Falcon 9 is a two-stage rocket designed...",
-}]
+  {
+    active:false,
+    costLaunch:6700000,
+    country:"Republic of the Marshall Islands",
+    fristFight:"03, 24, 2006",
+    name:"Falcon 1",
+    stats: {
+      boosters:0,
+      diameter:5.5,
+      // engines: {
+      //   propellant1:"liquid oxygen",
+      //   propellant2:"RP-1 kerosene",
+      //   thrustAtSea:94000,
+      //   thrustVaccum:110000,
+      //   type:"merlin",
+      // },
+      height:73,
+      mass:66460
+      // payload: {
+      //   id:"leo",
+      //   kg:450,
+      //   lb:992,
+      //   name:"Low Earth Orbit",
+      // }
+    },
+    summary:"The Falcon 1 was an expendable ..."
+  }, {
+    active:true,
+    costLaunch:61200000,
+    country:"United States",
+    fristFight:"06, 04, 2010",
+    name:"Falcon 9",
+    stats: {
+      boosters:0,
+      diameter:12,
+      // engines: {
+      //   propellant1:"liquid oxygen",
+      //   propellant2:"RP-1 kerosene",
+      //   thrustAtSea:190000,
+      //   thrustVaccum:205500,
+      //   type:"merlin",
+      // },
+      height:229.6,
+      mass:1207920
+      // payload: {
+      //   id:"leo",
+      //   kg:22800,
+      //   lb:50265,
+      //   name:"Low Earth Orbit",
+      // },
+    },
+    summary:"Falcon 9 is a two-stage rocket designed..."
+  }
+];

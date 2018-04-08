@@ -10,8 +10,8 @@ describe('App', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App/>)
-  })
+    wrapper = shallow(<App/>);
+  });
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -22,8 +22,5 @@ describe('App', () => {
   it('Should match the snapshot', () =>{
     expect(wrapper).toMatchSnapshot();
   });
-
-  
-
-})
+});
 

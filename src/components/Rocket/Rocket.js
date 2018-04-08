@@ -7,12 +7,12 @@ const Rocket = ({ rocket }) => {
     summary,
     active,
     costLunch,
-    fristFight,
+    fristFight
   } = rocket;
   
-  const tags = Object.keys(rocket.stats).map( (stat,index) => {
-    return <p key={stat+index}>{rocket.stats[stat]}</p>
-  })
+  const tags = Object.keys(rocket.stats).map( (stat, index) => {
+    return <p key={stat+index}>{rocket.stats[stat]}</p>;
+  });
 
   return (
     <div className='Rocket'>
@@ -23,12 +23,11 @@ const Rocket = ({ rocket }) => {
       {tags}
       <p>{summary}</p>
     </div>
-  )
-
-}
+  );
+};
 
 Rocket.propTypes = {
   rocket: PropTypes.object
-}
+};
 
 export default Rocket;

@@ -3,12 +3,12 @@ import * as cleaners from './cleaners';
 
 export const fetchBio = async () => {
   try {
-    const response = await fetch(`https://api.spacexdata.com/v2/info`)
+    const response = await fetch(`https://api.spacexdata.com/v2/info`);
     const info = await response.json();
     const bio = await cleaners.cleanBios(info);
     return bio;
-  } catch(error) {
-    throw error
+  } catch (error) {
+    throw error;
   }
 };
 
@@ -18,14 +18,16 @@ export const fetchSpaceXVideos = async () => {
     const condtions = 'part=snippet&order=viewCount';
     const videoInfo = 'q=spaceX+missions&type=video&videoDefinition=high';
     const key = apiKeys.youTubeKey;
-    const response = await fetch(`${baseUrl}?${condtions}&${videoInfo}&key=${key}`);
+    const response = await fetch(`
+      ${baseUrl}?${condtions}&${videoInfo}&key=${key}
+    `);
     const info = await response.json();
     const videos = await cleaners.cleanVideos(info.items);
-    return videos
-  } catch(error) {
+    return videos;
+  } catch (error) {
     throw error;
   }
-}
+};
 
 export const fetchRockets = async () => {
   try {
@@ -36,28 +38,27 @@ export const fetchRockets = async () => {
   } catch (error) {
     throw error;
   }
-}
+};
 
 export const fetchCapsules = async () => {
   try {
     const response = await fetch('https://api.spacexdata.com/v2/capsules');
     const info = await response.json();
     const capsules = await cleaners.cleanCapsules(info);
-    return capsules
-    return capsules
+    return capsules;
   } catch (error) {
     throw error;
   }
-}
+};
 
 export const fetchLaunchpads = async () => {
   try {
     const response = await fetch('https://api.spacexdata.com/v2/launchpads');
     const info = await response.json();
     const launchpads = await cleaners.cleanLaunchpads(info);
-    return launchpads
+    return launchpads;
   } catch (error) {
     throw error;
   }
-}
+};
 

@@ -12,7 +12,6 @@ describe('rocketsReducer', () => {
   it('Should return an array with rockets inside', () => {
     const expected = mocks.rockets;
     const called = rocketsReducer(undefined, actions.addRockets(mocks.rockets));
-    expect(called).toEqual(expected)
-  });
-  
-})
+    expect(called).toEqual(expected);
+  }); 
+});

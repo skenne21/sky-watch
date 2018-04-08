@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Capsule from '../../components/Capsule/Capsule';
 
 
 export class CapsulesContainer extends Component {
   
   createComponent = () => {
-    if(this.props.missionVideos.length) {
-      const { id, title, description } = this.props.missionVideos[2]
+    if (this.props.missionVideos.length) {
+      const { id, title, description } = this.props.missionVideos[2];
       return (
         <div>
           <h2>{title}</h2>
@@ -18,7 +19,7 @@ export class CapsulesContainer extends Component {
             this.createCapsules()
           }
         </div>
-      )
+      );
     }
   }
 
@@ -26,8 +27,8 @@ export class CapsulesContainer extends Component {
   createCapsules = () => {
     const { capsules } = this.props;
     return capsules.map((capsule, index) => {
-      return <Capsule key={capsule.name+index} capsule={capsule} />
-    })
+      return <Capsule key={capsule.name+index} capsule={capsule} />;
+    });
   }
 
   render() {
@@ -35,7 +36,7 @@ export class CapsulesContainer extends Component {
       <div className='CapsulesContainer'>
         {this.createComponent()}
       </div>
-    )
+    );
   }
 }
 
@@ -44,5 +45,10 @@ export const mapStateToProps = ({ capsules, missionVideos }) => ({
   missionVideos
 });
 
-export default withRouter(connect(mapStateToProps, null)(CapsulesContainer))
+CapsulesContainer.propTypes = {
+  capsules: PropTypes.array,
+  missionVideos: PropTypes.array
+};
+
+export default withRouter(connect(mapStateToProps, null)(CapsulesContainer));
 

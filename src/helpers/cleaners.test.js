@@ -4,10 +4,9 @@ import * as mocks from '../mockData';
 describe('cleaners', () => {
 
   describe('cleanVeidos', () => {
-
     it.skip('Should return a clean veido', () => {
       const recevied = mocks.rawVeido.items;
-      const expected = [mocks.veido]
+      const expected = [mocks.veido];
       const veidos = cleanVeidos(recevied);
       expect(veidos).toEqual(expected);
     });
@@ -20,7 +19,5 @@ describe('cleaners', () => {
       const bio = cleanBios(recevied);
       expect(bio).toEqual(expected);
     });
-
   });
-
 });
