@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchRockets, fetchCapsules } from '../../helpers/apiCalls';
+import { fetchRockets, fetchCapsules, fetchLandingPads } from '../../helpers/apiCalls';
 import * as actions from '../../actions/index';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -54,7 +54,15 @@ export class Homepage extends Component {
       const capsules = await fetchCapsules();
       this.props.getCapsules(capsules);
     } catch (error) {
-      this.props.handleError(error.message)
+      this.props.handleError(error.message);
+    }
+  }
+
+  handleLandingPads = async () => {
+    try {
+      const landingPads = await fetchLandingPads();
+    } catch (error) {
+      this.props.handleError(error.message);
     }
   }
 
@@ -84,6 +92,15 @@ export class Homepage extends Component {
             onClick={this.handleCapsules}
           >
             CAPSULES
+          </NavLink>
+          <NavLink
+            name='landingPads'
+            className='landingPads'
+            activeClassName='isActive'
+            to='/landingPads'
+            onClick={this.handleLandingPads}
+          >
+            LANDINGPADS 
           </NavLink>
         </form>
       </div>

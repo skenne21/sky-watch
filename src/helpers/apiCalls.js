@@ -50,3 +50,7 @@ export const fetchCapsules = async () => {
   }
 }
 
+export const fetchLandingPads = async () => {
+  
+}
+
