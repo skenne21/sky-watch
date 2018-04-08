@@ -262,7 +262,7 @@ export const rawCapsules = [
   }
 ];
 
-export const cleanCapsules = [
+export const capsules = [
   {
     crew:0,
     diameter:12,
@@ -320,7 +320,7 @@ export const rawLaunchpads = [
   }
 ];
 
-export const cleanLaunchpads = [
+export const launchpads = [
   {
     details:"SpaceX original launch site..", 
     location:"Marshall Islands: Omelek Island",

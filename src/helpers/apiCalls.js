@@ -18,9 +18,9 @@ export const fetchSpaceXVideos = async () => {
     const condtions = 'part=snippet&order=viewCount';
     const videoInfo = 'q=spaceX+launch&type=video&videoDefinition=high';
     const key = apiKeys.youTubeKey;
-    const response = await fetch(`
-      ${baseUrl}?${condtions}&${videoInfo}&key=${key}
-    `);
+    const response = await fetch(
+      `${baseUrl}?${condtions}&${videoInfo}&key=${key}`
+    );
     const info = await response.json();
     const videos = await cleaners.cleanVideos(info.items);
     return videos;
@@ -55,7 +55,6 @@ export const fetchLaunchpads = async () => {
   try {
     const response = await fetch('https://api.spacexdata.com/v2/launchpads');
     const info = await response.json();
-    console.log({info})
     const launchpads = await cleaners.cleanLaunchpads(info);
     return launchpads;
   } catch (error) {

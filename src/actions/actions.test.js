@@ -42,7 +42,7 @@ describe('Actions', () =>{
   });
 
   it('Should add capsules to the store', () => {
-    const capsules = mocks.cleanCapsules;
+    const capsules = mocks.capsules;
     const expected = {
       type: 'ADD_CAPSULES',
       capsules
@@ -51,7 +51,7 @@ describe('Actions', () =>{
   })
 
   it('Should add launchpads to the store', () => {
-    const launchpads = mocks.cleanLaunchpads;
+    const launchpads = mocks.launchpads;
     const expected = {
       type:'ADD_LAUNCHPADS',
       launchpads
