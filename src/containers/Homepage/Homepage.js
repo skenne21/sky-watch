@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { 
   fetchRockets,
   fetchCapsules,
@@ -17,9 +18,10 @@ export class Homepage extends Component {
       summary 
     } = this.props.companyBio[0]; 
     
-    const html = this.props.missionVideos[0].id
+    const html = this.props.missionVideos[0].id;
     const state = headquarters.state;
     const address = headquarters.address;
+
     return (
       <div className='Homepage'>
         <section className='bio'>
@@ -40,7 +42,7 @@ export class Homepage extends Component {
         <img src="../../assets/starman.png" alt="Picture of starman"/>
         <p> Loading </p>
       </div>
-    )
+    );
   }
 
   handleRockets = async ( ) => {
@@ -48,7 +50,7 @@ export class Homepage extends Component {
       const rockets = await fetchRockets();
       this.props.getRockets(rockets);
     } catch (error) {
-      this.props.handleError(error.message)
+      this.props.handleError(error.message);
     } 
   }
 
@@ -64,7 +66,7 @@ export class Homepage extends Component {
   handleLaunchpads = async () => {
     try {
       const launchpads = await fetchLaunchpads();
-      this.props.getLaunchpads(launchpads)
+      this.props.getLaunchpads(launchpads);
     } catch (error) {
       this.props.handleError(error.message);
     }
@@ -72,12 +74,12 @@ export class Homepage extends Component {
 
   
   render() {
-    const { companyBio } = this.props
+    const { companyBio } = this.props;
     return ( 
       <div className='Homepage'>
-      {
-        companyBio.length > 0 ? this.createBio() : this.createLoadingImage()
-      }
+        {
+          companyBio.length > 0 ? this.createBio() : this.createLoadingImage()
+        }
         <form>
           <NavLink
             name='rockets' 
@@ -108,7 +110,7 @@ export class Homepage extends Component {
           </NavLink>
         </form>
       </div>
-    )
+    );
   } 
 }
 
@@ -117,7 +119,7 @@ export const mapStateToProps = state => ({
   missionVideos: state.missionVideos,
   rockets: state.rockets,
   capsules: state.capsules,
-  launchpad: state.launchpad
+  launchpads: state.launchpads
 });
 
 export const mapDispatchToProps = dispatch =>({
@@ -127,4 +129,16 @@ export const mapDispatchToProps = dispatch =>({
   handleError: message => dispatch(actions.addError(message))
 });
 
+Homepage.propTypes = {
+  getRockets: PropTypes.func,
+  getCapsules: PropTypes.func,
+  getLaunchpads: PropTypes.func,
+  handleError: PropTypes.func,
+  companyBio: PropTypes.array,
+  missionVideos: PropTypes.array,
+  capsules: PropTypes.array,
+  launchpads: PropTypes.array
+};
+
+// eslint-disable-next-line 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Homepage));

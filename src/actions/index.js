@@ -27,4 +27,4 @@ export const addCapsules = capsules => ({
 export const addLaunchPads = launchpads => ({
   type: 'ADD_LAUNCHPADS',
   launchpads
-})
+});

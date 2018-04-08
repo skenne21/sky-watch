@@ -12,13 +12,13 @@ describe('spaceXReducer', () =>{
   it('Should return an array with bio inside', () => {
     const expected = [mocks.bio];
     const called = spaceXReducer(undefined, actions.addCompanyBio(mocks.bio));
-    expect(called).toEqual(expected)
-  })
+    expect(called).toEqual(expected);
+  });
 
   it('Shoould return an error message', () => {
     const message = 'Error happened';
     const expected = ['Error happened'];
     const called = spaceXReducer(undefined, actions.addError(message));
-    expect(called).toEqual(expected)
-  })
-})
+    expect(called).toEqual(expected);
+  });
+});

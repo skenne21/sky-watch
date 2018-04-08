@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import  { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Rocket from '../../components/Rocket/Rocket';
 
 export class RocketsContainer extends Component {
 
- createComponent = () => {
-    if(this.props.missionVideos.length) {
-      const { id, title, description } = this.props.missionVideos[1]
+  createComponent = () => {
+    if (this.props.missionVideos.length) {
+      const { id, title, description } = this.props.missionVideos[1];
       return (
         <div>
           <h2>{title}</h2>
@@ -17,25 +18,24 @@ export class RocketsContainer extends Component {
             this.createRockets()
           }
         </div>
-      )
+      );
     }
   }
 
   createRockets = () => {
     return this.props.rockets.map((rocket, index) => {
-      return <Rocket key={rocket.name+index} rocket={rocket}/>
-    })
+      return <Rocket key={rocket.name+index} rocket={rocket}/>;
+    });
   }
 
   render() {
-    return(
+    return (
       <div className='RocketContainer'>
-      { 
-        this.createComponent()
-      }
-      
-    </div>
-    )
+        { 
+          this.createComponent()
+        } 
+      </div>
+    );
   }
 }
 export const mapStateToProps = ({rockets, missionVideos}) => ({
@@ -43,4 +43,9 @@ export const mapStateToProps = ({rockets, missionVideos}) => ({
   missionVideos
 });
 
-export default withRouter(connect(mapStateToProps, null)(RocketsContainer))
+RocketsContainer.propTypes = {
+  rockets: PropTypes.array,
+  missionVideos: PropTypes.array
+};
+
+export default withRouter(connect(mapStateToProps, null)(RocketsContainer));

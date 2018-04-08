@@ -37,7 +37,7 @@ describe('Actions', () =>{
     const expected = {
       type: 'ADD_ROCKETS',
       rockets
-    }
+    };
     expect(actions.addRockets(rockets)).toEqual(expected);
   });
 });

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { fetchBio, fetchSpaceXVideos } from '../../helpers/apiCalls';
 import Header from '../../components/Header/Header.js';
 import Homepage from '../Homepage/Homepage';
@@ -15,24 +16,24 @@ export class App extends Component {
   fetchData = async () => {
     try {
       const bio = await fetchBio();
-      await this.props.fetchCompanyBio(bio)
+      await this.props.fetchCompanyBio(bio);
     } catch (error) {
-      this.props.handleError(error.message)
+      this.props.handleError(error.message);
     }
   }
 
   fetchVideos = async () => {
     try {
       const videos = await fetchSpaceXVideos();
-      await this.props.fetchMissionVideos(videos)
-    } catch(error) {
-      this.props.handleError(error.message)
+      await this.props.fetchMissionVideos(videos);
+    } catch (error) {
+      this.props.handleError(error.message);
     }
   }
 
   componentDidMount() {
     this.fetchData();
-    this.fetchVideos()
+    this.fetchVideos();
   }
 
   render() {
@@ -53,14 +54,21 @@ export class App extends Component {
 export const  mapStateToProps = state => ({
   companyBio: state.companyBio,
   missionVideos: state.missionVideos
-})
+});
 
 export const  mapDispatchToProps = dispatch => ({
   fetchCompanyBio: bio => dispatch(actions.addCompanyBio(bio)),
   fetchMissionVideos: videos => dispatch(actions.upLoadVideos(videos)),
   handleError: message => dispatch(actions.addError(message))
-})
+});
 
+App.propTypes = {
+  fetchCompanyBio: PropTypes.func,
+  fetchMissionVideos: PropTypes.func,
+  handleError: PropTypes.func,
+  companyBio: PropTypes.array,
+  missionVideos: PropTypes.array
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 

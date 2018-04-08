@@ -14,5 +14,5 @@ describe('videosReducer', () => {
     const expected = mocks.videos;
     const called = videosReducer(undefined, actions.upLoadVideos(videos));
     expect(called).toEqual(expected);
-  })
-})
+  });
+});

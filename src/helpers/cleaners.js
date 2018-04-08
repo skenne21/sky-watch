@@ -9,7 +9,7 @@ export const cleanVideos = async (videoInfo) => {
     image: video.snippet.thumbnails.high
   }));
   return videos;
-}
+};
 
 export const cleanBios = async (bioInfo) => {
   return {
@@ -18,9 +18,8 @@ export const cleanBios = async (bioInfo) => {
     founded: bioInfo.founded,
     summary: bioInfo.summary,
     headquarters: bioInfo.headquarters
-  }
-}
-
+  };
+};
 
 export const cleanRockets = (rockets) => {
   return rockets.map(rocket => ({
@@ -37,20 +36,20 @@ export const cleanRockets = (rockets) => {
       mass: rocket.mass.lb,
       // payload: rocket.payload_weights[0],
       height: rocket.height.feet,
-      boosters: rocket.boosters,
+      boosters: rocket.boosters
       // secondStage: rocket.second_stage,
     } 
   }));
-}
+};
 
 
 export const cleanDate = (date) => {
   const spiltDate = date.split('-');
   const year = spiltDate.shift();
   spiltDate.push(year);
-  const recombined = spiltDate.join(', ')
+  const recombined = spiltDate.join(', ');
   return recombined;
-}
+};
 
 export const cleanEngines = engine => {
   return {
@@ -58,9 +57,9 @@ export const cleanEngines = engine => {
     propellant1: engine.propellant_1,
     propellant2: engine.propellant_2,
     thrustAtSea: engine.thrust_sea_level.lbf,
-    thrustVaccum: engine.thrust_vacuum.lbf,
-  }
-}
+    thrustVaccum: engine.thrust_vacuum.lbf
+  };
+};
 
 export const cleanCapsules = capsules => {
   return capsules.map( capsule => ({
@@ -70,18 +69,16 @@ export const cleanCapsules = capsules => {
     diameter: capsule.diameter.feet,
     heatShield: capsule.heat_shield.temp_degrees,
     height: capsule.height_w_trunk.feet,
-    mass: capsule.launch_payload_mass.kg,
+    mass: capsule.launch_payload_mass.kg
   }));
-}
+};
 
 export const cleanLaunchpads = launchpads => {
-  console.log(launchpads)
   return launchpads.map(launchpad => ({
     name: launchpad.full_name,
     location:`${launchpad.location.region}: ${launchpad.location.name}`,
     details: launchpad.details,
     status: launchpad.status,
     vehicles: launchpad.vehicles_launched
-
-  }))
-}
+  }));
+};

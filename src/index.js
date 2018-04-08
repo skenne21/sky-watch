@@ -10,7 +10,7 @@ import App from '../src/containers/App/App';
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ &&
  window.__REDUX_DEVTOOLS_EXTENSION__();
 
-const store = createStore(rootReducer, devTools)
+const store = createStore(rootReducer, devTools);
 
 const applicationSetUp = (
   <Provider store={store}>
@@ -18,6 +18,6 @@ const applicationSetUp = (
       <App/>
     </BrowserRouter>
   </Provider>
-)
+);
 
 ReactDOM.render(applicationSetUp, document.getElementById('root'));

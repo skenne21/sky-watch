@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Capsule = ({capsule}) => {
   const {
@@ -18,10 +19,15 @@ const Capsule = ({capsule}) => {
       <h2>{crew}</h2>
       <p>{height}</p>
       <p>{mass}</p>
+      <p>{diameter}</p>
       <p>{heatShield}</p>
       <p>diameter</p>
     </div>
-  )
-}
+  );
+};
+
+Capsule.propTypes = {
+  capsule: PropTypes.object
+};
 
 export default Capsule;
