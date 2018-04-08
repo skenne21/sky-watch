@@ -18,3 +18,8 @@ export const addRockets = rockets => ({
   type: 'ADD_ROCKETS',
   rockets
 });
+
+export const addCapsules = capsules => ({
+  type: 'ADD_CAPSULES',
+  capsules
+});

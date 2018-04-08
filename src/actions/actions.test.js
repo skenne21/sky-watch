@@ -39,5 +39,5 @@ describe('Actions', () =>{
       rockets
     }
     expect(actions.addRockets(rockets)).toEqual(expected);
-  })
+  });
 });

@@ -61,3 +61,15 @@ export const cleanEngines = engine => {
     thrustVaccum: engine.thrust_vacuum.lbf,
   }
 }
+
+export const cleanCapsules = capsules => {
+  return capsules.map( capsule => ({
+    name: capsule.name,
+    crew: capsule.crew_capacity,
+    yearInOrbit: capsule.orbit_duration_yr,
+    diameter: capsule.diameter.feet,
+    heatShield: capsule.heat_shield.temp_degrees,
+    height: capsule.height_w_trunk.feet,
+    mass: capsule.launch_payload_mass.kg,
+  }));
+}

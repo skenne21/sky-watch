@@ -38,9 +38,9 @@ export class RocketsContainer extends Component {
     )
   }
 }
-export const mapStateToProps = state => ({
-  rockets: state.rockets,
-  missionVideos: state.missionVideos
+export const mapStateToProps = ({rockets, missionVideos}) => ({
+  rockets,
+  missionVideos
 });
 
 export default withRouter(connect(mapStateToProps, null)(RocketsContainer))
