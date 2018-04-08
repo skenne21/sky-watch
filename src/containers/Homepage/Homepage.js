@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchRockets, fetchCapsules, fetchLandingPads } from '../../helpers/apiCalls';
+import { fetchRockets, fetchCapsules, fetchLaunchpads } from '../../helpers/apiCalls';
 import * as actions from '../../actions/index';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -58,9 +58,10 @@ export class Homepage extends Component {
     }
   }
 
-  handleLandingPads = async () => {
+  handleLaunchpads = async () => {
     try {
-      const landingPads = await fetchLandingPads();
+      const launchpads = await fetchLaunchpads();
+      console.log(launchpads)
     } catch (error) {
       this.props.handleError(error.message);
     }
@@ -94,11 +95,11 @@ export class Homepage extends Component {
             CAPSULES
           </NavLink>
           <NavLink
-            name='landingPads'
-            className='landingPads'
+            name='launchpad'
+            className='launchpad'
             activeClassName='isActive'
-            to='/landingPads'
-            onClick={this.handleLandingPads}
+            to='/launchpad'
+            onClick={this.handleLaunchpads}
           >
             LANDINGPADS 
           </NavLink>

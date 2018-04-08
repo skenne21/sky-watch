@@ -50,7 +50,14 @@ export const fetchCapsules = async () => {
   }
 }
 
-export const fetchLandingPads = async () => {
-  
+export const fetchLaunchpads = async () => {
+  try {
+    const response = await fetch('https://api.spacexdata.com/v2/launchpads');
+    const info = await response.json();
+    const launchpads = await cleaners.cleanLaunchpads(info);
+    return launchpads
+  } catch (error) {
+    throw error;
+  }
 }
 

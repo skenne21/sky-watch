@@ -23,3 +23,5 @@ export const addCapsules = capsules => ({
   type: 'ADD_CAPSULES',
   capsules
 });
+
+export const addLaunchPads
