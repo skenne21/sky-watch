@@ -271,7 +271,7 @@ export const capsules = [
     mass:6000,
     name:"Dragon 1",
     yearInOrbit:2,
-  },{
+  }, {
     crew:0,
     diameter:12,
     heatShield:3000,
