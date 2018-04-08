@@ -9,9 +9,6 @@ import * as actions from '../../actions/index';
 import './App.css';
 
 export class App extends Component {
-  constructor() {
-    super();
-  }
 
   fetchData = async () => {
     try {

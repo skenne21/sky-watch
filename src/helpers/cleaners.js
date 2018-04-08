@@ -28,7 +28,7 @@ export const cleanRockets = (rockets) => {
     active: rocket.active,
     fristFight: cleanDate(rocket.first_flight),
     costLaunch: rocket.cost_per_launch,
-    stages: rocket.stages,
+    // stages: rocket.stages,
     country: rocket.country,
     summary: rocket.description,
     stats: {

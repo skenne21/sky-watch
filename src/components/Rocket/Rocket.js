@@ -1,13 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Rocket = ({rocket}) => {
+const Rocket = ({ rocket }) => {
   const { 
     name,
     summary,
     active,
     costLunch,
-    fristFlight,
-    stages,
+    fristFight,
   } = rocket;
 
   const { 
@@ -25,13 +25,16 @@ const Rocket = ({rocket}) => {
       <h1>{name}</h1>
       <p>{active}</p>
       <h2>{costLunch}</h2>
-      <h3>{fristFlight}</h3>
-      <h3>{stages}</h3>
+      <h3>{fristFight}</h3>
       {tags}
       <p>{summary}</p>
     </div>
   )
 
+}
+
+Rocket.propTypes = {
+  rocket: PropTypes.object
 }
 
 export default Rocket;
