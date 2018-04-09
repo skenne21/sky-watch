@@ -21,7 +21,6 @@ const Launchpad = ({launchpad}) => {
       <h2>{location}</h2>
       <h3>{details}</h3>
       {getVehicles}
-      <p>{details}</p>
     </div>
   );
 };

@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Capsule Should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Capsule
+    capsule={
+        Object {
+            "crew": 0,
+            "diameter": 12,
+            "heatShield": 3000,
+            "height": 23.6,
+            "mass": 6000,
+            "name": "Dragon 1",
+            "yearInOrbit": 2,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Dragon 1
+</h1>,
+        <p>
+          2
+</p>,
+        <h2 />,
+        <p>
+          23.6
+</p>,
+        <p>
+          6000
+</p>,
+        <p>
+          12
+</p>,
+        <p>
+          3000
+</p>,
+        <p>
+          diameter
+</p>,
+      ],
+      "className": "capsule",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Dragon 1",
+        },
+        "ref": null,
+        "rendered": "Dragon 1",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 2,
+        },
+        "ref": null,
+        "rendered": 2,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 0,
+        },
+        "ref": null,
+        "rendered": 0,
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 23.6,
+        },
+        "ref": null,
+        "rendered": 23.6,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 6000,
+        },
+        "ref": null,
+        "rendered": 6000,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 12,
+        },
+        "ref": null,
+        "rendered": 12,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 3000,
+        },
+        "ref": null,
+        "rendered": 3000,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "diameter",
+        },
+        "ref": null,
+        "rendered": "diameter",
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Dragon 1
+</h1>,
+          <p>
+            2
+</p>,
+          <h2 />,
+          <p>
+            23.6
+</p>,
+          <p>
+            6000
+</p>,
+          <p>
+            12
+</p>,
+          <p>
+            3000
+</p>,
+          <p>
+            diameter
+</p>,
+        ],
+        "className": "capsule",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Dragon 1",
+          },
+          "ref": null,
+          "rendered": "Dragon 1",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 2,
+          },
+          "ref": null,
+          "rendered": 2,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 0,
+          },
+          "ref": null,
+          "rendered": 0,
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 23.6,
+          },
+          "ref": null,
+          "rendered": 23.6,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 6000,
+          },
+          "ref": null,
+          "rendered": 6000,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 12,
+          },
+          "ref": null,
+          "rendered": 12,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 3000,
+          },
+          "ref": null,
+          "rendered": 3000,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "diameter",
+          },
+          "ref": null,
+          "rendered": "diameter",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

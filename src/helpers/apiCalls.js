@@ -16,11 +16,11 @@ export const fetchSpaceXVideos = async () => {
   try {
     const baseUrl = 'https://www.googleapis.com/youtube/v3/search';
     const condtions = 'part=snippet&order=viewCount';
-    const videoInfo = 'q=spaceX+missions&type=video&videoDefinition=high';
+    const videoInfo = 'q=spaceX+launch&type=video&videoDefinition=high';
     const key = apiKeys.youTubeKey;
-    const response = await fetch(`
-      ${baseUrl}?${condtions}&${videoInfo}&key=${key}
-    `);
+    const response = await fetch(
+      `${baseUrl}?${condtions}&${videoInfo}&key=${key}`
+    );
     const info = await response.json();
     const videos = await cleaners.cleanVideos(info.items);
     return videos;
