@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Launchpad from '../../components/Launchpad/Launchpad';
+import Launchpad from '../../components/Launchpad/';
 import * as actions from '../../actions';
 
 export class LaunchpadsContainer extends Component {

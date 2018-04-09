@@ -33,7 +33,6 @@ export const fetchRockets = async () => {
   try {
     const response = await fetch('https://api.spacexdata.com/v2/rockets');
     const info = await response.json();
-
     const rockets = await cleaners.cleanRockets(info);
     return rockets;
   } catch (error) {
@@ -46,7 +45,6 @@ export const fetchCapsules = async () => {
     const response = await fetch('https://api.spacexdata.com/v2/capsules');
     const info = await response.json();
     const capsules = await cleaners.cleanCapsules(info);
-
     return capsules;
   } catch (error) {
     throw error;

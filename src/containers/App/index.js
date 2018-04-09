@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { fetchBio, fetchSpaceXVideos } from '../../helpers/apiCalls';
-import Header from '../../components/Header/Header.js';
-import Homepage from '../Homepage/Homepage';
-import RocketsContainer  from '../RocketsContainer/RocketsContainer';
-import CapsulesContainer from '../CapsulesContainer/CapsulesContainer';
-import LaunchpadsContainer from '../LaunchpadsContainer/LaunchpadsContainer';
-import * as actions from '../../actions/index';
-import './App.css';
+import Header from '../../components/Header';
+import Homepage from '../Homepage/';
+import RocketsContainer  from '../RocketsContainer/';
+import CapsulesContainer from '../CapsulesContainer/';
+import LaunchpadsContainer from '../LaunchpadsContainer/';
+import * as actions from '../../actions/';
+import './styles.css';
 
 export class App extends Component {
 

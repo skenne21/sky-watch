@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Capsule from '../../components/Capsule/Capsule';
+import Capsule from '../../components/Capsule/';
 import * as actions from '../../actions';
 
 

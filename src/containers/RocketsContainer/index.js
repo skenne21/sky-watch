@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import  { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Rocket from '../../components/Rocket/Rocket';
+import Rocket from '../../components/Rocket/';
 import * as actions from '../../actions';
 
 export class RocketsContainer extends Component {

@@ -4,7 +4,7 @@ import {
   fetchRockets,
   fetchCapsules,
   fetchLaunchpads } from '../../helpers/apiCalls';
-import * as actions from '../../actions/index';
+import * as actions from '../../actions/';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
