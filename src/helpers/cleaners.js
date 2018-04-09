@@ -40,6 +40,7 @@ export const cleanRockets = (rockets) => {
 
 
 export const cleanDate = (date) => {
+  console.log(date)
   const spiltDate = date.split('-');
   const year = spiltDate.shift();
   spiltDate.push(year);
