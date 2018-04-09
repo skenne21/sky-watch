@@ -28,3 +28,13 @@ export const addLaunchPads = launchpads => ({
   type: 'ADD_LAUNCHPADS',
   launchpads
 });
+
+export const addBookmarks = bookmark => ({
+  type: 'ADD_BOOKMARK',
+  bookmark
+});
+
+export const removeBookmark = bookmark => ({
+  type: 'REMOVE_BOOKMARK',
+  bookmark
+});

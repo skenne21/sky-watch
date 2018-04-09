@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Rocket = ({ rocket }) => {
+const Rocket = ({ rocket, addRockets }) => {
   const { 
     name,
     summary,
@@ -22,6 +22,7 @@ const Rocket = ({ rocket }) => {
       <h3>{fristFight}</h3>
       {tags}
       <p>{summary}</p>
+      <button onClick={() => addRockets(rocket)}>X</button>
     </div>
   );
 };

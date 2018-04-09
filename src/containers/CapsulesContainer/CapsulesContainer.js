@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Capsule from '../../components/Capsule/Capsule';
+import * as actions from '../../actions';
 
 
 export class CapsulesContainer extends Component {
@@ -23,11 +24,19 @@ export class CapsulesContainer extends Component {
     }
   }
 
- 
+  addCapsule = (capsule) => {
+    const isBookemarked = this.props.bookmarks.includes(capsule);
+    if(!isBookemarked) {
+      this.props.addToBookmarks(capsule); 
+    } else {
+      this.props.removeBookmark(capsule);
+    }
+  }
+
   createCapsules = () => {
     const { capsules } = this.props;
     return capsules.map((capsule, index) => {
-      return <Capsule key={capsule.name+index} capsule={capsule} />;
+      return <Capsule key={capsule.name+index} capsule={capsule} addCapsule={this.addCapsule} />;
     });
   }
 
@@ -40,15 +49,21 @@ export class CapsulesContainer extends Component {
   }
 }
 
-export const mapStateToProps = ({ capsules, missionVideos }) => ({
+export const mapStateToProps = ({ capsules, missionVideos, bookmarks }) => ({
   capsules,
-  missionVideos
+  missionVideos, 
+  bookmarks
 });
+
+export const mapDispatchToProps = dispatch => ({
+  addToBookmarks: bookmark => dispatch(actions.addBookmarks(bookmark)),
+  removeBookmark: bookmark => dispatch(actions.removeBookmark(bookmark))
+})
 
 CapsulesContainer.propTypes = {
   capsules: PropTypes.array,
   missionVideos: PropTypes.array
 };
 
-export default withRouter(connect(mapStateToProps, null)(CapsulesContainer));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CapsulesContainer));
 

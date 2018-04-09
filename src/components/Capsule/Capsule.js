@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Capsule = ({capsule}) => {
+const Capsule = ({capsule, addCapsule}) => {
   const {
     name,
     crew,
@@ -22,6 +22,7 @@ const Capsule = ({capsule}) => {
       <p>{diameter}</p>
       <p>{heatShield}</p>
       <p>diameter</p>
+      <button onClick={() => addCapsule(capsule)}>X</button>
     </div>
   );
 };
