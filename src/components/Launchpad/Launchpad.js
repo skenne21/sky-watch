@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Launchpad = ({launchpad}) => {
+const Launchpad = ({launchpad, addLaunchPads}) => {
+  console.log(addLaunchPads)
   const {
     name,
     location,
@@ -21,6 +22,7 @@ const Launchpad = ({launchpad}) => {
       <h2>{location}</h2>
       <h3>{details}</h3>
       {getVehicles}
+      <button onClick={() => addLaunchPads(launchpad)}>X</button>
     </div>
   );
 };

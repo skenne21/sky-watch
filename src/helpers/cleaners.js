@@ -1,5 +1,3 @@
-// tests not passing!!!! Yay!!!!JOY!!!! :(, such a sad face; 
-
 export const cleanVideos = async (videoInfo) => {
   const videos = videoInfo.map(video => ({
     id: video.id.videoId,
@@ -40,7 +38,6 @@ export const cleanRockets = (rockets) => {
 
 
 export const cleanDate = (date) => {
-  console.log(date)
   const spiltDate = date.split('-');
   const year = spiltDate.shift();
   spiltDate.push(year);

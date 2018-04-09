@@ -4,13 +4,15 @@ import { videosReducer } from './videosReducer';
 import { rocketsReducer } from './rocketsReducer';
 import { capsulesReducer } from './capsulesReducer';
 import { launchpadsReducers } from './launchpadsReducer';
+import { bookmarksReducer } from './bookmarksReducer';
 
 const rootReducer = combineReducers({
   companyBio: spaceXReducer,
   rockets: rocketsReducer,
   missionVideos: videosReducer,
   capsules: capsulesReducer,
-  launchpads: launchpadsReducers
+  launchpads: launchpadsReducers,
+  bookmarks: bookmarksReducer
 });
 
 export default rootReducer;

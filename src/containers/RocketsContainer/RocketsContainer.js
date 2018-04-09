@@ -3,6 +3,7 @@ import  { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Rocket from '../../components/Rocket/Rocket';
+import * as actions from '../../actions';
 
 export class RocketsContainer extends Component {
 
@@ -24,8 +25,17 @@ export class RocketsContainer extends Component {
 
   createRockets = () => {
     return this.props.rockets.map((rocket, index) => {
-      return <Rocket key={rocket.name+index} rocket={rocket}/>;
+      return <Rocket key={rocket.name+index} rocket={rocket} addRockets={this.addRockets}/>;
     });
+  }
+
+  addRockets = (rocket) => {
+    const isBookemarked = this.props.bookmarks.includes(rocket);
+    if(!isBookemarked) {
+      this.props.addToBookmarks(rocket) 
+    } else {
+      this.props.removeBookmark(rocket)
+    }
   }
 
   render() {
@@ -38,9 +48,16 @@ export class RocketsContainer extends Component {
     );
   }
 }
-export const mapStateToProps = ({rockets, missionVideos}) => ({
+
+export const mapStateToProps = ({rockets, missionVideos, bookmarks}) => ({
   rockets,
-  missionVideos
+  missionVideos,
+  bookmarks
+});
+
+export const mapDispatchToProps = dispatch => ({
+  addToBookmarks: bookmark => dispatch(actions.addBookmarks(bookmark)),
+  removeBookmark: bookmark => dispatch(actions.removeBookmark(bookmark))
 });
 
 RocketsContainer.propTypes = {
@@ -48,4 +65,4 @@ RocketsContainer.propTypes = {
   missionVideos: PropTypes.array
 };
 
-export default withRouter(connect(mapStateToProps, null)(RocketsContainer));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RocketsContainer));
