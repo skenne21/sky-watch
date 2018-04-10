@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Launchpad from '../../components/Launchpad/';
 import * as actions from '../../actions';
+import './styles.css';
 
 export class LaunchpadsContainer extends Component {
   createComponent = () => {
@@ -11,12 +12,23 @@ export class LaunchpadsContainer extends Component {
       const { id, title, description } = this.props.missionVideos[3];
       return (
         <div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <iframe src={`https://www.youtube.com/embed/${id}`}/>
-          {  
-            this.createLaunchpads()
-          }
+          <div className='iframe-section'>
+            <div className='text-box'>
+              <h2>{title}</h2>
+            </div>
+            <iframe 
+              src={`https://www.youtube.com/embed/${id}?start=10&autoplay=1`}
+              height='600px'
+              width='65%'
+              title="capsule iframe"
+              allowfullScreen
+            />
+          </div>
+          <div className='LaunchpadsContainer'>
+            {  
+              this.createLaunchpads()
+            }
+          </div>
         </div>
       );
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 const Capsule = ({capsule, addCapsule}) => {
   const {
@@ -13,16 +14,19 @@ const Capsule = ({capsule, addCapsule}) => {
   } = capsule;
 
   return (
-    <div className='capsule'>
-      <h1>{name}</h1>
-      <p>{yearInOrbit}</p>
-      <h2>{crew}</h2>
-      <p>{height}</p>
-      <p>{mass}</p>
-      <p>{diameter}</p>
-      <p>{heatShield}</p>
-      <p>diameter</p>
-      <button onClick={() => addCapsule(capsule)}>X</button>
+    <div className='capsule-card'>
+      <h1 className="capsule_h1">Name: {name}</h1>
+      <p>Years in Orbit: {yearInOrbit}</p>
+      <h2>Crew Capacity: {crew}</h2>
+      <p>Total Height: {height} ft</p>
+      <p>Total Mass: {mass} lbs</p>
+      <p>Diameter: {diameter} ft</p>
+      <p>Heat Shield Capacity: {heatShield} degrees</p>
+      <button
+      className='button'
+      onClick={() => addCapsule(capsule)}
+      >
+      </button>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Rocket from '../../components/Rocket/';
 import * as actions from '../../actions';
+import './styles.css';
 
 export class RocketsContainer extends Component {
 
@@ -12,12 +13,23 @@ export class RocketsContainer extends Component {
       const { id, title, description } = this.props.missionVideos[1];
       return (
         <div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <iframe src={`https://www.youtube.com/embed/${id}`}/>
-          {  
-            this.createRockets()
-          }
+          <div className='iframe-section'>
+            <div className='text-box'>
+              <h2>{title}</h2>
+            </div>
+            <iframe 
+              src={`https://www.youtube.com/embed/${id}?start=3372&autoplay=1`}
+              height='600px'
+              width='65%'
+              title="capsule iframe"
+              allowfullScreen
+            />
+          </div>
+          <div className="rockets-seciton">
+            {  
+              this.createRockets()
+            }
+          </div>
         </div>
       );
     }

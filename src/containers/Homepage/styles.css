@@ -2,11 +2,6 @@
   display: inline-grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 60% 40%;
-  background-image: url('../../assets/nathan-anderson.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
 }
 
 .bio {
@@ -74,11 +69,7 @@
   font-size: 2.5em;
   padding-top: 5em;
 }
-/*
-.capsules,
-.launchpad {
-  padding-top: 2em;
-}*/
+
 
 .rockets {
   background-image: url('../../assets/rockets-2.jpeg');

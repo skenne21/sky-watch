@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 const Rocket = ({ rocket, addRockets }) => {
   const { 
     name,
     summary,
     active,
-    costLunch,
+    costLaunch,
     fristFight
   } = rocket;
   
@@ -15,14 +16,17 @@ const Rocket = ({ rocket, addRockets }) => {
   });
 
   return (
-    <div className='Rocket'>
-      <h1>{name}</h1>
-      <p>{active}</p>
-      <h2>{costLunch}</h2>
-      <h3>{fristFight}</h3>
+    <div className='Rocket-card'>
+      <h1>Name: {name}</h1>
+      <p>Active: {active}</p>
+      <h2>Cost to Launch {costLaunch}</h2>
+      <h3>Date of Frist Fight : {fristFight}</h3>
       {tags}
       <p>{summary}</p>
-      <button onClick={() => addRockets(rocket)}>X</button>
+      <button
+        className='button'
+        onClick={() => addRockets(rocket)}>
+      </button>
     </div>
   );
 };

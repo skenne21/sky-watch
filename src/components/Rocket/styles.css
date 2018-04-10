@@ -1,0 +1,28 @@
+.Rocket-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  height: 680px;
+  margin: 60px 10px;
+  background-color: #ffffffa6;
+}
+
+.Rocket-card p {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.Rocket-card_h1 {
+  font-size: 1.8em;
+  color: #1F3926;
+}
+
+.button {
+  vertical-align: middle;
+  background-image: url('../../assets/space-icon.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}

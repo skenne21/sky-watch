@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Capsule from '../../components/Capsule/';
 import * as actions from '../../actions';
+import './styles.css';
 
 
 export class CapsulesContainer extends Component {
@@ -13,12 +14,23 @@ export class CapsulesContainer extends Component {
       const { id, title, description } = this.props.missionVideos[2];
       return (
         <div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <iframe src={`https://www.youtube.com/embed/${id}`}/>
-          {  
-            this.createCapsules()
-          }
+          <div className='iframe-section'>
+            <div className='text-box'>
+              <h2>{title}</h2>
+            </div>
+            <iframe 
+              src={`https://www.youtube.com/embed/${id}?start=96&autoplay=1`}
+              height='600px'
+              width='65%'
+              title="capsule iframe"
+              allowfullScreen
+            />
+          </div>
+          <div className="Cards-contianer">
+            {  
+              this.createCapsules()
+            }
+          </div>
         </div>
       );
     }
