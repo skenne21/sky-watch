@@ -7,6 +7,7 @@ import {
 import * as actions from '../../actions/';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './styles.css';
 
 
 export class Homepage extends Component {
@@ -19,18 +20,34 @@ export class Homepage extends Component {
     } = this.props.companyBio[0]; 
     
     const html = this.props.missionVideos[0].id;
+    const title = this.props.missionVideos[0].title;
+    const detials = this.props.missionVideos[0].description
     const state = headquarters.state;
     const address = headquarters.address;
 
     return (
       <div className='Homepage'>
+        <section className='homepage-video'>
+          <div className='text-box'>
+            <h2 className='title'>{title}</h2>
+            <p>{detials}</p>
+          </div>
+          <iframe 
+            className='iframe'
+            src={`https://www.youtube.com/embed/${html}?start=1320&autoplay=1`}
+            height='600px'
+            width='65%'
+            title="Homepage iframe"
+            allowfullScreen
+          />
+        </section>
         <section className='bio'>
-          <h1>{name}</h1>
-          <h2>{founder}</h2>
-          <img src="../assets/starman.png"/>
-          <h3>{`Location: ${address}, ${state}`}</h3>
-          <iframe src={`https://www.youtube.com/embed/${html}`}/>
-          <p>{summary}</p>
+          <div className='text-box'>
+            <h2 className='title'>{name}</h2>
+            <h3>Founder: {founder}</h3>
+            <h3>Location: {`Location: ${address}, ${state}`}</h3>
+            <p>About: {summary}</p>
+          </div>
         </section>
       </div>
     );
@@ -80,7 +97,7 @@ export class Homepage extends Component {
         {
           companyBio.length > 0 ? this.createBio() : this.createLoadingImage()
         }
-        <form>
+        <form className='nav-links'>
           <NavLink
             name='rockets' 
             className='rockets'

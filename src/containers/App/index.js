@@ -7,6 +7,7 @@ import Header from '../../components/Header';
 import Homepage from '../Homepage/';
 import RocketsContainer  from '../RocketsContainer/';
 import CapsulesContainer from '../CapsulesContainer/';
+import SignUp from '../SignUp';
 import LaunchpadsContainer from '../LaunchpadsContainer/';
 import * as actions from '../../actions/';
 import './styles.css';
@@ -42,6 +43,7 @@ export class App extends Component {
         <Header/>
         <Switch>
           <Route exact path='/' component={Homepage}/>
+          <Route path='/signup' component={SignUp}/>
           <Route path='/rockets' component={RocketsContainer}/>
           <Route path='/capsules' component={CapsulesContainer}/>
           <Route path='/launchpads' component={LaunchpadsContainer}/>

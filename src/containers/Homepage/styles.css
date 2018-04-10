@@ -1,0 +1,103 @@
+.Homepage {
+  display: inline-grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 60% 40%;
+  background-image: url('../../assets/nathan-anderson.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.bio {
+  display: inline-grid;
+  grid-column: 1 /3;
+  grid-row: 2 / 3;
+  width: 100%;
+  height: 500px;
+}
+
+.homepage-video {
+  display: inline-grid;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  width: 100%;
+  padding-top: 3em;
+}
+
+.iframe {
+  margin: auto;
+}
+
+.text-box {
+  background-color: #ffffff0f;
+  width: 65.5%;
+  margin: auto;
+  height: 230px;
+  color: #fff;
+}
+
+.bio .text-box {
+  height: 350px;
+}
+
+.bio .title {
+  padding-top: 0.5em;
+  font-size: 3em;
+}
+
+.title {
+  padding-top: 2em;
+  color: #945972;
+  font-weight: bold;
+}
+
+.text-box p {
+  margin: auto;
+  width: 60%;
+  text-align: left;
+  letter-spacing: 3px;
+}
+
+.nav-links {
+  display: inline-grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.rockets,
+.launchpad,
+.capsules {
+  background-color: #ffffff0f;
+  color: #945972;
+  font-family: bold;
+  font-size: 2.5em;
+  padding-top: 5em;
+}
+/*
+.capsules,
+.launchpad {
+  padding-top: 2em;
+}*/
+
+.rockets {
+  background-image: url('../../assets/rockets-2.jpeg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.launchpad {
+  padding-top: 6em;
+  background-image: url('../../assets/launch.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.capsules {
+  background-image: url('../../assets/capsules.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

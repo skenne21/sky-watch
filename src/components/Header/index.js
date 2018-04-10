@@ -1,10 +1,11 @@
 import React from 'react';
+import './styles.css'
 
 const Header = () => {
 
   return (
-    <header className="App-header">
-      <h1 className="App-title">Welcome to Sky Watch: A SpaceX Experience</h1>
+    <header className="header">
+      <h1 className="App-title">Welcome to Sky Watch: <span>A SpaceX Experience</span></h1>
     </header>
   );
 };
