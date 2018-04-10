@@ -1,0 +1,17 @@
+.header {
+  height: 110px;
+  background-color: black;
+  margin: 0;
+}
+
+h1 {
+  color: #fff;
+  margin: 0;
+  padding: 1em;
+}
+
+h1 span {
+  color: #945972;
+  padding-right: 10px;
+  font-weight: bold;
+}

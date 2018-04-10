@@ -1,0 +1,28 @@
+.launchpad-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  height: 700px;
+  margin: 60px 10px;
+  background-color: #ffffffa6;
+}
+
+.launchpad-card p {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.launchpad_h1 {
+  font-size: 1.4em;
+  color: #6D609B;
+}
+
+.button {
+  vertical-align: middle;
+  background-image: url('../../assets/space-icon.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
