@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { auth } from '../../firebase';
+import { auth, db } from '../../firebase';
 import * as actions from '../../actions';
+import './styles.css';
 
 export class SignUp extends Component {
   constructor() {
@@ -16,29 +17,31 @@ export class SignUp extends Component {
 
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
     const { email, password, name } = this.state;
-
-    auth.createUser(email, password)
-      .then(authUser => {
-        const user = {
-          name,
-          email: authUser.email,
-          uid: authUser.uid
-        }
-        this.props.addUser(user)
-      })
-      .then(authUser => {
-        this.setState(() => ({
-          name: '',
-          email: '',
-          password: '',
-          error:''
-        }))
-      })
-      .then(authUser => this.props.history.push('/'))
-      .catch( error => { this.setState({error})})
+    try  {
+    const authUser = await auth.createUser(email, password)
+    const dbUser = await db.createUser(authUser.uid, name, email)
+    console.log({authUser});
+    console.log({dbUser});
+    debugger
+    const user = {
+      name,
+      email: authUser.email,
+      uid: authUser.uid
+    }
+    this.props.addUser(user)
+    this.setState({
+      name: '',
+      email: '',
+      password: '',
+      error:''
+    })
+    this.props.history.push('/');
+    } catch (error) {
+      this.setState({error});
+    }
   }
 
   handleChange = event => {
@@ -49,8 +52,12 @@ export class SignUp extends Component {
   render() {
     const { error } = this.state
     return(
-      <form onSubmit={this.handleSubmit}>
+      <form 
+        onSubmit={this.handleSubmit}
+        className='SignUp-form'
+      >
         <input
+          className='input'
           name='name'
           value={this.state.name}
           placeholder='Enter Your Name'
@@ -58,6 +65,7 @@ export class SignUp extends Component {
           type='text'
         />
         <input
+          className='input'
           name='email'
           value={this.state.email}
           placeholder='Enter Your Email'
@@ -65,6 +73,7 @@ export class SignUp extends Component {
           type='email'
         />
         <input 
+          className='input'
           name='password'
           vaule={this.state.password}
           placeholder='Enter Your Password'

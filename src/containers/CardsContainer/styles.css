@@ -2,13 +2,22 @@
   padding-bottom: 7em;
 }
 
-.cards_text-box {
+.cards_text-box { 
   height: 60px;
+  width: 46%;
 }
 
 .cards_h2 {
   margin: 3em;
   padding-top: 1em;
+  font-size: 1.5em;
+}
+
+.current-p {
   font-size: 2em;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+  padding-left: 3.5em;
 }
 

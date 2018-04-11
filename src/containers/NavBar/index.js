@@ -2,23 +2,30 @@ import React, { Component } from 'react';
 import { NavLink, Link, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 import { connect } from 'react-redux';
+import * as actions from '../../actions';
 import './styles.css';
 
 export class NavBar extends Component {
 
   removeUser = async () => {
-    const signOut = await auth.doSignOut();
-    console.log(signOut)
+    auth.signOut();
+    this.props.removeUser(this.props.user);
+  }
+
+  toggleLogin = () => {
+    const user = Object.keys(this.props.user)
+    if (user.length > 1) {
+      return (<button onClick ={this.removeUser}>SignOut</button>)
+    } else {
+      return (<NavLink className='signin' to='/signin'>SIGN IN</NavLink>)
+    }
   }
 
   render() {
-    const { user } = this.props;
+    
     return (
       <div className="NavBar">
-        { user.length > 1 ? 
-          <NavLink onChange={this.removeUser}>SignOut</NavLink> : 
-          <NavLink className='signin' to='/signin'>SIGN IN</NavLink>
-        }
+        {this.toggleLogin()}
         <NavLink 
           className='createAccount' 
           to='/signup'
@@ -31,8 +38,11 @@ export class NavBar extends Component {
 
 export const mapStateToProps = ({ user }) => ({
   user
-})
+});
+
+export const mapDispatchToProps = dispatch => ({
+  removeUser: user => dispatch(actions.removeUser(user))
+});
 
 
-
-export default withRouter(connect(mapStateToProps, null)(NavBar))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar))

@@ -1,4 +1,4 @@
-.SignUp-form {
+.Signin-form {
   height: 250px;
   width: 40%;
   padding: 2em 0;
@@ -16,7 +16,7 @@
   display: block;
 }
 
-.SignUp-form button {
+.Signin-form button {
   /*width: 35%;
   */height: 45px;
   background-color: transparent;

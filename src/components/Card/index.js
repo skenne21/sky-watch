@@ -13,7 +13,8 @@ const Card = ({card, className, addBookmarks}) => {
       <h1>{name}</h1>
       <button
         className='button'
-        onClick={() => addBookmarks(card)}>
+        onClick={() => addBookmarks(card)}
+      > BOOKMARK
       </button>
       {tags}
     </div>
