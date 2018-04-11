@@ -3,6 +3,7 @@ import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { auth } from '../../firebase';
 import * as actions from '../../actions';
+import './styles.css';
 
 export class SignIn extends Component {
   constructor() {
@@ -19,7 +20,7 @@ export class SignIn extends Component {
     event.preventDefault();
     const { email, password, name } = this.state;
     try {
-      const authUser = await auth.signIn(email, password)
+      const authUser = await auth.signIn(email, password);
       const user = {
         email: authUser.email,
         uid: authUser.uid
@@ -45,8 +46,13 @@ export class SignIn extends Component {
   render() {
     const { error } = this.state
     return(
-      <form onSubmit={this.handleSubmit}>
+      <form 
+        onSubmit={this.handleSubmit}
+        className='Signin-form'
+      >
+        <h2> SIGN INTO YOUR ACCOUNT </h2>
         <input
+          className='input'
           name='email'
           value={this.state.email}
           placeholder='Enter Your Email'
@@ -54,6 +60,7 @@ export class SignIn extends Component {
           type='email'
         />
         <input 
+          className='input'
           name='password'
           vaule={this.state.password}
           placeholder='Enter Your Password'
