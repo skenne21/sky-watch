@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 
 const Card = ({card, className, addBookmarks}) => {
   const { name, stats } = card;

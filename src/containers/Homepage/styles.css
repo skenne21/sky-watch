@@ -81,8 +81,7 @@
 .rockets,
 .launchpad,
 .capsules {
-  background-color: #ffffff0f;
-  color: #945972;
+  color: #303D63;
   font-family: bold;
   font-size: 2.5em;
   padding-top: 5em;
@@ -90,6 +89,7 @@
 
 
 .rockets {
+  padding-top: 5.5em;
   background-image: url('../../assets/rockets-2.jpeg');
   background-size: cover;
   background-position: top;
@@ -98,9 +98,9 @@
 
 .launchpad {
   padding-top: 6em;
-  background-image: url('../../assets/launch.jpeg');
+  background-image: url('../../assets/space-x-ocean-landing.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 

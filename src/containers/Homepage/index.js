@@ -38,7 +38,7 @@ export class Homepage extends Component {
             height='600px'
             width='65%'
             title="Homepage iframe"
-            allowfullScreen
+            allowFullScreen
           />
         </section>
         <section className='bio'>
