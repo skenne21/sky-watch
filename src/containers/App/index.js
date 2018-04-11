@@ -7,6 +7,7 @@ import Header from '../../components/Header';
 import Homepage from '../Homepage/';
 import CardsContainer from '../CardsContainer';
 import SignUp from '../SignUp';
+import SignIn from '../SignIn';
 import * as actions from '../../actions/';
 import './styles.css';
 
@@ -38,10 +39,11 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header/>
+        <Header history={this.props.history}/>
         <Switch>
           <Route exact path='/' component={Homepage}/>
           <Route path='/signup' component={SignUp}/>
+          <Route path='/signin' component={SignIn}/>
           <Route path='/rockets' component={CardsContainer}/>
           <Route path='/capsules' component={CardsContainer}/>
           <Route path='/launchpads' component={CardsContainer}/>
