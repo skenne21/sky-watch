@@ -136,7 +136,8 @@ export const mapStateToProps = state => ({
   missionVideos: state.missionVideos,
   rockets: state.rockets,
   capsules: state.capsules,
-  launchpads: state.launchpads
+  launchpads: state.launchpads,
+  user: state.user
 });
 
 export const mapDispatchToProps = dispatch =>({
