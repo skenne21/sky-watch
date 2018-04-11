@@ -27,19 +27,19 @@ export class CapsulesContainer extends Component {
 
   createComponent = (cardType) => {
     if (this.props.missionVideos.length) {
-      const { id, title, description } = this.props.missionVideos[2];
+      const { id, title, description } = this.props.missionVideos[1];
       return (
         <div>
           <div className='iframe-section'>
-            <div className='text-box'>
-              <h2>{title}</h2>
+            <div className='cards_text-box text-box'>
+              <h2 className='cards-container cards_h2'>{title}</h2>
             </div>
             <iframe 
               src={`https://www.youtube.com/embed/${id}?start=96&autoplay=1`}
               height='600px'
               width='65%'
               title="capsule iframe"
-              allowfullScreen
+              allowFullScreen
             />
           </div>
           <div className="Cards-contianer">

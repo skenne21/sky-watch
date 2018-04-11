@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 
 const Card = ({card, className, addBookmarks}) => {
   const { name, stats } = card;
@@ -8,13 +9,13 @@ const Card = ({card, className, addBookmarks}) => {
   });
 
   return (
-    <div className={className}>
-      <h1>Name: {name}</h1>
-      {tags}
+    <div className={`card ${className}`}>
+      <h1>{name}</h1>
       <button
         className='button'
         onClick={() => addBookmarks(card)}>
       </button>
+      {tags}
     </div>
   );
 }

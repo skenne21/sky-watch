@@ -1,0 +1,23 @@
+.NavBar {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  width: 12%;
+  height: 80px;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.signin {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.createAccount {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding-top: 8px;
+}
