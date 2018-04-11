@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { withRouter, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { auth } from '../../firebase';
+import * as actions from '../../actions';
 
-class SignUp extends Component {
+export class SignUp extends Component {
   constructor() {
     super();
     this.state = {
@@ -15,8 +18,17 @@ class SignUp extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-     const { email, password } = this.state;
-    auth.doCreateUserWithEmailAndPassword(email, password)
+    const { email, password, name } = this.state;
+
+    auth.createUser(email, password)
+      .then(authUser => {
+        const user = {
+          name,
+          email: authUser.email,
+          uid: authUser.uid
+        }
+        this.props.addUser(user)
+      })
       .then(authUser => {
         this.setState(() => ({
           name: '',
@@ -25,8 +37,8 @@ class SignUp extends Component {
           error:''
         }))
       })
-      .catch( error => { this.setState({ error: error})})
-
+      .then(authUser => this.props.history.push('/'))
+      .catch( error => { this.setState({error})})
   }
 
   handleChange = event => {
@@ -35,6 +47,7 @@ class SignUp extends Component {
   }
 
   render() {
+    const { error } = this.state
     return(
       <form onSubmit={this.handleSubmit}>
         <input
@@ -58,10 +71,19 @@ class SignUp extends Component {
           onChange={this.handleChange}
           type='password'
         />
-        <button>X</button>
+        <button>Enter Your Account</button>
+        {error && <p>{error.message}</p>}
       </form>
     )
   }
 }
 
-export default SignUp;
+const mapStateToProps = ({user}) => ({
+  user
+})
+
+const mapDispatchToProps = dispatch => ({
+  addUser: user => dispatch(actions.addUser(user))
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUp));

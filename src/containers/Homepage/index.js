@@ -28,7 +28,7 @@ export class Homepage extends Component {
     return (
       <div className='Homepage'>
         <section className='homepage-video'>
-          <div className='text-box'>
+          <div className='text-box_homepage'>
             <h2 className='title'>{title}</h2>
             <p>{detials}</p>
           </div>

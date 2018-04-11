@@ -24,12 +24,30 @@
   margin: auto;
 }
 
-.text-box {
+.text-box_homepage {
   background-color: #ffffff0f;
   width: 65.5%;
   margin: auto;
   height: 230px;
   color: #fff;
+}
+
+
+.text-box {
+  padding-bottom: 2em;
+  background-color: #ffffff0f;
+  width: 65.5%;
+  margin: auto;
+  height: 230px;
+  color: #fff;
+}
+
+
+
+.text-box_homepage p {
+  text-align: left;
+  margin: auto;
+  width: 85%;
 }
 
 .bio .text-box {
@@ -49,7 +67,7 @@
 
 .text-box p {
   margin: auto;
-  width: 60%;
+  width: 85%;
   text-align: left;
   letter-spacing: 3px;
 }
