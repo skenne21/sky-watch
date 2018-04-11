@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import { fetchBio, fetchSpaceXVideos } from '../../helpers/apiCalls';
-import App from './App';
+import App from './index';
 
 jest.mock('../../helpers/apiCalls');
 

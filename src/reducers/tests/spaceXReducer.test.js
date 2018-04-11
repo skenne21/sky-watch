@@ -1,6 +1,6 @@
-import { spaceXReducer } from './spaceXReducer';
-import * as actions from '../actions';
-import * as mocks from '../mockData';
+import { spaceXReducer } from '../spaceXReducer';
+import * as actions from '../../actions';
+import * as mocks from '../../mockData';
 
 describe('spaceXReducer', () =>{
   it('Should return a default state as an empty array', () => {

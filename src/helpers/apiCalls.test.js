@@ -70,7 +70,7 @@ describe('apiCalls', () => {
       key = youTubeKey;
       base ='https://www.googleapis.com/youtube/v3/search';
       condtions ='part=snippet&order=viewCount';
-      videoInfo ='q=spaceX+launch&type=video&videoDefinition=high';
+      videoInfo ='q=spaceX+launches&type=video&videoDefinition=high';
       url =`${base}?${condtions}&${videoInfo}&key=${key}`;
       response = mocks.rawVideo;
       window.fetch = jest.fn().mockImplementation(() => (
