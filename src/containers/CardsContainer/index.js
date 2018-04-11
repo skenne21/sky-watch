@@ -2,14 +2,30 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Capsule from '../../components/Capsule/';
 import * as actions from '../../actions';
+import Card from '../../components/Card';
 import './styles.css';
 
 
 export class CapsulesContainer extends Component {
   
-  createComponent = () => {
+  determineCardType = () => {
+    const { pathname } = this.props.history.location;
+
+    if (pathname === '/rockets') {
+      return this.createComponent(this.props.rockets)
+    }
+
+    if (pathname === '/capsules') {
+      return this.createComponent(this.props.capsules);
+    }
+
+    if (pathname === '/launchpads') {
+      return this.createComponent(this.props.launchpads)
+    }
+  }
+
+  createComponent = (cardType) => {
     if (this.props.missionVideos.length) {
       const { id, title, description } = this.props.missionVideos[2];
       return (
@@ -28,7 +44,7 @@ export class CapsulesContainer extends Component {
           </div>
           <div className="Cards-contianer">
             {  
-              this.createCapsules()
+              this.createCards(cardType)
             }
           </div>
         </div>
@@ -36,35 +52,42 @@ export class CapsulesContainer extends Component {
     }
   }
 
-  addCapsule = (capsule) => {
-    const isBookemarked = this.props.bookmarks.includes(capsule);
+  addBookmarks = (card) => {
+    const isBookemarked = this.props.bookmarks.includes(card);
     if(!isBookemarked) {
-      this.props.addToBookmarks(capsule); 
+      this.props.addToBookmarks(card); 
     } else {
-      this.props.removeBookmark(capsule);
+      this.props.removeBookmark(card);
     }
   }
 
-  createCapsules = () => {
-    const { capsules } = this.props;
-    return capsules.map((capsule, index) => {
-      return <Capsule key={capsule.name+index} capsule={capsule} addCapsule={this.addCapsule} />;
+  createCards = (cardsToMap) => {
+    return cardsToMap.map((card, index) => {
+      return (
+        <Card 
+          key={card.name+index} 
+          card={card} 
+          addBookmarks={this.addBookmarks}
+          className={`${card.type}-card`}
+        />)
     });
   }
 
   render() {
     return (
       <div className='CapsulesContainer'>
-        {this.createComponent()}
+        {this.determineCardType()}
       </div>
     );
   }
 }
 
-export const mapStateToProps = ({ capsules, missionVideos, bookmarks }) => ({
-  capsules,
-  missionVideos, 
-  bookmarks
+export const mapStateToProps = state => ({
+  capsules: state.capsules,
+  missionVideos: state.missionVideos,
+  launchpads: state.launchpads,
+  rockets: state.rockets, 
+  bookmarks: state.bookmarks
 });
 
 export const mapDispatchToProps = dispatch => ({
@@ -74,8 +97,9 @@ export const mapDispatchToProps = dispatch => ({
 
 CapsulesContainer.propTypes = {
   capsules: PropTypes.array,
+  rockets: PropTypes.array,
+  launchpads: PropTypes.array,
   missionVideos: PropTypes.array
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CapsulesContainer));
-

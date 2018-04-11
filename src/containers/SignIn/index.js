@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { auth } from '../../firebase';
 import * as actions from '../../actions';
 
-export class SignUp extends Component {
+export class SignIn extends Component {
   constructor() {
     super();
     this.state = {
@@ -13,32 +13,28 @@ export class SignUp extends Component {
       password: '',
       error: ''
     }
-
   }
 
-  handleSubmit = event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const { email, password, name } = this.state;
-
-    auth.createUser(email, password)
-      .then(authUser => {
-        const user = {
-          name,
-          email: authUser.email,
-          uid: authUser.uid
-        }
-        this.props.addUser(user)
+    try {
+      const authUser = await auth.signIn(email, password)
+      const user = {
+        email: authUser.email,
+        uid: authUser.uid
+      };
+      this.props.addUser(user);
+      this.setState({
+        name: '',
+        email: '',
+        password: '',
+        error:''
       })
-      .then(authUser => {
-        this.setState(() => ({
-          name: '',
-          email: '',
-          password: '',
-          error:''
-        }))
-      })
-      .then(authUser => this.props.history.push('/'))
-      .catch( error => { this.setState({error})})
+      this.props.history.push('/')
+    } catch (error) {
+      this.setState({error})
+    }
   }
 
   handleChange = event => {
@@ -50,13 +46,6 @@ export class SignUp extends Component {
     const { error } = this.state
     return(
       <form onSubmit={this.handleSubmit}>
-        <input
-          name='name'
-          value={this.state.name}
-          placeholder='Enter Your Name'
-          onChange={this.handleChange}
-          type='text'
-        />
         <input
           name='email'
           value={this.state.email}
@@ -86,4 +75,4 @@ const mapDispatchToProps = dispatch => ({
   addUser: user => dispatch(actions.addUser(user))
 })
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUp));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignIn));

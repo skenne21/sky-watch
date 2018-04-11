@@ -38,3 +38,8 @@ export const removeBookmark = bookmark => ({
   type: 'REMOVE_BOOKMARK',
   bookmark
 });
+
+export const addUser = user => ({
+  type:'ADD_USER',
+  user
+})

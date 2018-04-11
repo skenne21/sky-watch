@@ -21,17 +21,18 @@ export const cleanBios = async (bioInfo) => {
 
 export const cleanRockets = (rockets) => {
   return rockets.map(rocket => ({
-    name: rocket.name,
-    active: rocket.active,
-    fristFight: cleanDate(rocket.first_flight),
-    costLaunch: rocket.cost_per_launch,
-    country: rocket.country,
-    summary: rocket.description,
+    name:`Name: ${rocket.name}`,
+    type: 'rocket',
     stats: {
-      diameter: rocket.diameter.feet,
-      mass: rocket.mass.lb,
-      height: rocket.height.feet,
-      boosters: rocket.boosters
+      fristFlight:`Frist Flight: ${cleanDate(rocket.first_flight)}`,
+      active:`Active: ${rocket.active}`,
+      costLaunch:`Cost To Launch:${rocket.cost_per_launch}`,
+      country:`Launch From: ${rocket.country}`,
+      diameter:`Diameter ${rocket.diameter.feet} ft`,
+      mass:`Mass: ${rocket.mass.lb} lb`,
+      height:`Height: ${rocket.height.feet} ft`,
+      boosters:`Boosters: ${rocket.boosters}`,
+      description:`Description: ${rocket.description}`,
     } 
   }));
 };
@@ -45,34 +46,31 @@ export const cleanDate = (date) => {
   return recombined;
 };
 
-// export const cleanEngines = engine => {
-//   return {
-//     type: engine.type,
-//     propellant1: engine.propellant_1,
-//     propellant2: engine.propellant_2,
-//     thrustAtSea: engine.thrust_sea_level.lbf,
-//     thrustVaccum: engine.thrust_vacuum.lbf
-//   };
-// };
 
 export const cleanCapsules = capsules => {
   return capsules.map( capsule => ({
-    name: capsule.name,
-    crew: capsule.crew_capacity,
-    yearInOrbit: capsule.orbit_duration_yr,
-    diameter: capsule.diameter.feet,
-    heatShield: capsule.heat_shield.temp_degrees,
-    height: capsule.height_w_trunk.feet,
-    mass: capsule.launch_payload_mass.kg
+    name: `Name: ${capsule.name}`,
+    type: 'capsule',
+    stats : {
+      crew:`Crew Capacity: ${capsule.crew_capacity}`,
+      yearInOrbit:` Years in Orbit: ${capsule.orbit_duration_yr}`,
+      diameter:`Diameter: ${capsule.diameter.feet} ft`,
+      height:`Height: ${capsule.height_w_trunk.feet} ft`,
+      mass:`Mass: ${capsule.launch_payload_mass.kg} kg`,
+      heatShield:`Heat Shield Capacity: ${capsule.heat_shield.temp_degrees} deg`,
+    }
   }));
 };
 
 export const cleanLaunchpads = launchpads => {
   return launchpads.map(launchpad => ({
-    name: launchpad.full_name,
-    location:`${launchpad.location.region}: ${launchpad.location.name}`,
-    details: launchpad.details,
-    status: launchpad.status,
-    vehicles: launchpad.vehicles_launched
+    name:`Name: ${launchpad.full_name}`,
+    type: 'launchpad',
+    stats: {
+      location:`Location: ${launchpad.location.region},${launchpad.location.name}`,
+      details:`${launchpad.details}`,
+      status:`Status: ${launchpad.status}`,
+      vehicles:`Vehicles Launched: ${launchpad.vehicles_launched.join(', ')}`
+    }
   }));
 };
