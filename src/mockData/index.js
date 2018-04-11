@@ -192,33 +192,33 @@ export const cleanRocket = {
   summary:"The Falcon 1 was an expendable ..."
 };
 
-export const rockets = [
+export const rockets =  [
   {
-    active:false,
-    costLaunch:6700000,
-    country:"Republic of the Marshall Islands",
-    fristFight:"03, 24, 2006",
-    name:"Falcon 1",
-    stats: {
-      boosters:0,
-      diameter:5.5,
-      height:73,
-      mass:66460
-    },
-    summary:"The Falcon 1 was an expendable launch system privately"
+  "name": "Name: Falcon 1", 
+    "stats": {
+      "active": "Active: false",
+      "boosters": "Boosters: 0",
+      "costLaunch": "Cost To Launch:6700000", 
+      "country": "Launch From: Republic of the Marshall Islands", 
+      "description": "Description: The Falcon 1 was an expendable launch system privately", 
+      "diameter": "Diameter 5.5 ft", "fristFlight": "Frist Flight: 03, 24, 2006", "height": 
+      "Height: 73 ft", 
+      "mass": "Mass: 66460 lb"
+    }, "type": "rocket"
   }, {
-    active:true,
-    costLaunch:6700000,
-    country:"United States",
-    fristFight:"03, 24, 2006",
-    name:"Falcon 9",
-    stats: {
-      boosters:0,
-      diameter:5.5,
-      height:73,
-      mass:1207920
-    },
-    summary:"The Falcon 1 was an expendable launch system privately" 
+    "name": "Name: Falcon 9", 
+    "stats": {
+      "active": "Active: true",
+      "boosters": "Boosters: 0",
+      "costLaunch": "Cost To Launch:6700000", 
+      "country": "Launch From: United States", 
+      "description": "Description: The Falcon 1 was an expendable launch system privately", 
+      "diameter": "Diameter 5.5 ft",
+      "fristFlight": "Frist Flight: 03, 24, 2006", 
+      "height": "Height: 73 ft", 
+      "mass": "Mass: 1207920 lb"
+    }, 
+    "type": "rocket"
   }
 ];
 
@@ -272,21 +272,27 @@ export const rawCapsules = [
 
 export const capsules = [
   {
-    crew:0,
-    diameter:12,
-    heatShield:3000,
-    height:23.6,
-    mass:3000,
-    name:"Dragon 1",
-    yearInOrbit:2,
+    "name": "Name: Dragon 1",
+    "stats": {
+      "crew": "Crew Capacity: 0", 
+      "diameter": "Diameter: 12 ft", 
+      "heatShield": "Heat Shield Capacity: 3000 deg", 
+      "height": "Height: 23.6 ft", 
+      "mass": "Mass: 3000 kg", 
+      "yearInOrbit": " Years in Orbit: 2"
+    }, 
+    "type": "capsule"
   }, {
-    crew:0,
-    diameter:12,
-    heatShield:3000,
-    height:23.6,
-    mass:3000,
-    name:"Dragon 1",
-    yearInOrbit:2
+    "name": "Name: Dragon 1", 
+    "stats": {
+      "crew": "Crew Capacity: 0", 
+      "diameter": "Diameter: 12 ft", 
+      "heatShield": "Heat Shield Capacity: 3000 deg", 
+      "height": "Height: 23.6 ft", 
+      "mass": "Mass: 3000 kg", 
+      "yearInOrbit": " Years in Orbit: 2"
+    }, 
+    "type": "capsule"
   }
 ];
 
@@ -330,18 +336,24 @@ export const rawLaunchpads = [
 
 export const launchpads = [
   {
-    details:"SpaceX original launch site...", 
-    location:"Marshall Islands: Omelek Island",
-    name:"Kwajalein Atoll Omelek Island",
-    status:"retired",
-    vehicles:["Falcon 1"]
+    "name": "Name: Kwajalein Atoll Omelek Island", 
+    "stats": {
+      "details": "SpaceX original launch site...", 
+      "location": "Location: Marshall Islands,Omelek Island", 
+      "status": "Status: retired", 
+      "vehicles": "Vehicles Launched: Falcon 1"
+    }, 
+    "type": "launchpad"
   }, {
-    details:"SpaceX east coast landing...", 
-    location:"Florida: Cape Canaveral",
-    name:"Cape Canaveral Air Force Station, Space Launch Complex 13",
-    status:"active",
-    vehicles:["Falcon 9"]
-  } 
+    "name": "Name: Cape Canaveral Air Force Station, Space Launch Complex 13", 
+    "stats": {
+      "details": "SpaceX east coast landing...",
+      "location": "Location: Florida,Cape Canaveral", 
+      "status": "Status: active", 
+      "vehicles": "Vehicles Launched: Falcon 9"
+    }, 
+    "type": "launchpad"
+  }
 ];
 
 export const launchpad = {
