@@ -1,6 +1,6 @@
-import { rocketsReducer } from './rocketsReducer';
-import * as actions from '../actions';
-import * as mocks from '../mockData';
+import { rocketsReducer } from '../rocketsReducer';
+import * as actions from '../../actions';
+import * as mocks from '../../mockData';
 
 describe('rocketsReducer', () => {
   it('Should return a default state as an empty array', () => {

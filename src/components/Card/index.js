@@ -8,8 +8,13 @@ const Card = ({card, className, addBookmarks}) => {
     return <p key={stat+index}>{stats[stat]}</p>;
   });
 
+  const active = Object.keys(card).find(item => console.log(item))
+ 
+
   return (
-    <div className={`card ${className}`}>
+    <div 
+      className={`card ${className}`}
+    >
       <h1>{name}</h1>
       <button
         className='button'

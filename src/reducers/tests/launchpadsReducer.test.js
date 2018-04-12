@@ -1,6 +1,6 @@
-import { launchpadsReducers } from './launchpadsReducer';
-import * as actions from '../actions';
-import * as mocks from '../mockData';
+import { launchpadsReducers } from '../launchpadsReducer';
+import * as actions from '../../actions';
+import * as mocks from '../../mockData';
 
 describe('launchpadsReducer', () => {
   it('Should return a default state as an empty array', () => {

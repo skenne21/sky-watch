@@ -1,6 +1,6 @@
-import { capsulesReducer } from './capsulesReducer';
-import * as actions from '../actions';
-import * as mocks from '../mockData';
+import { capsulesReducer } from '../capsulesReducer';
+import * as actions from '../../actions';
+import * as mocks from '../../mockData';
 
 it('Should return an empty an array if the state is undefined', () => {
   const expected = [];

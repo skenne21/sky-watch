@@ -1,6 +1,6 @@
-import { videosReducer } from './videosReducer';
-import * as actions from '../actions';
-import * as mocks from '../mockData';
+import { videosReducer } from '../videosReducer';
+import * as actions from '../../actions';
+import * as mocks from '../../mockData';
 
 describe('videosReducer', () => {
   it('Should return a default state', () => {

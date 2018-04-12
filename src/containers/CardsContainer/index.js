@@ -27,7 +27,7 @@ export class CapsulesContainer extends Component {
 
   createComponent = (cardType) => {
     if (this.props.missionVideos.length) {
-      const { id, title, description } = this.props.missionVideos[4];
+      const { id, title, description } = this.props.missionVideos[3];
       return (
         <div>
           <div className='iframe-section'>
@@ -58,10 +58,13 @@ export class CapsulesContainer extends Component {
   addBookmarks = (card) => {
     const isBookemarked = this.props.bookmarks.includes(card);
     if(!isBookemarked) {
+      card.isActive = true;
       this.props.addToBookmarks(card); 
     } else {
       this.props.removeBookmark(card);
+      card.isActive = false;
     }
+
   }
 
   createCards = (cardsToMap) => {

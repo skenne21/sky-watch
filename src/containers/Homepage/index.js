@@ -53,14 +53,14 @@ export class Homepage extends Component {
     );
   }
 
-  createLoadingImage = () => {
-    return (
-      <div className='loading'>
-        <img src="../../assets/starman.png" alt="Picture of starman"/>
-        <p> Loading </p>
-      </div>
-    );
-  }
+  // createLoadingImage = () => {
+  //   return (
+  //     <div className='loading'>
+  //       <img src="../../assets/starman.png" alt="Picture of starman"/>
+  //       <p> Loading </p>
+  //     </div>
+  //   );
+  // }
 
   handleRockets = async ( ) => {
     try {
