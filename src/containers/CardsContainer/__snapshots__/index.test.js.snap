@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardsContainer Should create capsules cards if history equals /capsules 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+    addToBookmarks={[Function]}
+    capsules={
+        Array [
+            Object {
+              "name": "Name: Dragon 1",
+              "stats": Object {
+                "crew": "Crew Capacity: 0",
+                "diameter": "Diameter: 12 ft",
+                "heatShield": "Heat Shield Capacity: 3000 deg",
+                "height": "Height: 23.6 ft",
+                "mass": "Mass: 3000 kg",
+                "yearInOrbit": " Years in Orbit: 2",
+              },
+              "type": "capsule",
+            },
+            Object {
+              "name": "Name: Dragon 1",
+              "stats": Object {
+                "crew": "Crew Capacity: 0",
+                "diameter": "Diameter: 12 ft",
+                "heatShield": "Heat Shield Capacity: 3000 deg",
+                "height": "Height: 23.6 ft",
+                "mass": "Mass: 3000 kg",
+                "yearInOrbit": " Years in Orbit: 2",
+              },
+              "type": "capsule",
+            },
+          ]
+    }
+    history={
+        Object {
+            "location": Object {
+              "pathname": "/capsules",
+            },
+          }
+    }
+    launchpads={Array []}
+    missionVideos={Array []}
+    removeBookmark={[Function]}
+    rockets={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "render": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "render": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CardsContainer Should create launchpads cards if history equals /launchpads 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+    addToBookmarks={[Function]}
+    capsules={Array []}
+    history={
+        Object {
+            "location": Object {
+              "pathname": "/launchpads",
+            },
+          }
+    }
+    launchpads={
+        Array [
+            Object {
+              "name": "Name: Kwajalein Atoll Omelek Island",
+              "stats": Object {
+                "details": "SpaceX original launch site...",
+                "location": "Location: Marshall Islands,Omelek Island",
+                "status": "Status: retired",
+                "vehicles": "Vehicles Launched: Falcon 1",
+              },
+              "type": "launchpad",
+            },
+            Object {
+              "name": "Name: Cape Canaveral Air Force Station, Space Launch Complex 13",
+              "stats": Object {
+                "details": "SpaceX east coast landing...",
+                "location": "Location: Florida,Cape Canaveral",
+                "status": "Status: active",
+                "vehicles": "Vehicles Launched: Falcon 9",
+              },
+              "type": "launchpad",
+            },
+          ]
+    }
+    missionVideos={Array []}
+    removeBookmark={[Function]}
+    rockets={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "render": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "render": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CardsContainer Should create rockets cards if history equals /rockets 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+    addToBookmarks={[Function]}
+    capsules={Array []}
+    history={
+        Object {
+            "location": Object {
+              "pathname": "/rockets",
+            },
+          }
+    }
+    launchpads={Array []}
+    missionVideos={Array []}
+    removeBookmark={[Function]}
+    rockets={
+        Array [
+            Object {
+              "name": "Name: Falcon 1",
+              "stats": Object {
+                "active": "Active: false",
+                "boosters": "Boosters: 0",
+                "costLaunch": "Cost To Launch:6700000",
+                "country": "Launch From: Republic of the Marshall Islands",
+                "description": "Description: The Falcon 1 was an expendable launch system privately",
+                "diameter": "Diameter 5.5 ft",
+                "fristFlight": "Frist Flight: 03, 24, 2006",
+                "height": "Height: 73 ft",
+                "mass": "Mass: 66460 lb",
+              },
+              "type": "rocket",
+            },
+            Object {
+              "name": "Name: Falcon 9",
+              "stats": Object {
+                "active": "Active: true",
+                "boosters": "Boosters: 0",
+                "costLaunch": "Cost To Launch:6700000",
+                "country": "Launch From: United States",
+                "description": "Description: The Falcon 1 was an expendable launch system privately",
+                "diameter": "Diameter 5.5 ft",
+                "fristFlight": "Frist Flight: 03, 24, 2006",
+                "height": "Height: 73 ft",
+                "mass": "Mass: 1207920 lb",
+              },
+              "type": "rocket",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "render": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "render": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CardsContainer Should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+    addToBookmarks={[Function]}
+    capsules={Array []}
+    history={
+        Object {
+            "location": Object {
+              "pathname": "/",
+            },
+          }
+    }
+    launchpads={Array []}
+    missionVideos={Array []}
+    removeBookmark={[Function]}
+    rockets={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "render": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "render": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
