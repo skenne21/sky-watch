@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { mapStateToProps, mapDispatchToProps } from './index';
 import * as actions from '../../actions';
 import * as mocks from '../../mockData';
-import SignUp from './index';
+import  { SignUp } from './index';
 
 describe('SignUp', () => {
   let wrapper, user, addUser, history;
@@ -26,8 +26,16 @@ describe('SignUp', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip("Should have a default state of name as a empty string", () => {
+  it('Should have a default state of name as a empty string', () => {
     expect(wrapper.state('name')).toEqual('');
+  });
+
+  it('Should have a defualt state of email as an empty string', () => {
+    expect(wrapper.state('email')).toEqual('');
+  });
+
+  it('Should have a defualt state of passowrd as a empty string', () => {
+    expect(wrapper.state('error')).toEqual('');
   });
 
    describe('mapStateToProps', () => {
