@@ -13,21 +13,16 @@ export class LaunchesContainer extends Component {
       falcon9: [],
       falconHeavy: [],
       cards: [],
-      isActive: false,
+      // isActive: false,
     }
   }
 
   handleClick = event => {
     const { name } = event.target;
     if (this.props.launches.length) {
-      if (!this.state[name].length) {
-        const launches = this.props.launches[0][name];
-        this.setState({ [name] : launches});
-        this.setState({cards: launches })
-        this.setState({isActive: true});
-      } else {
-        this.setState({isActive: false});
-      };
+      const launches = this.props.launches[0][name];
+      this.setState({ [name] : launches});
+      this.setState({cards: launches });
     };
   }
 
