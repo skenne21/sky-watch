@@ -38,7 +38,11 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  
+  it.skip('Should call fetchCompanyBio', () => {
+    wrapper.instance().fetchCompanyBio();
+    expect(mockFetchCompany).toHaveBeenCalled()
+  });
+
   describe('mapStateToProps', () => {
     let mappedState, expectedState;
 
