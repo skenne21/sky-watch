@@ -4,7 +4,50 @@ exports[`App Should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(App)) />,
+  Symbol(enzyme.__unrendered__): <withRouter(Connect(App))
+    companyBio={
+        Object {
+            "founded": 2002,
+            "founder": "Elon Musk",
+            "headquarters": Object {
+              "address": "Rocket Road",
+              "city": "Hawthorne",
+              "state": "California",
+            },
+            "name": "SpaceX",
+            "summary": "SpaceX designs, manufactures and launches advanced...",
+          }
+    }
+    fetchCompanyBio={[Function]}
+    fetchMissionVideos={[Function]}
+    handleError={[Function]}
+    missionVideos={
+        Array [
+            Object {
+              "date": "2017-09-29T06:05:03.000Z",
+              "description": "Elon Musk gives new details, about SpaceX Mission...",
+              "id": "XcVpMJp9Th4",
+              "image": Object {
+                "height": 360,
+                "url": "https://i.ytimg.com/vi/XcVpMJp9Th4/hqdefault.jpg",
+                "width": 480,
+              },
+              "title": "Elon Musk",
+            },
+            Object {
+              "date": "2018-01-08T01:19:10.000Z",
+              "description": "SpaceX is targeting launch...",
+              "id": "0PWu3BRxn60",
+              "image": Object {
+                "height": 360,
+                "url": "https://i.ytimg.com/vi/0PWu3BRxn60/hqdefault.jpg",
+                "width": 480,
+              },
+              "title": "ZUMA Mission",
+            },
+          ]
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
