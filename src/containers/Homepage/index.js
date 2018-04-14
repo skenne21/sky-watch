@@ -134,7 +134,7 @@ export class Homepage extends Component {
             to='/launchpads'
             onClick={this.handleLaunchpads}
           >
-            LANDINGPADS 
+            LAUNCHPADS 
           </NavLink>
           <NavLink
             name='launches'

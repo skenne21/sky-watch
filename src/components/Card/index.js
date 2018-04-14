@@ -1,29 +1,56 @@
 import React from 'react';
 import './styles.css';
 
-const Card = ({card, className, addBookmarks}) => {
+const Card = ({card, className, addBookmarks, user}) => {
   const { name, stats } = card;
-
+  console.log(user)
   const tags = Object.keys(stats).map( (stat, index) => {
     return <p key={stat+index}>{stats[stat]}</p>;
   });
 
   // const active = Object.keys(card).find(item => console.log(item))
- 
-
-  return (
-    <div 
-      className={`card ${className}`}
-    >
+  
+  const questions = card => {
+    return (
+      <div calssName='card'>
+        <div className='front'>Questions</div>
+        <div 
+          className={`card ${className} back`}
+        >
+        <h1>{name}</h1>
+        <button
+          className='button'
+          onClick={() => addBookmarks(card)}
+        > BOOKMARK
+        </button>
+          {tags}
+        </div>
+      </div>
+    )
+  }
+  const factCards = (card) => {
+    return (
+      <div 
+        className={`card ${className}`}
+      >
       <h1>{name}</h1>
       <button
         className='button'
         onClick={() => addBookmarks(card)}
       > BOOKMARK
       </button>
-      {tags}
+        {tags}
     </div>
-  );
+    )
+  }
+
+  return (
+    <div>
+      {
+        user.length ? factCards(card) : questions(card)
+      }
+    </div>
+  )
 }
 
 

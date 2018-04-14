@@ -4,6 +4,7 @@ import {withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 import Card from '../../components/Card';
+import { randomQuestions } from '../../mockData/mockQuestions';
 
 export class LaunchesContainer extends Component {
   constructor() {
@@ -12,8 +13,7 @@ export class LaunchesContainer extends Component {
       falcon1: [],
       falcon9: [],
       falconHeavy: [],
-      cards: [],
-      // isActive: false,
+      cards: [...randomQuestions()],
     }
   }
 
@@ -33,6 +33,7 @@ export class LaunchesContainer extends Component {
           key={index+card.name}
           card={card}
           className={`${card.type}-card`}
+          user={this.props.user}
         />
       )
     })
@@ -69,8 +70,9 @@ export class LaunchesContainer extends Component {
     )
   }
 }
-export const mapStateToProps = ({launches}) => ({
-  launches
+export const mapStateToProps = ({launches, user}) => ({
+  launches,
+  user
 })
 
 export default withRouter(connect(mapStateToProps, null)(LaunchesContainer));
