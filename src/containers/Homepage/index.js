@@ -12,6 +12,10 @@ import './styles.css';
 
 
 export class Homepage extends Component {
+  constructor(props) {
+    super(props)
+  } 
+  
   createBio = () => {
     const { 
       name,

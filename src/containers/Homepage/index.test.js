@@ -3,8 +3,14 @@ import { shallow } from 'enzyme';
 import * as apiCalls from '../../helpers/apiCalls';
 import * as actions from '../../actions';
 import { mapStateToProps, mapDispatchToProps } from './index';
-import Homepage from './index';
+import { Homepage }from './index';
 import * as mocks from '../../mockData';
+import { 
+  fetchRockets,
+  fetchCapsules,
+  fetchLaunchpads } from '../../helpers/apiCalls';
+
+jest.mock('../../helpers/apiCalls');
 
 describe('Homepage Container', () => {
   let wrapper;
@@ -41,20 +47,44 @@ describe('Homepage Container', () => {
     );
   });
 
-  it('Should Match the snapshot', () => {
+  it('Should match the snapshot if the bio has length', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
-  it.skip('Should call handleRockets when clicked and pass correct params', () => {
+  it('Should Match the snapshot if there is no length to the bio', () => {
+    wrapper = shallow(
+      <Homepage
+        getRockets={getRockets}
+        getCapsules={getCapsules}
+        getLaunchPads={getLaunchPads}
+        handleError={handleError}
+        companyBio={[]}
+        missionVideos={missionVideos}
+        capsules={capsules}
+        launchpads={launchpads} 
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  })
 
+  it('Should call handleRockets when clicked', () => {
+    const navlink = wrapper.find('.rockets').simulate('click')
+    expect(fetchRockets).toHaveBeenCalled();
   });
 
-  it.skip('Should call handleCapsules when clicked and pass correct params', () => {
-    
+  it('Should call handleCapsules when clicked', () => {
+    const navlink = wrapper.find('.capsules').simulate('click')
+    expect(fetchCapsules).toHaveBeenCalled();
   });
 
-  it.skip('Should call handleLaunchpads when clicked and pass correct params', () => {
-    
+  it('Should call handleLaunchpads when clicked', () => {
+    const navlink = wrapper.find('.launchpad').simulate('click')
+    expect(fetchLaunchpads).toHaveBeenCalled();
+  });
+
+  it('Should call handleLaunches when clicked', () => {
+    const navlink = wrapper.find('.launches').simulate('click')
+    expect(fetchLaunchpads).toHaveBeenCalled();
   });
 
   describe('mapStateToProps', () => {

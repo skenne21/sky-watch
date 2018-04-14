@@ -109,7 +109,8 @@ describe('CardsContainer', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
-  })
+  });
+  
   // it('Should add bookmarks to the store', () => {
 
   // });
