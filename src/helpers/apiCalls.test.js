@@ -4,12 +4,18 @@ import {
   cleanVideos,
   cleanRockets,
   cleanCapsules,
-  cleanLaunchpads } from './cleaners';
+  cleanLaunchpads,
+  cleanLaunches,
+  combineLaunches,
+  filterLaunches 
+} from './cleaners';
+import { manageLaunches } from './launches';
 import { youTubeKey } from '../apiKeys';
 import * as mocks from '../mockData';
 
 
 jest.mock('./cleaners');
+jest.mock('./launches');
 
 describe('apiCalls', () => {
 
@@ -257,4 +263,53 @@ describe('apiCalls', () => {
       expect(call).rejects.toEqual(expected);
     });
   });
+
+  describe('fetchLaunches', () => {
+    let url, response;
+
+    beforeEach(() => {
+      url = 'https://api.spacexdata.com/v2/launches/all';
+      response = mocks.rawLaunches;
+      window.fetch = jest.fn().mockImplementation(() => (
+        Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(response)
+        })
+      ));
+    });
+
+    it('Should fetch with the right url', () => {
+      apiCalls.fetchLaunches();
+      expect(window.fetch).toHaveBeenCalledWith(url);
+    });
+
+    it('Should call clean manageLaunches with the right params', async () => {
+      const call = await apiCalls.fetchLaunches();
+      expect(manageLaunches).toHaveBeenCalledWith(response);
+    });
+
+    it('Should return a call an object of launches', async () => {
+      const call = await apiCalls.fetchLaunches();
+      const expected = mocks.launches;
+      expect(call).toEqual(expected);
+    });
+
+    it('Should throw an error if the status is above 200', () => {
+      window.fetch = jest.fn().mockImplementation(() =>(
+        Promise.reject({
+          status: 500,
+          message: 'Error'
+        })
+      ));
+
+      const expected = {
+        status: 500,
+        message: 'Error'
+      };
+
+      const call = apiCalls.fetchLaunchpads();
+
+      expect(call).rejects.toEqual(expected);
+    });
+  })
 });

@@ -1,24 +1,28 @@
-import { 
-  video,
-  bio,
-  rockets,
-  capsules,
-  launchpads} from '../../mockData';
+import * as mocks from '../../mockData';
 
 export const cleanVideos = jest.fn()
-  .mockImplementation(() => [video]);
+  .mockImplementation(() => [mocks.video]);
 
 export const cleanBios = jest.fn()
-  .mockImplementation(() => bio);
+  .mockImplementation(() => mocks.bio);
 
 export const cleanRockets = jest.fn()
-  .mockImplementation(() => rockets);
+  .mockImplementation(() => mocks.rockets);
 
 export const cleanDate = jest.fn()
   .mockImplementation(() => "03, 24, 2006");
 
 export const cleanCapsules = jest.fn()
-  .mockImplementation(() => capsules);
+  .mockImplementation(() => mocks.capsules);
 
 export const cleanLaunchpads = jest.fn()
-  .mockImplementation(() => launchpads);
+  .mockImplementation(() => mocks.launchpads);
+
+export const cleanLaunches = jest.fn()
+  .mockImplementation(() => mocks.launch);
+
+export const combineLaunches = jest.fn()
+  .mockImplementation(() => mocks.launches);
+
+export const filterLaunches = jest.fn()
+  .mockImplementation(() => mocks.launch)
