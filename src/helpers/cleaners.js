@@ -1,5 +1,3 @@
-
-
 export const cleanVideos = async (videoInfo) => {
   const videos = videoInfo.map(video => ({
     id: video.id.videoId,

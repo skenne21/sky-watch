@@ -6,6 +6,7 @@ import { capsulesReducer } from './capsulesReducer';
 import { launchpadsReducers } from './launchpadsReducer';
 import { bookmarksReducer } from './bookmarksReducer';
 import { userReducer } from './userReducer';
+import { launchesReducer } from './launchesReducer';
 
 const rootReducer = combineReducers({
   companyBio: spaceXReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   capsules: capsulesReducer,
   launchpads: launchpadsReducers,
   bookmarks: bookmarksReducer,
-  user: userReducer
+  user: userReducer,
+  launches: launchesReducer
 });
 
 export default rootReducer;

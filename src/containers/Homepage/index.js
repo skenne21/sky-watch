@@ -94,7 +94,7 @@ export class Homepage extends Component {
     try {
       console.log('works')
       const launches = await fetchLaunches();
-      console.log(launches)
+      this.props.getLaunches(launches)
     } catch (error) {
       this.props.handleError(error.message)
     }
@@ -157,13 +157,15 @@ export const mapStateToProps = state => ({
   rockets: state.rockets,
   capsules: state.capsules,
   launchpads: state.launchpads,
-  user: state.user
+  user: state.user,
+  launches: state.launches
 });
 
 export const mapDispatchToProps = dispatch =>({
   getRockets: rockets => dispatch(actions.addRockets(rockets)),
   getCapsules: capsules => dispatch(actions.addCapsules(capsules)),
   getLaunchpads: launchpads => dispatch(actions.addLaunchPads(launchpads)),
+  getLaunches: launches => dispatch(actions.addLaunches(launches)),
   handleError: message => dispatch(actions.addError(message))
 });
 
