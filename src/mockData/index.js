@@ -366,3 +366,83 @@ export const launchpad = {
   status:"active",
   vehicles:["Falcon 9"]
 }
+
+export const launches = [
+{
+  falcon1:[
+  {
+    name: "Flight Number: 1",
+    type: "launches",
+    image: "https://www.spacexnow.com/patches/falcon1-1.png",
+    video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+    stats : {
+      site: "Kwajalein Atoll",
+      sucessful: "Launch Sucess: false",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
+      capsule: "Reuseable Capsule: false",
+      core: "Reuseable Core: false",
+      sideCores: "Reusable Sidecores: false",
+      fairings: "Reusable Fairings: false",
+    } 
+  }, {
+    name: "Flight Number: 2",
+    type: "launches",
+    image: "https://www.spacexnow.com/patches/falcon1-1.png",
+    video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+    stats : {
+      site: "Kwajalein Atoll",
+      sucessful: "Launch Sucess: false",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
+      capsule: "Reuseable Capsule: false",
+      core: "Reuseable Core: false",
+      sideCores: "Reusable Sidecores: false",
+      fairings: "Reusable Fairings: false",
+    }
+  }],
+  falcon9:[
+  {
+    name: "Flight Number: 1",
+    type: "launches",
+    image: "https://www.spacexnow.com/patches/falcon1-1.png",
+    video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+    stats : {
+      site: "Kwajalein Atoll",
+      sucessful: "Launch Sucess: false",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
+      capsule: "Reuseable Capsule: false",
+      core: "Reuseable Core: false",
+      sideCores: "Reusable Sidecores: false",
+      fairings: "Reusable Fairings: false",
+    } 
+  }, {
+    name: "Flight Number: 2",
+    type: "launches",
+    image: "https://www.spacexnow.com/patches/falcon1-1.png",
+    video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+    stats : {
+      site: "Kwajalein Atoll",
+      sucessful: "Launch Sucess: false",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
+      capsule: "Reuseable Capsule: false",
+      core: "Reuseable Core: false",
+      sideCores: "Reusable Sidecores: false",
+      fairings: "Reusable Fairings: false",
+    }
+  }],
+  falconHeavy: [
+  {
+    name: "Flight Number: 2",
+    type: "launches",
+    image: "https://www.spacexnow.com/patches/falcon1-1.png",
+    video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+    stats : {
+      site: "Kwajalein Atoll",
+      sucessful: "Launch Sucess: false",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
+      capsule: "Reuseable Capsule: false",
+      core: "Reuseable Core: false",
+      sideCores: "Reusable Sidecores: false",
+      fairings: "Reusable Fairings: false",
+    }
+  }] 
+}]

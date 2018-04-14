@@ -58,4 +58,45 @@ describe('Actions', () =>{
     };
     expect(actions.addLaunchPads(launchpads)).toEqual(expected);
   });
+
+  it.skip('Should add bookmarks' , () => {
+
+  });
+
+  it('Should add a user', () => {
+    const user = {
+      name: 'bob',
+      email: 'bob@gmail.com',
+      id: 1
+    }
+    const expected = {
+      type:'ADD_USER',
+      user
+    }
+
+    expect(actions.addUser(user)).toEqual(expected)
+  });
+
+  it('Should remove a user', () => {
+    const user = {
+      name: 'bob',
+      email: 'bob@gmail.com',
+      id: 1
+    };
+
+    const expected = {
+      type:'REMOVE_USER',
+      user
+    };
+
+    expect(actions.removeUser(user)).toEqual(expected);
+  });
+
+  it('Should add Launches', () => {
+    const launches = mocks.launches;
+    const expected = {
+      type: "ADD_LAUNCHES",
+      launches
+    }
+  })
 });
