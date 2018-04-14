@@ -673,6 +673,141 @@ export const rawLaunches = [
   }
 ]
 
+export const rawLaunch = {
+  "flight_number": 1,
+  "launch_year": "2007",
+  "launch_date_unix": 1174439400,
+  "launch_date_utc": "2007-03-21T01:10:00Z",
+  "launch_date_local": "2007-03-21T13:10:00+12:00",
+  "rocket": {
+    "rocket_id": "falconHeavy",
+    "rocket_name": "Falcon Heavy",
+    "rocket_type": "Merlin A",
+    "first_stage": {
+    "cores": [
+      {
+        "core_serial": "Merlin2A",
+        "flight": 1,
+        "block": null,
+        "reused": false,
+        "land_success": false,
+        "landing_type": null,
+        "landing_vehicle": null
+      }
+    ]},
+    "second_stage": {
+      "payloads": [
+        {
+          "payload_id": "DemoSAT",
+          "reused": false,
+          "customers": [
+            "DARPA"
+          ],
+          "payload_type": "Satellite",
+          "payload_mass_kg": null,
+          "payload_mass_lbs": null,
+          "orbit": "LEO"
+        }
+      ]
+    }
+  },
+  "telemetry": {
+    "flight_club": null
+  },
+  "reuse": {
+    "core": false,
+    "side_core1": false,
+    "side_core2": false,
+    "fairings": false,
+    "capsule": false
+  },
+  "launch_site": {
+    "site_id": "kwajalein_atoll",
+    "site_name": "Kwajalein Atoll",
+    "site_name_long": "Kwajalein Atoll Omelek Island"
+  },
+  "launch_success": false,
+  "links": {
+    "mission_patch": "https://www.spacexnow.com/patches/falcon1-2.png",
+    "article_link": "https://www.space.com/3590-spacex-falcon-1-rocket-fails-reach-orbit.html",
+      "video_link": "https://www.youtube.com/watch?v=YMvQsmLv44o"
+  },
+    "details": "Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage"
+}
+
+export const semiClean =  [
+  {
+    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+   "name": "Flight Number: 1", 
+   "stats": {
+    "capsule": "Reuseable Capsule: false",
+    "core": "Reuseable Core: false", 
+    "details": "Details: Engine failure at 33 seconds and loss of vehicle", 
+    "fairings": "Reusable Fairings: false", 
+    "sideCores": "Reusable Sidecores: false", 
+    "site": "Kwajalein Atoll", "sucessful": "Launch Sucess: false"
+  }, "type": "launches", 
+  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88"
+}, {
+  "image": "https://www.spacexnow.com/patches/falcon1-2.png",
+  "name": "Flight Number: 2",
+  "stats": {
+    "capsule": "Reuseable Capsule: false",
+    "core": "Reuseable Core: false",
+    "details": "Details: Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage",
+    "fairings": "Reusable Fairings: false",
+    "sideCores": "Reusable Sidecores: false",
+    "site": "Kwajalein Atoll", 
+    "sucessful": "Launch Sucess: false"
+  },
+  "type": "launches",
+  "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
+  }, {
+    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "name": "Flight Number: 1",
+    "stats": {
+      "capsule": "Reuseable Capsule: false",
+      "core": "Reuseable Core: false", "details":
+      "Details: Engine failure at 33 seconds and loss of vehicle",
+      "fairings": "Reusable Fairings: false",
+      "sideCores": "Reusable Sidecores: false",
+      "site": "Kwajalein Atoll",
+      "sucessful": "Launch Sucess: false"
+    }, 
+    "type": "launches",
+    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88"
+  }, {
+    "image": "https://www.spacexnow.com/patches/falcon1-2.png",
+    "name": "Flight Number: 2",
+    "stats": {
+      "capsule": "Reuseable Capsule: false",
+      "core": "Reuseable Core: false",
+      "details": "Details: Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage",
+      "fairings": "Reusable Fairings: false",
+      "sideCores": "Reusable Sidecores: false",
+      "site": "Kwajalein Atoll",
+      "sucessful": "Launch Sucess: false"
+    }, 
+    "type": "launches",
+    "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
+  }, {
+    "image": "https://www.spacexnow.com/patches/falcon1-2.png",
+    "name": "Flight Number: 1",
+    "stats": {
+      "capsule": "Reuseable Capsule: false",
+      "core": "Reuseable Core: false",
+      "details": "Details: Successful first stage burn and transition to second stage, maximum altitude 289 km, Premature engine shutdown at T+7 min 30 s, Failed to reach orbit, Failed to recover first stage",
+      "fairings": "Reusable Fairings: false",
+      "sideCores": "Reusable Sidecores: false",
+      "site": "Kwajalein Atoll",
+      "sucessful": "Launch Sucess: false"
+    }, 
+    "type": "launches",
+    "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
+  }
+]
+
+
 export const launches = {
   falcon1:[
   {

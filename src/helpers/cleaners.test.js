@@ -56,4 +56,37 @@ describe('cleaners', () => {
       expect(launchpads).toEqual(expected);
     });
   });
+
+  describe('Cleanlaunches', () => {
+    it('Should clean launchess', () => {
+      const recevied = mocks.rawLaunches;
+      const expected = mocks.semiClean;
+      const launches = cleaners.cleanLaunches(recevied);
+      expect(launches).toEqual(expected);
+    });
+  })
+
+  describe('CombineLaunches', () => {
+    it('Should combine launchess', () => {
+      const falcon1 = mocks.semiClean[0];
+      const falcon9 = mocks.semiClean[1];
+      const falconHeavy = mocks.semiClean[2];
+      const expected = {
+        falcon1,
+        falcon9,
+        falconHeavy
+      };
+      const launches = cleaners.combineLaunches(falcon1, falcon9, falconHeavy);
+      expect(launches).toEqual(expected);
+    });
+  });
+
+  describe('filterLaunches', () => {
+    it('Should filter launchess', () => {
+      const launches = mocks.rawLaunches;
+      const called = cleaners.filterLaunches(launches, 'falcon1');
+      const expected = mocks.rawLaunches
+      expect(launches).toEqual(expected);
+    });
+  })
 });
