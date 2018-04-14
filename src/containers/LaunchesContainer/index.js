@@ -12,6 +12,7 @@ export class LaunchesContainer extends Component {
       falcon1: [],
       falcon9: [],
       falconHeavy: [],
+      cards: [],
       isActive: false,
     }
   }
@@ -22,6 +23,7 @@ export class LaunchesContainer extends Component {
       if (!this.state[name].length) {
         const launches = this.props.launches[0][name];
         this.setState({ [name] : launches});
+        this.setState({cards: launches })
         this.setState({isActive: true});
       } else {
         this.setState({isActive: false});
@@ -29,8 +31,20 @@ export class LaunchesContainer extends Component {
     };
   }
 
+  createCards = (cards) => {
+    return cards.map((card, index) => {
+      return (
+        <Card 
+          key={index+card.name}
+          card={card}
+          className={`${card.type}-card`}
+        />
+      )
+    })
+  }
 
   render() {
+    const { cards } = this.state
     return (
       <div className='LaunchesContainer'>
         <button
@@ -53,6 +67,9 @@ export class LaunchesContainer extends Component {
         >
           FALCON HEAVY
         </button>
+        {
+          this.createCards(cards)
+        }
       </div>
     )
   }
