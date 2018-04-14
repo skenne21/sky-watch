@@ -297,13 +297,16 @@ export const capsules = [
 ];
 
 export const capsule = {
-  crew:0,
-  diameter:12,
-  heatShield:3000,
-  height:23.6,
-  mass:6000,
-  name:"Dragon 1",
-  yearInOrbit:2,
+  "name": "Name: Dragon 1", 
+  "stats": {
+    "crew": "Crew Capacity: 0", 
+    "diameter": "Diameter: 12 ft", 
+    "heatShield": "Heat Shield Capacity: 3000 deg", 
+    "height": "Height: 23.6 ft", 
+    "mass": "Mass: 3000 kg", 
+    "yearInOrbit": " Years in Orbit: 2"
+  }, 
+  "type": "capsule"
 };
 
 export const rawLaunchpads = [

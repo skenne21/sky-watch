@@ -74,3 +74,34 @@ export const cleanLaunchpads = launchpads => {
     }
   }));
 };
+
+export const cleanLaunches = launches => {
+  return launches.map(launch => ({
+    name: `Flight Number: ${launch.flight_number}`,
+    type: 'launches',
+    image: launch.links.mission_patch,
+    video: launch.links.video_link,
+    stats: {
+      site:`${launch.launch_site.site_name}`,
+      sucessful:`Launch Sucess: ${launch.launch_success}`,
+      details:`Details: ${launch.details}`,
+      capsule:`Reuseable Capsule: ${launch.reuse.capsule}`,
+      core:`Reuseable Core: ${launch.reuse.core}`,
+      sideCores: `Reusable Sidecores: ${launch.reuse.side_core1}`,
+      fairings:`Reusable Fairings: ${launch.reuse.fairings}`,
+
+    }
+  }));
+}
+
+export const combineLaunches = (falcon1, falcon9, falconHeavy) => {
+  return {
+    falcon1,
+    falcon9,
+    falconHeavy
+  };
+}
+
+export const filterLaunches = (launches, id) => {
+  return launches.filter(launch => launch.rocket.rocket_id === id);
+}

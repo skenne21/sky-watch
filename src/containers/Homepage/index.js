@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { 
   fetchRockets,
   fetchCapsules,
-  fetchLaunchpads } from '../../helpers/apiCalls';
+  fetchLaunchpads,
+  fetchLaunches } from '../../helpers/apiCalls';
 import * as actions from '../../actions/';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -53,14 +54,14 @@ export class Homepage extends Component {
     );
   }
 
-  // createLoadingImage = () => {
-  //   return (
-  //     <div className='loading'>
-  //       <img src="../../assets/starman.png" alt="Picture of starman"/>
-  //       <p> Loading </p>
-  //     </div>
-  //   );
-  // }
+  createLoadingImage = () => {
+    return (
+      <div className='loading'>
+        <img src="../../assets/starman.png" alt="Picture of starman"/>
+        <p> Loading </p>
+      </div>
+    );
+  }
 
   handleRockets = async ( ) => {
     try {
@@ -86,6 +87,16 @@ export class Homepage extends Component {
       this.props.getLaunchpads(launchpads);
     } catch (error) {
       this.props.handleError(error.message);
+    }
+  }
+
+  handleLaunches = async () => {
+    try {
+      console.log('works')
+      const launches = await fetchLaunches();
+      this.props.getLaunches(launches)
+    } catch (error) {
+      this.props.handleError(error.message)
     }
   }
 
@@ -125,6 +136,15 @@ export class Homepage extends Component {
           >
             LANDINGPADS 
           </NavLink>
+          <NavLink
+            name='launches'
+            className='launches'
+            activeClassName='isActive'
+            to='/launches'
+            onClick={this.handleLaunches}
+          >
+            LAUNCHES 
+          </NavLink>
         </form>
       </div>
     );
@@ -137,13 +157,15 @@ export const mapStateToProps = state => ({
   rockets: state.rockets,
   capsules: state.capsules,
   launchpads: state.launchpads,
-  user: state.user
+  user: state.user,
+  launches: state.launches
 });
 
 export const mapDispatchToProps = dispatch =>({
   getRockets: rockets => dispatch(actions.addRockets(rockets)),
   getCapsules: capsules => dispatch(actions.addCapsules(capsules)),
   getLaunchpads: launchpads => dispatch(actions.addLaunchPads(launchpads)),
+  getLaunches: launches => dispatch(actions.addLaunches(launches)),
   handleError: message => dispatch(actions.addError(message))
 });
 

@@ -91,11 +91,11 @@ describe('CardsContainer', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
-  it.skip('Should add bookmarks to the store', () => {
+  it('Should add bookmarks to the store', () => {
 
   });
 
-  it.skip('Should remove bookmarks to the store if it already is in the store', () => {
+  it('Should remove bookmarks to the store if it already is in the store', () => {
 
   });
 

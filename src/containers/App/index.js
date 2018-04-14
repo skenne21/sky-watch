@@ -6,6 +6,7 @@ import { fetchBio, fetchSpaceXVideos } from '../../helpers/apiCalls';
 import Header from '../../components/Header';
 import Homepage from '../Homepage/';
 import CardsContainer from '../CardsContainer';
+import LaunchesContainer from '../LaunchesContainer';
 import SignUp from '../SignUp';
 import SignIn from '../SignIn';
 import * as actions from '../../actions/';
@@ -47,6 +48,7 @@ export class App extends Component {
           <Route path='/rockets' component={CardsContainer}/>
           <Route path='/capsules' component={CardsContainer}/>
           <Route path='/launchpads' component={CardsContainer}/>
+          <Route path='/launches' component={LaunchesContainer} />
         </Switch>
       </div>
     );

@@ -11,17 +11,15 @@ export class CapsulesContainer extends Component {
   
   determineCardType = () => {
     const { pathname } = this.props.history.location;
-
-    if (pathname === '/rockets') {
-      return this.createComponent(this.props.rockets)
-    }
-
-    if (pathname === '/capsules') {
+    switch (pathname) {
+    case '/rockets':
+      return this.createComponent(this.props.rockets);
+    case '/capsules':
       return this.createComponent(this.props.capsules);
-    }
-
-    if (pathname === '/launchpads') {
-      return this.createComponent(this.props.launchpads)
+    case '/launchpads':
+      return this.createComponent(this.props.launchpads);
+    default:
+      return null
     }
   }
 

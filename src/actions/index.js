@@ -47,4 +47,9 @@ export const addUser = user => ({
 export const removeUser = user => ({
   type: 'REMOVE_USER',
   user
-})
+});
+
+export const addLaunches = launches => ({
+  type: 'ADD_LAUNCHES',
+  launches
+});
