@@ -1,6 +1,6 @@
 import * as apiKeys from '../apiKeys';
 import * as cleaners from './cleaners';
-
+import { manageLaunches } from './launches';
 export const fetchBio = async () => {
   try {
     const response = await fetch(`https://api.spacexdata.com/v2/info`);
@@ -61,4 +61,15 @@ export const fetchLaunchpads = async () => {
     throw error;
   }
 };
+
+export const fetchLaunches = async () => {
+  try{
+    const response = await fetch('https://api.spacexdata.com/v2/launches/all');
+    const info = await response.json();
+    const launches = manageLaunches(info);
+    return launches;
+  } catch (error) {
+    throw error;
+  }
+}
 

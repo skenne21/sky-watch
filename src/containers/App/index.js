@@ -47,6 +47,7 @@ export class App extends Component {
           <Route path='/rockets' component={CardsContainer}/>
           <Route path='/capsules' component={CardsContainer}/>
           <Route path='/launchpads' component={CardsContainer}/>
+          <Route path='/launches' component={CardsContainer} />
         </Switch>
       </div>
     );
