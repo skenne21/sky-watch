@@ -73,6 +73,7 @@ export class CapsulesContainer extends Component {
           card={card} 
           addBookmarks={this.addBookmarks}
           className={`${card.type}-card`}
+          user={this.props.user}
         />)
     });
   }
@@ -91,7 +92,8 @@ export const mapStateToProps = state => ({
   missionVideos: state.missionVideos,
   launchpads: state.launchpads,
   rockets: state.rockets, 
-  bookmarks: state.bookmarks
+  bookmarks: state.bookmarks,
+  user: state.user
 });
 
 export const mapDispatchToProps = dispatch => ({

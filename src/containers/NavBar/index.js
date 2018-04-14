@@ -13,11 +13,25 @@ export class NavBar extends Component {
   }
 
   toggleLogin = () => {
-    const user = Object.keys(this.props.user)
+    const user = Object.keys(this.props.user);
+    const { pathname }  = this.props.history.location;
+    
     if (user.length > 1) {
-      return (<button onClick ={this.removeUser}>SignOut</button>)
+      return (
+        <div>
+          <button onClick ={this.removeUser}>SignOut</button>
+          {
+            pathname !== '/' ? <NavLink to='/'>HOME</NavLink> : ''
+          }
+        </div>
+      )
     } else {
-      return (<NavLink className='signin' to='/signin'>SIGN IN</NavLink>)
+      return (
+        <div>
+          <NavLink className='signin' to='/signin'>SIGN IN</NavLink>
+          <NavLink className='createAccount' to='/signup'>NEW ACCOUNT</NavLink>
+        </div>
+      )
     }
   }
 
@@ -26,11 +40,6 @@ export class NavBar extends Component {
     return (
       <div className="NavBar">
         {this.toggleLogin()}
-        <NavLink 
-          className='createAccount' 
-          to='/signup'
-        >NEW ACCOUNT
-        </NavLink>
       </div>
     )
   }
