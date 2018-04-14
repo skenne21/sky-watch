@@ -367,8 +367,7 @@ export const launchpad = {
   vehicles:["Falcon 9"]
 }
 
-export const launches = [
-{
+export const launches = {
   falcon1:[
   {
     name: "Flight Number: 1",
@@ -445,4 +444,4 @@ export const launches = [
       fairings: "Reusable Fairings: false",
     }
   }] 
-}]
+}
