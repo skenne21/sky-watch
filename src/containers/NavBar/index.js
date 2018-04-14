@@ -36,7 +36,6 @@ export class NavBar extends Component {
   }
 
   render() {
-    
     return (
       <div className="NavBar">
         {this.toggleLogin()}

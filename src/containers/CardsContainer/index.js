@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import Card from '../../components/Card';
+import { randomQuestions } from '../../mockData/mockQuestions';
 import './styles.css';
 
 
@@ -79,9 +80,14 @@ export class CapsulesContainer extends Component {
   }
 
   render() {
+    const questions = randomQuestions()
+    const { user } = this.props;
+    console.log(user)
     return (
       <div className='CapsulesContainer'>
-        {this.determineCardType()}
+        {
+          user.length ? this.determineCardType() : this.createCards(questions)
+        }
       </div>
     );
   }
