@@ -3,7 +3,6 @@ import './styles.css';
 
 const Card = ({card, className, addBookmarks, user}) => {
   const { name, stats } = card;
-  console.log(user)
   const tags = Object.keys(stats).map( (stat, index) => {
     return <p key={stat+index}>{stats[stat]}</p>;
   });
@@ -28,6 +27,7 @@ const Card = ({card, className, addBookmarks, user}) => {
       </div>
     )
   }
+  
   const factCards = (card) => {
     return (
       <div 

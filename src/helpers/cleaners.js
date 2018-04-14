@@ -103,5 +103,5 @@ export const combineLaunches = (falcon1, falcon9, falconHeavy) => {
 }
 
 export const filterLaunches = (launches, id) => {
-  return launches.filter(launch => launch.rocket.rocket_id === id);
+ return launches.filter(launch => launch.rocket.rocket_id === id);
 }
