@@ -25,4 +25,4 @@ export const combineLaunches = jest.fn()
   .mockImplementation(() => mocks.launches);
 
 export const filterLaunches = jest.fn()
-  .mockImplementation(() => mocks.launch)
+  .mockImplementation(() => mocks.launch);

@@ -4,10 +4,7 @@ import {
   cleanVideos,
   cleanRockets,
   cleanCapsules,
-  cleanLaunchpads,
-  cleanLaunches,
-  combineLaunches,
-  filterLaunches 
+  cleanLaunchpads 
 } from './cleaners';
 import { manageLaunches } from './launches';
 import { youTubeKey } from '../apiKeys';
@@ -194,7 +191,7 @@ describe('apiCalls', () => {
 
     it('Should call cleanCapsules with the correct params', () => {
       apiCalls.fetchCapsules();
-      expect(cleanCapsules).toHaveBeenCalledWith(response)
+      expect(cleanCapsules).toHaveBeenCalledWith(response);
     });
 
     it('Should throw an error if the status is above 200', () => {
@@ -235,7 +232,7 @@ describe('apiCalls', () => {
     });
 
     it('Should call clean launchpads witht the right params', async () => {
-      const call = await apiCalls.fetchLaunchpads();
+      await apiCalls.fetchLaunchpads();
       expect(cleanLaunchpads).toHaveBeenCalledWith(response);
     });
 
@@ -284,7 +281,7 @@ describe('apiCalls', () => {
     });
 
     it('Should call clean manageLaunches with the right params', async () => {
-      const call = await apiCalls.fetchLaunches();
+      await apiCalls.fetchLaunches();
       expect(manageLaunches).toHaveBeenCalledWith(response);
     });
 
@@ -308,8 +305,7 @@ describe('apiCalls', () => {
       };
 
       const call = apiCalls.fetchLaunchpads();
-
       expect(call).rejects.toEqual(expected);
     });
-  })
+  });
 });

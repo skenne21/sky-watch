@@ -63,7 +63,7 @@ export const fetchLaunchpads = async () => {
 };
 
 export const fetchLaunches = async () => {
-  try{
+  try {
     const response = await fetch('https://api.spacexdata.com/v2/launches/all');
     const info = await response.json();
     const launches = manageLaunches(info);
@@ -71,5 +71,5 @@ export const fetchLaunches = async () => {
   } catch (error) {
     throw error;
   }
-}
+};
 

@@ -30,12 +30,12 @@ describe('cleaners', () => {
     });
   });
 
-  describe('cleanDate' , () => {
+  describe('cleanDate', () => {
     it('Should clean the date', () => {
       const recevied = '2006-03-24';
       const expected = '03, 24, 2006';
       const date = cleaners.cleanDate(recevied);
-      expect(date).toEqual(expected)
+      expect(date).toEqual(expected);
     });
   });
 
@@ -64,7 +64,7 @@ describe('cleaners', () => {
       const launches = cleaners.cleanLaunches(recevied);
       expect(launches).toEqual(expected);
     });
-  })
+  });
 
   describe('CombineLaunches', () => {
     it('Should combine launchess', () => {
@@ -84,9 +84,9 @@ describe('cleaners', () => {
   describe('filterLaunches', () => {
     it('Should filter launchess', () => {
       const launches = mocks.rawLaunches;
-      const called = cleaners.filterLaunches(launches, 'falcon1');
-      const expected = mocks.rawLaunches
+      cleaners.filterLaunches(launches, 'falcon1');
+      const expected = mocks.rawLaunches;
       expect(launches).toEqual(expected);
     });
-  })
+  });
 });

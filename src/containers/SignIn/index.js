@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { auth } from '../../firebase';
 import * as actions from '../../actions';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 export class SignIn extends Component {
@@ -13,12 +14,12 @@ export class SignIn extends Component {
       email: '',
       password: '',
       error: ''
-    }
+    };
   }
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { email, password, name } = this.state;
+    const { email, password } = this.state;
     try {
       const authUser = await auth.signIn(email, password);
       const user = {
@@ -31,21 +32,21 @@ export class SignIn extends Component {
         email: '',
         password: '',
         error:''
-      })
-      this.props.history.push('/')
+      });
+      this.props.history.push('/');
     } catch (error) {
-      this.setState({error})
+      this.setState({error});
     }
   }
 
   handleChange = event => {
     const { name, value} = event.target;
-    this.setState({ [name]: value })
+    this.setState({ [name]: value });
   }
 
   render() {
-    const { error } = this.state
-    return(
+    const { error } = this.state;
+    return (
       <form 
         onSubmit={this.handleSubmit}
         className='Signin-form'
@@ -70,16 +71,22 @@ export class SignIn extends Component {
         <button>Enter Your Account</button>
         {error && <p>{error.message}</p>}
       </form>
-    )
+    );
   }
 }
 
 export const mapStateToProps = ({user}) => ({
   user
-})
+});
 
 export const mapDispatchToProps = dispatch => ({
   addUser: user => dispatch(actions.addUser(user))
-})
+});
+
+SignIn.propTypes = {
+  addUser: PropTypes.func,
+  user: PropTypes.object,
+  history: PropTypes.object
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignIn));

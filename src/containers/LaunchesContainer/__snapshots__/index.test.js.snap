@@ -234,7 +234,7 @@ ShallowWrapper {
                                     "type": "questionCard",
                                   }
             }
-            className="questionCard-card"
+            classname="questionCard-card"
             user={Array []}
 />,
         ],
@@ -302,7 +302,7 @@ ShallowWrapper {
             },
             "type": "questionCard",
           },
-          "className": "questionCard-card",
+          "classname": "questionCard-card",
           "user": Array [],
         },
         "ref": null,
@@ -356,7 +356,7 @@ ShallowWrapper {
                                           "type": "questionCard",
                                         }
               }
-              className="questionCard-card"
+              classname="questionCard-card"
               user={Array []}
 />,
           ],
@@ -424,7 +424,7 @@ ShallowWrapper {
               },
               "type": "questionCard",
             },
-            "className": "questionCard-card",
+            "classname": "questionCard-card",
             "user": Array [],
           },
           "ref": null,

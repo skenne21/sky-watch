@@ -4,5 +4,5 @@ export const launchesReducer = (state = [], action) => {
     return [...state, action.launches];
   default:
     return state;
-  };
-}
+  }
+};

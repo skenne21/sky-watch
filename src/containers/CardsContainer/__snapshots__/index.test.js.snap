@@ -4,7 +4,7 @@ exports[`CardsContainer Should create capsules cards if history equals /capsules
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+  Symbol(enzyme.__unrendered__): <CardsContainer
     addToBookmarks={[Function]}
     capsules={
         Array [
@@ -61,25 +61,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "render": [Function],
+      "children": undefined,
+      "className": "CapsulesContainer",
     },
     "ref": null,
     "rendered": null,
-    "type": [Function],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "render": [Function],
+        "children": undefined,
+        "className": "CapsulesContainer",
       },
       "ref": null,
       "rendered": null,
-      "type": [Function],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -96,7 +98,7 @@ exports[`CardsContainer Should create launchpads cards if history equals /launch
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+  Symbol(enzyme.__unrendered__): <CardsContainer
     addToBookmarks={[Function]}
     capsules={Array []}
     history={
@@ -149,25 +151,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "render": [Function],
+      "children": undefined,
+      "className": "CapsulesContainer",
     },
     "ref": null,
     "rendered": null,
-    "type": [Function],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "render": [Function],
+        "children": undefined,
+        "className": "CapsulesContainer",
       },
       "ref": null,
       "rendered": null,
-      "type": [Function],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -184,7 +188,7 @@ exports[`CardsContainer Should create question cards if there is not a user 1`] 
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+  Symbol(enzyme.__unrendered__): <CardsContainer
     addToBookmarks={[Function]}
     capsules={Array []}
     history={
@@ -210,25 +214,115 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "render": [Function],
+      "children": Array [
+        <Card
+          addBookmarks={undefined}
+          card={
+                    Object {
+                              "name": "",
+                              "question": "What Falcon 9 achieving a stable landing at sea?",
+                              "stats": Object {
+                                "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
+                          landing at sea in the Atlantic on the drone ship Of Course I Still
+                          Love You in April 2016 after four previous attempts ended in
+                          destruction of the booster upon impact",
+                              },
+                              "type": "questionCard",
+                            }
+          }
+          classname="questionCard-card"
+          user={Array []}
+/>,
+      ],
+      "className": "CapsulesContainer",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "addBookmarks": undefined,
+          "card": Object {
+            "name": "",
+            "question": "What Falcon 9 achieving a stable landing at sea?",
+            "stats": Object {
+              "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
+      landing at sea in the Atlantic on the drone ship Of Course I Still
+      Love You in April 2016 after four previous attempts ended in
+      destruction of the booster upon impact",
+            },
+            "type": "questionCard",
+          },
+          "classname": "questionCard-card",
+          "user": Array [],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "render": [Function],
+        "children": Array [
+          <Card
+            addBookmarks={undefined}
+            card={
+                        Object {
+                                    "name": "",
+                                    "question": "What Falcon 9 achieving a stable landing at sea?",
+                                    "stats": Object {
+                                      "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
+                              landing at sea in the Atlantic on the drone ship Of Course I Still
+                              Love You in April 2016 after four previous attempts ended in
+                              destruction of the booster upon impact",
+                                    },
+                                    "type": "questionCard",
+                                  }
+            }
+            classname="questionCard-card"
+            user={Array []}
+/>,
+        ],
+        "className": "CapsulesContainer",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "addBookmarks": undefined,
+            "card": Object {
+              "name": "",
+              "question": "What Falcon 9 achieving a stable landing at sea?",
+              "stats": Object {
+                "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
+      landing at sea in the Atlantic on the drone ship Of Course I Still
+      Love You in April 2016 after four previous attempts ended in
+      destruction of the booster upon impact",
+              },
+              "type": "questionCard",
+            },
+            "classname": "questionCard-card",
+            "user": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -245,7 +339,7 @@ exports[`CardsContainer Should create rockets cards if history equals /rockets 1
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+  Symbol(enzyme.__unrendered__): <CardsContainer
     addToBookmarks={[Function]}
     capsules={Array []}
     history={
@@ -308,25 +402,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "render": [Function],
+      "children": undefined,
+      "className": "CapsulesContainer",
     },
     "ref": null,
     "rendered": null,
-    "type": [Function],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "render": [Function],
+        "children": undefined,
+        "className": "CapsulesContainer",
       },
       "ref": null,
       "rendered": null,
-      "type": [Function],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -343,7 +439,7 @@ exports[`CardsContainer Should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+  Symbol(enzyme.__unrendered__): <CardsContainer
     addToBookmarks={[Function]}
     capsules={Array []}
     history={
@@ -373,25 +469,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "render": [Function],
+      "children": null,
+      "className": "CapsulesContainer",
     },
     "ref": null,
     "rendered": null,
-    "type": [Function],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "render": [Function],
+        "children": null,
+        "className": "CapsulesContainer",
       },
       "ref": null,
       "rendered": null,
-      "type": [Function],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

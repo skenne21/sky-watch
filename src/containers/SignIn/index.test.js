@@ -2,8 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { mapStateToProps, mapDispatchToProps } from './index';
 import * as actions from '../../actions';
-import * as mocks from '../../mockData';
+// import * as mocks from '../../mockData';
+/* eslint-disable no-duplicate-imports*/
 import  { SignIn } from './index';
+/* eslint-enable no-duplicate-imports*/
 
 describe('SignIn', () => {
   let wrapper, user, addUser, history;
