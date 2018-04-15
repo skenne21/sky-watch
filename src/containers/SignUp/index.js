@@ -27,21 +27,21 @@ export class SignUp extends Component {
         email: authUser.email,
         uid: authUser.uid
       };
-      await this.resetState();
-      await this.props.addUser(user);
-      await this.props.history.push('/');
+      this.resetState(user)
     } catch (error) {
       this.setState({error});
     }
   }
 
-  resetState = () => {
+  resetState = (user) => {
     this.setState({
       name: '',
       email: '',
       password: '',
       error:''
     });
+    this.props.addUser(user);
+    this.props.history.push('/');
   }
 
   handleChange = event => {
