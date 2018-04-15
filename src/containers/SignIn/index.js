@@ -45,7 +45,7 @@ export class SignIn extends Component {
   }
 
   render() {
-    const { error } = this.state;
+    const { error, email, password,  } = this.state;
     return (
       <form 
         onSubmit={this.handleSubmit}
@@ -55,7 +55,7 @@ export class SignIn extends Component {
         <input
           className='input'
           name='email'
-          value={this.state.email}
+          value={email}
           placeholder='Enter Your Email'
           onChange={this.handleChange}
           type='email'
@@ -63,7 +63,7 @@ export class SignIn extends Component {
         <input 
           className='input'
           name='password'
-          vaule={this.state.password}
+          vaule={password}
           placeholder='Enter Your Password'
           onChange={this.handleChange}
           type='password'

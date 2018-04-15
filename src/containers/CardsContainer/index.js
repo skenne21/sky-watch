@@ -28,6 +28,7 @@ export class CardsContainer extends Component {
   }
 
   createComponent = (cardType) => {
+    console.log({cardType})
     if (this.props.missionVideos.length) {
       const { id, title } = this.props.missionVideos[3];
       return (
@@ -57,18 +58,6 @@ export class CardsContainer extends Component {
     }
   }
 
-  // addBookmarks = (card) => {
-  //   const isBookemarked = this.props.bookmarks.includes(card);
-  //   if(!isBookemarked) {
-  //     card.isActive = true;
-  //     this.props.addToBookmarks(card); 
-  //   } else {
-  //     this.props.removeBookmark(card);
-  //     card.isActive = false;
-  //   }
-
-  // }
-
   createCards = (cardsToMap) => {
     return cardsToMap.map((card, index) => {
       return (
@@ -85,10 +74,11 @@ export class CardsContainer extends Component {
   render() {
     const questions = randomQuestions();
     const { user } = this.props;
+    const users = Object.keys(user)
     return (
       <div className='CapsulesContainer'>
         {
-          user.length ? this.determineCardType() : this.createCards(questions)
+          users.length ? this.determineCardType() : this.createCards(questions)
         }
       </div>
     );

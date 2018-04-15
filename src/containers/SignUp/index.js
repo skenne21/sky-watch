@@ -28,17 +28,21 @@ export class SignUp extends Component {
         email: authUser.email,
         uid: authUser.uid
       };
-      this.props.addUser(user);
-      this.setState({
-        name: '',
-        email: '',
-        password: '',
-        error:''
-      });
-      this.props.history.push('/');
+      await this.resetState();
+      await this.props.addUser(user);
+      await this.props.history.push('/');
     } catch (error) {
       this.setState({error});
     }
+  }
+
+  resetState = () => {
+    this.setState({
+      name: '',
+      email: '',
+      password: '',
+      error:''
+    });
   }
 
   handleChange = event => {
@@ -47,7 +51,7 @@ export class SignUp extends Component {
   }
 
   render() {
-    const { error } = this.state;
+    const { error, password, name, email } = this.state;
     return (
       <form 
         onSubmit={this.handleSubmit}
@@ -56,7 +60,7 @@ export class SignUp extends Component {
         <input
           className='input'
           name='name'
-          value={this.state.name}
+          value={name}
           placeholder='Enter Your Name'
           onChange={this.handleChange}
           type='text'
@@ -64,7 +68,7 @@ export class SignUp extends Component {
         <input
           className='input'
           name='email'
-          value={this.state.email}
+          value={email}
           placeholder='Enter Your Email'
           onChange={this.handleChange}
           type='email'
@@ -72,7 +76,7 @@ export class SignUp extends Component {
         <input 
           className='input'
           name='password'
-          vaule={this.state.password}
+          vaule={password}
           placeholder='Enter Your Password'
           onChange={this.handleChange}
           type='password'
