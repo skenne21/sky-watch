@@ -45,6 +45,11 @@ ShallowWrapper {
     missionVideos={Array []}
     removeBookmark={[Function]}
     rockets={Array []}
+    user={
+        Array [
+            Object {},
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -128,6 +133,72 @@ ShallowWrapper {
     missionVideos={Array []}
     removeBookmark={[Function]}
     rockets={Array []}
+    user={
+        Array [
+            Object {},
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "render": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "render": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CardsContainer Should create question cards if there is not a user 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <withRouter(Connect(CapsulesContainer))
+    addToBookmarks={[Function]}
+    capsules={Array []}
+    history={
+        Object {
+            "location": Object {
+              "pathname": "/",
+            },
+          }
+    }
+    launchpads={Array []}
+    missionVideos={Array []}
+    removeBookmark={[Function]}
+    rockets={Array []}
+    user={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -221,6 +292,11 @@ ShallowWrapper {
             },
           ]
     }
+    user={
+        Array [
+            Object {},
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -281,6 +357,11 @@ ShallowWrapper {
     missionVideos={Array []}
     removeBookmark={[Function]}
     rockets={Array []}
+    user={
+        Array [
+            Object {},
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

@@ -12,6 +12,10 @@ import './styles.css';
 
 
 export class Homepage extends Component {
+  constructor(props) {
+    super(props)
+  } 
+  
   createBio = () => {
     const { 
       name,
@@ -92,7 +96,6 @@ export class Homepage extends Component {
 
   handleLaunches = async () => {
     try {
-      console.log('works')
       const launches = await fetchLaunches();
       this.props.getLaunches(launches)
     } catch (error) {

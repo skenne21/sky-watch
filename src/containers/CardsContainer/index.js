@@ -54,17 +54,17 @@ export class CapsulesContainer extends Component {
     }
   }
 
-  addBookmarks = (card) => {
-    const isBookemarked = this.props.bookmarks.includes(card);
-    if(!isBookemarked) {
-      card.isActive = true;
-      this.props.addToBookmarks(card); 
-    } else {
-      this.props.removeBookmark(card);
-      card.isActive = false;
-    }
+  // addBookmarks = (card) => {
+  //   const isBookemarked = this.props.bookmarks.includes(card);
+  //   if(!isBookemarked) {
+  //     card.isActive = true;
+  //     this.props.addToBookmarks(card); 
+  //   } else {
+  //     this.props.removeBookmark(card);
+  //     card.isActive = false;
+  //   }
 
-  }
+  // }
 
   createCards = (cardsToMap) => {
     return cardsToMap.map((card, index) => {

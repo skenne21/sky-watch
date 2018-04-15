@@ -32,6 +32,7 @@ describe('CardsContainer', () => {
         missionVideos={missionVideos}
         addToBookmarks={addToBookmarks}
         removeBookmark={removeBookmark}
+        user={[{}]}
       />
     )
   });
@@ -51,6 +52,7 @@ describe('CardsContainer', () => {
         missionVideos={missionVideos}
         addToBookmarks={addToBookmarks}
         removeBookmark={removeBookmark}
+        user={[{}]}
       />
     );
 
@@ -68,6 +70,7 @@ describe('CardsContainer', () => {
         missionVideos={missionVideos}
         addToBookmarks={addToBookmarks}
         removeBookmark={removeBookmark}
+        user={[{}]}
       />
     );
 
@@ -85,19 +88,36 @@ describe('CardsContainer', () => {
       missionVideos={missionVideos}
       addToBookmarks={addToBookmarks}
       removeBookmark={removeBookmark}
+      user={[{}]}
       />
     );
 
     expect(wrapper).toMatchSnapshot();
   })
 
-  it('Should add bookmarks to the store', () => {
+  it('Should create question cards if there is not a user' , () => {
+    wrapper = shallow(<CardsContainer
+      history={history}
+      capsules={capsules}
+      rockets={rockets}
+      launchpads={launchpads}
+      missionVideos={missionVideos}
+      addToBookmarks={addToBookmarks}
+      removeBookmark={removeBookmark}
+      user={[]}
+      />
+    );
 
+    expect(wrapper).toMatchSnapshot();
   });
+  
+  // it('Should add bookmarks to the store', () => {
 
-  it('Should remove bookmarks to the store if it already is in the store', () => {
+  // });
 
-  });
+  // it('Should remove bookmarks to the store if it already is in the store', () => {
+
+  // });
 
   describe('mapStateToProps', () => {
     let mockedState, expectedState, mapped;

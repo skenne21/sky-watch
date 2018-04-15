@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Homepage Container Should Match the snapshot 1`] = `
+exports[`Homepage Container Should Match the snapshot if there is no length to the bio 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(Homepage))
+  Symbol(enzyme.__unrendered__): <Homepage
     capsules={Array []}
     companyBio={Array []}
     getCapsules={[Function]}
@@ -24,25 +24,976 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "render": [Function],
+      "children": Array [
+        <div
+          className="loading"
+>
+          <img
+                    alt="Picture of starman"
+                    src="../../assets/starman.png"
+          />
+          <p>
+                     Loading 
+          </p>
+</div>,
+        <form
+          className="nav-links"
+>
+          <NavLink
+                    activeClassName="isActive"
+                    ariaCurrent="true"
+                    className="rockets"
+                    name="rockets"
+                    onClick={[Function]}
+                    to="/rockets"
+          >
+                    ROCKETS
+          </NavLink>
+          <NavLink
+                    activeClassName="isActive"
+                    ariaCurrent="true"
+                    className="capsules"
+                    name="capsules"
+                    onClick={[Function]}
+                    to="/capsules"
+          >
+                    CAPSULES
+          </NavLink>
+          <NavLink
+                    activeClassName="isActive"
+                    ariaCurrent="true"
+                    className="launchpad"
+                    name="launchpad"
+                    onClick={[Function]}
+                    to="/launchpads"
+          >
+                    LAUNCHPADS
+          </NavLink>
+          <NavLink
+                    activeClassName="isActive"
+                    ariaCurrent="true"
+                    className="launches"
+                    name="launches"
+                    onClick={[Function]}
+                    to="/launches"
+          >
+                    LAUNCHES
+          </NavLink>
+</form>,
+      ],
+      "className": "Homepage",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Picture of starman"
+              src="../../assets/starman.png"
+/>,
+            <p>
+               Loading 
+</p>,
+          ],
+          "className": "loading",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Picture of starman",
+              "src": "../../assets/starman.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " Loading ",
+            },
+            "ref": null,
+            "rendered": " Loading ",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <NavLink
+              activeClassName="isActive"
+              ariaCurrent="true"
+              className="rockets"
+              name="rockets"
+              onClick={[Function]}
+              to="/rockets"
+>
+              ROCKETS
+</NavLink>,
+            <NavLink
+              activeClassName="isActive"
+              ariaCurrent="true"
+              className="capsules"
+              name="capsules"
+              onClick={[Function]}
+              to="/capsules"
+>
+              CAPSULES
+</NavLink>,
+            <NavLink
+              activeClassName="isActive"
+              ariaCurrent="true"
+              className="launchpad"
+              name="launchpad"
+              onClick={[Function]}
+              to="/launchpads"
+>
+              LAUNCHPADS
+</NavLink>,
+            <NavLink
+              activeClassName="isActive"
+              ariaCurrent="true"
+              className="launches"
+              name="launches"
+              onClick={[Function]}
+              to="/launches"
+>
+              LAUNCHES
+</NavLink>,
+          ],
+          "className": "nav-links",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "isActive",
+              "ariaCurrent": "true",
+              "children": "ROCKETS",
+              "className": "rockets",
+              "name": "rockets",
+              "onClick": [Function],
+              "to": "/rockets",
+            },
+            "ref": null,
+            "rendered": "ROCKETS",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "isActive",
+              "ariaCurrent": "true",
+              "children": "CAPSULES",
+              "className": "capsules",
+              "name": "capsules",
+              "onClick": [Function],
+              "to": "/capsules",
+            },
+            "ref": null,
+            "rendered": "CAPSULES",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "isActive",
+              "ariaCurrent": "true",
+              "children": "LAUNCHPADS",
+              "className": "launchpad",
+              "name": "launchpad",
+              "onClick": [Function],
+              "to": "/launchpads",
+            },
+            "ref": null,
+            "rendered": "LAUNCHPADS",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "isActive",
+              "ariaCurrent": "true",
+              "children": "LAUNCHES",
+              "className": "launches",
+              "name": "launches",
+              "onClick": [Function],
+              "to": "/launches",
+            },
+            "ref": null,
+            "rendered": "LAUNCHES",
+            "type": [Function],
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "render": [Function],
+        "children": Array [
+          <div
+            className="loading"
+>
+            <img
+                        alt="Picture of starman"
+                        src="../../assets/starman.png"
+            />
+            <p>
+                         Loading 
+            </p>
+</div>,
+          <form
+            className="nav-links"
+>
+            <NavLink
+                        activeClassName="isActive"
+                        ariaCurrent="true"
+                        className="rockets"
+                        name="rockets"
+                        onClick={[Function]}
+                        to="/rockets"
+            >
+                        ROCKETS
+            </NavLink>
+            <NavLink
+                        activeClassName="isActive"
+                        ariaCurrent="true"
+                        className="capsules"
+                        name="capsules"
+                        onClick={[Function]}
+                        to="/capsules"
+            >
+                        CAPSULES
+            </NavLink>
+            <NavLink
+                        activeClassName="isActive"
+                        ariaCurrent="true"
+                        className="launchpad"
+                        name="launchpad"
+                        onClick={[Function]}
+                        to="/launchpads"
+            >
+                        LAUNCHPADS
+            </NavLink>
+            <NavLink
+                        activeClassName="isActive"
+                        ariaCurrent="true"
+                        className="launches"
+                        name="launches"
+                        onClick={[Function]}
+                        to="/launches"
+            >
+                        LAUNCHES
+            </NavLink>
+</form>,
+        ],
+        "className": "Homepage",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Picture of starman"
+                src="../../assets/starman.png"
+/>,
+              <p>
+                 Loading 
+</p>,
+            ],
+            "className": "loading",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Picture of starman",
+                "src": "../../assets/starman.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " Loading ",
+              },
+              "ref": null,
+              "rendered": " Loading ",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <NavLink
+                activeClassName="isActive"
+                ariaCurrent="true"
+                className="rockets"
+                name="rockets"
+                onClick={[Function]}
+                to="/rockets"
+>
+                ROCKETS
+</NavLink>,
+              <NavLink
+                activeClassName="isActive"
+                ariaCurrent="true"
+                className="capsules"
+                name="capsules"
+                onClick={[Function]}
+                to="/capsules"
+>
+                CAPSULES
+</NavLink>,
+              <NavLink
+                activeClassName="isActive"
+                ariaCurrent="true"
+                className="launchpad"
+                name="launchpad"
+                onClick={[Function]}
+                to="/launchpads"
+>
+                LAUNCHPADS
+</NavLink>,
+              <NavLink
+                activeClassName="isActive"
+                ariaCurrent="true"
+                className="launches"
+                name="launches"
+                onClick={[Function]}
+                to="/launches"
+>
+                LAUNCHES
+</NavLink>,
+            ],
+            "className": "nav-links",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "isActive",
+                "ariaCurrent": "true",
+                "children": "ROCKETS",
+                "className": "rockets",
+                "name": "rockets",
+                "onClick": [Function],
+                "to": "/rockets",
+              },
+              "ref": null,
+              "rendered": "ROCKETS",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "isActive",
+                "ariaCurrent": "true",
+                "children": "CAPSULES",
+                "className": "capsules",
+                "name": "capsules",
+                "onClick": [Function],
+                "to": "/capsules",
+              },
+              "ref": null,
+              "rendered": "CAPSULES",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "isActive",
+                "ariaCurrent": "true",
+                "children": "LAUNCHPADS",
+                "className": "launchpad",
+                "name": "launchpad",
+                "onClick": [Function],
+                "to": "/launchpads",
+              },
+              "ref": null,
+              "rendered": "LAUNCHPADS",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "isActive",
+                "ariaCurrent": "true",
+                "children": "LAUNCHES",
+                "className": "launches",
+                "name": "launches",
+                "onClick": [Function],
+                "to": "/launches",
+              },
+              "ref": null,
+              "rendered": "LAUNCHES",
+              "type": [Function],
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Homepage Container Should match the snapshot if the bio has length 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Homepage
+    capsules={Array []}
+    companyBio={Array []}
+    getCapsules={[Function]}
+    getLaunchPads={[Function]}
+    getRockets={[Function]}
+    handleError={[Function]}
+    launchpads={Array []}
+    missionVideos={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="loading"
+>
+          <img
+                    alt="Picture of starman"
+                    src="../../assets/starman.png"
+          />
+          <p>
+                     Loading 
+          </p>
+</div>,
+        <form
+          className="nav-links"
+>
+          <NavLink
+                    activeClassName="isActive"
+                    ariaCurrent="true"
+                    className="rockets"
+                    name="rockets"
+                    onClick={[Function]}
+                    to="/rockets"
+          >
+                    ROCKETS
+          </NavLink>
+          <NavLink
+                    activeClassName="isActive"
+                    ariaCurrent="true"
+                    className="capsules"
+                    name="capsules"
+                    onClick={[Function]}
+                    to="/capsules"
+          >
+                    CAPSULES
+          </NavLink>
+          <NavLink
+                    activeClassName="isActive"
+                    ariaCurrent="true"
+                    className="launchpad"
+                    name="launchpad"
+                    onClick={[Function]}
+                    to="/launchpads"
+          >
+                    LAUNCHPADS
+          </NavLink>
+          <NavLink
+                    activeClassName="isActive"
+                    ariaCurrent="true"
+                    className="launches"
+                    name="launches"
+                    onClick={[Function]}
+                    to="/launches"
+          >
+                    LAUNCHES
+          </NavLink>
+</form>,
+      ],
+      "className": "Homepage",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Picture of starman"
+              src="../../assets/starman.png"
+/>,
+            <p>
+               Loading 
+</p>,
+          ],
+          "className": "loading",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Picture of starman",
+              "src": "../../assets/starman.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " Loading ",
+            },
+            "ref": null,
+            "rendered": " Loading ",
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <NavLink
+              activeClassName="isActive"
+              ariaCurrent="true"
+              className="rockets"
+              name="rockets"
+              onClick={[Function]}
+              to="/rockets"
+>
+              ROCKETS
+</NavLink>,
+            <NavLink
+              activeClassName="isActive"
+              ariaCurrent="true"
+              className="capsules"
+              name="capsules"
+              onClick={[Function]}
+              to="/capsules"
+>
+              CAPSULES
+</NavLink>,
+            <NavLink
+              activeClassName="isActive"
+              ariaCurrent="true"
+              className="launchpad"
+              name="launchpad"
+              onClick={[Function]}
+              to="/launchpads"
+>
+              LAUNCHPADS
+</NavLink>,
+            <NavLink
+              activeClassName="isActive"
+              ariaCurrent="true"
+              className="launches"
+              name="launches"
+              onClick={[Function]}
+              to="/launches"
+>
+              LAUNCHES
+</NavLink>,
+          ],
+          "className": "nav-links",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "isActive",
+              "ariaCurrent": "true",
+              "children": "ROCKETS",
+              "className": "rockets",
+              "name": "rockets",
+              "onClick": [Function],
+              "to": "/rockets",
+            },
+            "ref": null,
+            "rendered": "ROCKETS",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "isActive",
+              "ariaCurrent": "true",
+              "children": "CAPSULES",
+              "className": "capsules",
+              "name": "capsules",
+              "onClick": [Function],
+              "to": "/capsules",
+            },
+            "ref": null,
+            "rendered": "CAPSULES",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "isActive",
+              "ariaCurrent": "true",
+              "children": "LAUNCHPADS",
+              "className": "launchpad",
+              "name": "launchpad",
+              "onClick": [Function],
+              "to": "/launchpads",
+            },
+            "ref": null,
+            "rendered": "LAUNCHPADS",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "isActive",
+              "ariaCurrent": "true",
+              "children": "LAUNCHES",
+              "className": "launches",
+              "name": "launches",
+              "onClick": [Function],
+              "to": "/launches",
+            },
+            "ref": null,
+            "rendered": "LAUNCHES",
+            "type": [Function],
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="loading"
+>
+            <img
+                        alt="Picture of starman"
+                        src="../../assets/starman.png"
+            />
+            <p>
+                         Loading 
+            </p>
+</div>,
+          <form
+            className="nav-links"
+>
+            <NavLink
+                        activeClassName="isActive"
+                        ariaCurrent="true"
+                        className="rockets"
+                        name="rockets"
+                        onClick={[Function]}
+                        to="/rockets"
+            >
+                        ROCKETS
+            </NavLink>
+            <NavLink
+                        activeClassName="isActive"
+                        ariaCurrent="true"
+                        className="capsules"
+                        name="capsules"
+                        onClick={[Function]}
+                        to="/capsules"
+            >
+                        CAPSULES
+            </NavLink>
+            <NavLink
+                        activeClassName="isActive"
+                        ariaCurrent="true"
+                        className="launchpad"
+                        name="launchpad"
+                        onClick={[Function]}
+                        to="/launchpads"
+            >
+                        LAUNCHPADS
+            </NavLink>
+            <NavLink
+                        activeClassName="isActive"
+                        ariaCurrent="true"
+                        className="launches"
+                        name="launches"
+                        onClick={[Function]}
+                        to="/launches"
+            >
+                        LAUNCHES
+            </NavLink>
+</form>,
+        ],
+        "className": "Homepage",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Picture of starman"
+                src="../../assets/starman.png"
+/>,
+              <p>
+                 Loading 
+</p>,
+            ],
+            "className": "loading",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Picture of starman",
+                "src": "../../assets/starman.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " Loading ",
+              },
+              "ref": null,
+              "rendered": " Loading ",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <NavLink
+                activeClassName="isActive"
+                ariaCurrent="true"
+                className="rockets"
+                name="rockets"
+                onClick={[Function]}
+                to="/rockets"
+>
+                ROCKETS
+</NavLink>,
+              <NavLink
+                activeClassName="isActive"
+                ariaCurrent="true"
+                className="capsules"
+                name="capsules"
+                onClick={[Function]}
+                to="/capsules"
+>
+                CAPSULES
+</NavLink>,
+              <NavLink
+                activeClassName="isActive"
+                ariaCurrent="true"
+                className="launchpad"
+                name="launchpad"
+                onClick={[Function]}
+                to="/launchpads"
+>
+                LAUNCHPADS
+</NavLink>,
+              <NavLink
+                activeClassName="isActive"
+                ariaCurrent="true"
+                className="launches"
+                name="launches"
+                onClick={[Function]}
+                to="/launches"
+>
+                LAUNCHES
+</NavLink>,
+            ],
+            "className": "nav-links",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "isActive",
+                "ariaCurrent": "true",
+                "children": "ROCKETS",
+                "className": "rockets",
+                "name": "rockets",
+                "onClick": [Function],
+                "to": "/rockets",
+              },
+              "ref": null,
+              "rendered": "ROCKETS",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "isActive",
+                "ariaCurrent": "true",
+                "children": "CAPSULES",
+                "className": "capsules",
+                "name": "capsules",
+                "onClick": [Function],
+                "to": "/capsules",
+              },
+              "ref": null,
+              "rendered": "CAPSULES",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "isActive",
+                "ariaCurrent": "true",
+                "children": "LAUNCHPADS",
+                "className": "launchpad",
+                "name": "launchpad",
+                "onClick": [Function],
+                "to": "/launchpads",
+              },
+              "ref": null,
+              "rendered": "LAUNCHPADS",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "isActive",
+                "ariaCurrent": "true",
+                "children": "LAUNCHES",
+                "className": "launches",
+                "name": "launches",
+                "onClick": [Function],
+                "to": "/launches",
+              },
+              "ref": null,
+              "rendered": "LAUNCHES",
+              "type": [Function],
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
