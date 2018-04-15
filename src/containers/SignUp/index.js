@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { auth, db } from '../../firebase';
+import { auth } from '../../firebase';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 import './styles.css';
@@ -22,23 +22,26 @@ export class SignUp extends Component {
     const { email, password, name } = this.state;
     try  {
       const authUser = await auth.createUser(email, password);
-      const dbUser = await db.createUser(authUser.uid, name, email);
       const user = {
         name,
         email: authUser.email,
         uid: authUser.uid
       };
-      this.props.addUser(user);
-      this.setState({
-        name: '',
-        email: '',
-        password: '',
-        error:''
-      });
-      this.props.history.push('/');
+      this.resetState(user)
     } catch (error) {
       this.setState({error});
     }
+  }
+
+  resetState = (user) => {
+    this.setState({
+      name: '',
+      email: '',
+      password: '',
+      error:''
+    });
+    this.props.addUser(user);
+    this.props.history.push('/');
   }
 
   handleChange = event => {
@@ -47,7 +50,7 @@ export class SignUp extends Component {
   }
 
   render() {
-    const { error } = this.state;
+    const { error, password, name, email } = this.state;
     return (
       <form 
         onSubmit={this.handleSubmit}
@@ -56,7 +59,7 @@ export class SignUp extends Component {
         <input
           className='input'
           name='name'
-          value={this.state.name}
+          value={name}
           placeholder='Enter Your Name'
           onChange={this.handleChange}
           type='text'
@@ -64,7 +67,7 @@ export class SignUp extends Component {
         <input
           className='input'
           name='email'
-          value={this.state.email}
+          value={email}
           placeholder='Enter Your Email'
           onChange={this.handleChange}
           type='email'
@@ -72,7 +75,7 @@ export class SignUp extends Component {
         <input 
           className='input'
           name='password'
-          vaule={this.state.password}
+          vaule={password}
           placeholder='Enter Your Password'
           onChange={this.handleChange}
           type='password'

@@ -197,47 +197,53 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <button
-          className="buttons"
-          name="falcon1"
-          onClick={[Function]}
+        <div
+          className="launches-buttons"
 >
-          FALCON 1
-</button>,
-        <button
-          className="buttons"
-          name="falcon9"
-          onClick={[Function]}
+          <button
+                    className="buttons"
+                    name="falcon1"
+                    onClick={[Function]}
+          >
+                    FALCON 1
+          </button>
+          <button
+                    className="buttons"
+                    name="falcon9"
+                    onClick={[Function]}
+          >
+                    FALCON 9
+          </button>
+          <button
+                    className="buttons"
+                    name="falconHeavy"
+                    onClick={[Function]}
+          >
+                    FALCON HEAVY
+          </button>
+</div>,
+        <div
+          className="main"
 >
-          FALCON 9
-</button>,
-        <button
-          className="buttons"
-          name="falconHeavy"
-          onClick={[Function]}
->
-          FALCON HEAVY
-</button>,
-        Array [
           <Card
-            card={
-                        Object {
-                                    "name": "",
-                                    "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
-                                    "stats": Object {
-                                      "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
-                               after the fictional Puff the Magic Dragon, from the hit song by 
-                               music group Peter, Paul and Mary. Musk said he used the name 
-                               because many critics considered his goals impossible when he 
-                               founded SpaceX in 2002.",
-                                    },
-                                    "type": "questionCard",
-                                  }
-            }
-            classname="questionCard-card"
-            user={Array []}
-/>,
-        ],
+                    card={
+                              Object {
+                                        "name": "",
+                                        "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+                                        "stats": Object {
+                                          "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+                                     after the fictional Puff the Magic Dragon, from the hit song by 
+                                     music group Peter, Paul and Mary. Musk said he used the name 
+                                     because many critics considered his goals impossible when he 
+                                     founded SpaceX in 2002.",
+                                        },
+                                        "type": "questionCard",
+                                      }
+                    }
+                    classname="questionCard-card"
+                    user={Array []}
+          />
+</div>,
       ],
       "className": "LaunchesContainer",
     },
@@ -248,99 +254,84 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "FALCON 1",
-          "className": "buttons",
-          "name": "falcon1",
-          "onClick": [Function],
+          "children": Array [
+            <button
+              className="buttons"
+              name="falcon1"
+              onClick={[Function]}
+>
+              FALCON 1
+</button>,
+            <button
+              className="buttons"
+              name="falcon9"
+              onClick={[Function]}
+>
+              FALCON 9
+</button>,
+            <button
+              className="buttons"
+              name="falconHeavy"
+              onClick={[Function]}
+>
+              FALCON HEAVY
+</button>,
+          ],
+          "className": "launches-buttons",
         },
         "ref": null,
-        "rendered": "FALCON 1",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "FALCON 9",
-          "className": "buttons",
-          "name": "falcon9",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "FALCON 9",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "FALCON HEAVY",
-          "className": "buttons",
-          "name": "falconHeavy",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "FALCON HEAVY",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": "0",
-        "nodeType": "function",
-        "props": Object {
-          "card": Object {
-            "name": "",
-            "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
-            "stats": Object {
-              "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
-       after the fictional Puff the Magic Dragon, from the hit song by 
-       music group Peter, Paul and Mary. Musk said he used the name 
-       because many critics considered his goals impossible when he 
-       founded SpaceX in 2002.",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "FALCON 1",
+              "className": "buttons",
+              "name": "falcon1",
+              "onClick": [Function],
             },
-            "type": "questionCard",
+            "ref": null,
+            "rendered": "FALCON 1",
+            "type": "button",
           },
-          "classname": "questionCard-card",
-          "user": Array [],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "FALCON 9",
+              "className": "buttons",
+              "name": "falcon9",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "FALCON 9",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "FALCON HEAVY",
+              "className": "buttons",
+              "name": "falconHeavy",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "FALCON HEAVY",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <button
-            className="buttons"
-            name="falcon1"
-            onClick={[Function]}
->
-            FALCON 1
-</button>,
-          <button
-            className="buttons"
-            name="falcon9"
-            onClick={[Function]}
->
-            FALCON 9
-</button>,
-          <button
-            className="buttons"
-            name="falconHeavy"
-            onClick={[Function]}
->
-            FALCON HEAVY
-</button>,
-          Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
             <Card
               card={
                             Object {
@@ -360,6 +351,94 @@ ShallowWrapper {
               user={Array []}
 />,
           ],
+          "className": "main",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "function",
+            "props": Object {
+              "card": Object {
+                "name": "",
+                "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+                "stats": Object {
+                  "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+       after the fictional Puff the Magic Dragon, from the hit song by 
+       music group Peter, Paul and Mary. Musk said he used the name 
+       because many critics considered his goals impossible when he 
+       founded SpaceX in 2002.",
+                },
+                "type": "questionCard",
+              },
+              "classname": "questionCard-card",
+              "user": Array [],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="launches-buttons"
+>
+            <button
+                        className="buttons"
+                        name="falcon1"
+                        onClick={[Function]}
+            >
+                        FALCON 1
+            </button>
+            <button
+                        className="buttons"
+                        name="falcon9"
+                        onClick={[Function]}
+            >
+                        FALCON 9
+            </button>
+            <button
+                        className="buttons"
+                        name="falconHeavy"
+                        onClick={[Function]}
+            >
+                        FALCON HEAVY
+            </button>
+</div>,
+          <div
+            className="main"
+>
+            <Card
+                        card={
+                                    Object {
+                                                "name": "",
+                                                "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+                                                "stats": Object {
+                                                  "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+                                           after the fictional Puff the Magic Dragon, from the hit song by 
+                                           music group Peter, Paul and Mary. Musk said he used the name 
+                                           because many critics considered his goals impossible when he 
+                                           founded SpaceX in 2002.",
+                                                },
+                                                "type": "questionCard",
+                                              }
+                        }
+                        classname="questionCard-card"
+                        user={Array []}
+            />
+</div>,
         ],
         "className": "LaunchesContainer",
       },
@@ -370,66 +449,133 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "FALCON 1",
-            "className": "buttons",
-            "name": "falcon1",
-            "onClick": [Function],
+            "children": Array [
+              <button
+                className="buttons"
+                name="falcon1"
+                onClick={[Function]}
+>
+                FALCON 1
+</button>,
+              <button
+                className="buttons"
+                name="falcon9"
+                onClick={[Function]}
+>
+                FALCON 9
+</button>,
+              <button
+                className="buttons"
+                name="falconHeavy"
+                onClick={[Function]}
+>
+                FALCON HEAVY
+</button>,
+            ],
+            "className": "launches-buttons",
           },
           "ref": null,
-          "rendered": "FALCON 1",
-          "type": "button",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "FALCON 1",
+                "className": "buttons",
+                "name": "falcon1",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "FALCON 1",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "FALCON 9",
+                "className": "buttons",
+                "name": "falcon9",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "FALCON 9",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "FALCON HEAVY",
+                "className": "buttons",
+                "name": "falconHeavy",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "FALCON HEAVY",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "FALCON 9",
-            "className": "buttons",
-            "name": "falcon9",
-            "onClick": [Function],
+            "children": Array [
+              <Card
+                card={
+                                Object {
+                                                "name": "",
+                                                "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+                                                "stats": Object {
+                                                  "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+                                       after the fictional Puff the Magic Dragon, from the hit song by 
+                                       music group Peter, Paul and Mary. Musk said he used the name 
+                                       because many critics considered his goals impossible when he 
+                                       founded SpaceX in 2002.",
+                                                },
+                                                "type": "questionCard",
+                                              }
+                }
+                classname="questionCard-card"
+                user={Array []}
+/>,
+            ],
+            "className": "main",
           },
           "ref": null,
-          "rendered": "FALCON 9",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "FALCON HEAVY",
-            "className": "buttons",
-            "name": "falconHeavy",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "FALCON HEAVY",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": "0",
-          "nodeType": "function",
-          "props": Object {
-            "card": Object {
-              "name": "",
-              "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
-              "stats": Object {
-                "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "function",
+              "props": Object {
+                "card": Object {
+                  "name": "",
+                  "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+                  "stats": Object {
+                    "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
        after the fictional Puff the Magic Dragon, from the hit song by 
        music group Peter, Paul and Mary. Musk said he used the name 
        because many critics considered his goals impossible when he 
        founded SpaceX in 2002.",
+                  },
+                  "type": "questionCard",
+                },
+                "classname": "questionCard-card",
+                "user": Array [],
               },
-              "type": "questionCard",
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "classname": "questionCard-card",
-            "user": Array [],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

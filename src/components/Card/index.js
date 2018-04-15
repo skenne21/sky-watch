@@ -2,30 +2,26 @@ import React from 'react';
 import './styles.css';
 import PropTypes from 'prop-types';
 
-const Card = ({card, classname, addBookmarks, user}) => {
+const Card = ({card, classname, user}) => {
 
   const { name, stats } = card;
+  const users = Object.keys(user)
   const tags = Object.keys(stats).map( (stat, index) => {
     return <p key={stat+index}>{stats[stat]}</p>;
   });
 
-  // const active = Object.keys(card).find(item => console.log(item))
-  
   const questions = card => {
     return (
-      <div calssName='card'>
-        <div className='front'>Questions</div>
-        <div 
-          className={`card ${classname} back`}
-        >
-          <h1>{name}</h1>
-          <button
-            className='button'
-            onClick={() => addBookmarks(card)}
-          > BOOKMARK
-          </button>
-          {tags}
+      <div calssName='questionCard'>
+        <div className='question front'>
+          <p>{card.question}</p>
         </div>
+        <div 
+          className={`${classname} question back`}
+        >
+        {tags}
+        </div>
+        <h2 className='signinMessage'>SIGNIN TO VEIW MORE INFROMATION</h2>
       </div>
     );
   };
@@ -33,23 +29,18 @@ const Card = ({card, classname, addBookmarks, user}) => {
   const factCards = (card) => {
     return (
       <div 
-        className={`card ${classname}`}
+        className={`${classname}`}
       >
         <h1>{name}</h1>
-        <button
-          className='button'
-          onClick={() => addBookmarks(card)}
-        > BOOKMARK
-        </button>
         {tags}
       </div>
     );
   };
 
   return (
-    <div>
+    <div className='card'>
       {
-        user.length ? factCards(card) : questions(card)
+        users.length > 1 ? factCards(card)  : questions(card)
       }
     </div>
   );
@@ -58,8 +49,7 @@ const Card = ({card, classname, addBookmarks, user}) => {
 Card.propTypes = {
   card: PropTypes.object,
   classname: PropTypes.string,
-  addBookmarks: PropTypes.object,
-  user: PropTypes.array
+  user: PropTypes.object
 };
 
 export default Card;

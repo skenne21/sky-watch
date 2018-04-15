@@ -1,7 +1,7 @@
 .Homepage {
   display: inline-grid;
   grid-template-columns: 20% 80%;
-  grid-template-rows: 60% 40%;
+  grid-template-rows: 25% 25% 25% 25%;
 }
 
 .bio {
@@ -17,7 +17,8 @@
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   width: 100%;
-  padding-top: 3em;
+  padding-top: 8em;
+  padding-left: 3em;
 }
 
 .iframe {
@@ -34,7 +35,6 @@
 
 
 .text-box {
-  padding-bottom: 2em;
   background-color: #ffffff0f;
   width: 65.5%;
   margin: auto;
@@ -75,21 +75,23 @@
 .nav-links {
   display: inline-grid;
   grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
 }
 
 .rockets,
 .launchpad,
-.capsules {
+.capsules,
+.launches {
+  height: 375px;
   color: #303D63;
   font-family: bold;
   font-size: 2.5em;
-  padding-top: 5em;
+  padding-top: 4em;
 }
 
 
 .rockets {
-  padding-top: 5.5em;
+  padding-top: 5em;
   background-image: url('../../assets/rockets-2.jpeg');
   background-size: cover;
   background-position: top;
@@ -97,7 +99,7 @@
 }
 
 .launchpad {
-  padding-top: 6em;
+  padding-top: 4.3em;
   background-image: url('../../assets/space-x-ocean-landing.jpg');
   background-size: cover;
   background-position: bottom;
@@ -106,6 +108,13 @@
 
 .capsules {
   background-image: url('../../assets/capsules.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.launches {
+  background-image: url('../../assets/launch.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

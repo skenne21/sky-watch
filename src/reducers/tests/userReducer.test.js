@@ -3,7 +3,7 @@ import * as actions from '../../actions';
 
 describe('userReducer', () => {
   it('Should retrun a defualt state if action is undefined', () => {
-    const expected = [];
+    const expected = {};
     const called = userReducer(undefined, {});
     expect(called).toEqual(expected);
   });

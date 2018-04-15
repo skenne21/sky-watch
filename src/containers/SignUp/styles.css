@@ -1,7 +1,7 @@
 .SignUp-form {
-  height: 250px;
+  height: 350px;
   width: 40%;
-  padding: 2em 0;
+  padding: 3em 0;
   background-color: #ffffff0f;
   margin: 3.5em auto;
   color: #fff;
@@ -17,10 +17,8 @@
 }
 
 .SignUp-form button {
-  /*width: 35%;
-  */height: 45px;
+  height: 45px;
   background-color: transparent;
   color: #fff;
-  /*border: none;*/
   font-size: 2em;
 }

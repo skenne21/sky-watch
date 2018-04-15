@@ -48,26 +48,16 @@ export class CardsContainer extends Component {
             {
               cardType.length ? <p className='current-p'>CURRENT</p> : ''
             }
-            {  
-              this.createCards(cardType)
-            }
+            <div className='main'>
+              {  
+                this.createCards(cardType)
+              }
+            </div>
           </div>
         </div>
       );
     }
   }
-
-  // addBookmarks = (card) => {
-  //   const isBookemarked = this.props.bookmarks.includes(card);
-  //   if(!isBookemarked) {
-  //     card.isActive = true;
-  //     this.props.addToBookmarks(card); 
-  //   } else {
-  //     this.props.removeBookmark(card);
-  //     card.isActive = false;
-  //   }
-
-  // }
 
   createCards = (cardsToMap) => {
     return cardsToMap.map((card, index) => {
@@ -75,7 +65,6 @@ export class CardsContainer extends Component {
         <Card 
           key={card.name+index} 
           card={card} 
-          addBookmarks={this.addBookmarks}
           classname={`${card.type}-card`}
           user={this.props.user}
         />);
@@ -85,10 +74,11 @@ export class CardsContainer extends Component {
   render() {
     const questions = randomQuestions();
     const { user } = this.props;
+    const users = Object.keys(user)
     return (
       <div className='CapsulesContainer'>
         {
-          user.length ? this.determineCardType() : this.createCards(questions)
+          users.length ? this.determineCardType() : this.createCards(questions)
         }
       </div>
     );
@@ -100,26 +90,19 @@ export const mapStateToProps = state => ({
   missionVideos: state.missionVideos,
   launchpads: state.launchpads,
   rockets: state.rockets, 
-  bookmarks: state.bookmarks,
   user: state.user
 });
 
-export const mapDispatchToProps = dispatch => ({
-  addToBookmarks: bookmark => dispatch(actions.addBookmarks(bookmark)),
-  removeBookmark: bookmark => dispatch(actions.removeBookmark(bookmark))
-});
 
 CardsContainer.propTypes = {
   capsules: PropTypes.array,
   rockets: PropTypes.array,
   launchpads: PropTypes.array,
   missionVideos: PropTypes.array,
-  user: PropTypes.array,
-  addToBookmarks: PropTypes.func,
-  removeBookmark: PropTypes.func,
+  user: PropTypes.object,
   history: PropTypes.object
 };
 
 
 /* eslint-disable max-len*/
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardsContainer));
+export default withRouter(connect(mapStateToProps, null)(CardsContainer));

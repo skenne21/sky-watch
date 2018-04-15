@@ -93,13 +93,13 @@ export const questions = [
     question: `From 2013 to 2016, sixteen test flights were conducted
     Falcon 9 first-stage landing test how many were successful?`,
     stats: {
-      answer: `From 2013 to 2016, sixteen test flights were conducted,
+      answer: `Sixteen test flights were conducted,
       six of which achieved a soft landing and recovery of the booster.`
     }
   }, {
     name: '',
     type: 'questionCard',
-    question: `What Falcon 9 achieving a stable landing at sea?`,
+    question: `What Falcon 9 achieved a stable landing at sea?`,
     stats: {
       answer: `Falcon 9 flight 23 (CRS-8) finally achieved a stable
       landing at sea in the Atlantic on the drone ship Of Course I Still

@@ -4,7 +4,6 @@ import { videosReducer } from './videosReducer';
 import { rocketsReducer } from './rocketsReducer';
 import { capsulesReducer } from './capsulesReducer';
 import { launchpadsReducers } from './launchpadsReducer';
-import { bookmarksReducer } from './bookmarksReducer';
 import { userReducer } from './userReducer';
 import { launchesReducer } from './launchesReducer';
 
@@ -14,7 +13,6 @@ const rootReducer = combineReducers({
   missionVideos: videosReducer,
   capsules: capsulesReducer,
   launchpads: launchpadsReducers,
-  bookmarks: bookmarksReducer,
   user: userReducer,
   launches: launchesReducer
 });

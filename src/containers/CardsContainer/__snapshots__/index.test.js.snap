@@ -5,7 +5,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardsContainer
-    addToBookmarks={[Function]}
     capsules={
         Array [
             Object {
@@ -43,7 +42,6 @@ ShallowWrapper {
     }
     launchpads={Array []}
     missionVideos={Array []}
-    removeBookmark={[Function]}
     rockets={Array []}
     user={
         Array [
@@ -99,7 +97,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardsContainer
-    addToBookmarks={[Function]}
     capsules={Array []}
     history={
         Object {
@@ -133,7 +130,6 @@ ShallowWrapper {
           ]
     }
     missionVideos={Array []}
-    removeBookmark={[Function]}
     rockets={Array []}
     user={
         Array [
@@ -189,7 +185,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardsContainer
-    addToBookmarks={[Function]}
     capsules={Array []}
     history={
         Object {
@@ -200,7 +195,6 @@ ShallowWrapper {
     }
     launchpads={Array []}
     missionVideos={Array []}
-    removeBookmark={[Function]}
     rockets={Array []}
     user={Array []}
 />,
@@ -218,16 +212,29 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
-          addBookmarks={undefined}
           card={
                     Object {
                               "name": "",
-                              "question": "What Falcon 9 achieving a stable landing at sea?",
+                              "question": "What was the reason for Falcon 9 first-stage landing test ",
                               "stats": Object {
-                                "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
-                          landing at sea in the Atlantic on the drone ship Of Course I Still
-                          Love You in April 2016 after four previous attempts ended in
-                          destruction of the booster upon impact",
+                                "answer": "Falcon 9 first-stage landing test were a series of 
+                          controlled-descent flight tests conducted by SpaceX between 2013 
+                          and 2016. Since 2017, the first stage of Falcon 9 missions has
+                          been routinely landed if the rocket performance allowed it, 
+                          and if SpaceX choose to recover the stage.
+                    
+                          The program's objective was to reliably execute controlled re-entry,
+                          descent and landing (EDL) of the Falcon 9 first stage into Earth's 
+                          atmosphere after the stage completes the boost phase of an orbital
+                          spaceflight. The first tests aimed to touch down vertically in the
+                          ocean at zero velocity. Later tests attempted to land the rocket
+                          precisely on an autonomous spaceport drone ship (a barge 
+                          commissioned by SpaceX to provide a stable landing surface at sea)
+                          or at Landing Zone 1 (LZ-1), a concrete pad at Cape Canaveral.
+                          The first ground landing at LZ-1 succeeded in December 2015,
+                          and the first landing at sea on a drone ship in April 2016.
+                          The second landed booster, B1021, was the first to fly again
+                          in March 2017, and was recovered a second time.",
                               },
                               "type": "questionCard",
                             }
@@ -245,15 +252,28 @@ ShallowWrapper {
         "key": "0",
         "nodeType": "function",
         "props": Object {
-          "addBookmarks": undefined,
           "card": Object {
             "name": "",
-            "question": "What Falcon 9 achieving a stable landing at sea?",
+            "question": "What was the reason for Falcon 9 first-stage landing test ",
             "stats": Object {
-              "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
-      landing at sea in the Atlantic on the drone ship Of Course I Still
-      Love You in April 2016 after four previous attempts ended in
-      destruction of the booster upon impact",
+              "answer": "Falcon 9 first-stage landing test were a series of 
+      controlled-descent flight tests conducted by SpaceX between 2013 
+      and 2016. Since 2017, the first stage of Falcon 9 missions has
+      been routinely landed if the rocket performance allowed it, 
+      and if SpaceX choose to recover the stage.
+
+      The program's objective was to reliably execute controlled re-entry,
+      descent and landing (EDL) of the Falcon 9 first stage into Earth's 
+      atmosphere after the stage completes the boost phase of an orbital
+      spaceflight. The first tests aimed to touch down vertically in the
+      ocean at zero velocity. Later tests attempted to land the rocket
+      precisely on an autonomous spaceport drone ship (a barge 
+      commissioned by SpaceX to provide a stable landing surface at sea)
+      or at Landing Zone 1 (LZ-1), a concrete pad at Cape Canaveral.
+      The first ground landing at LZ-1 succeeded in December 2015,
+      and the first landing at sea on a drone ship in April 2016.
+      The second landed booster, B1021, was the first to fly again
+      in March 2017, and was recovered a second time.",
             },
             "type": "questionCard",
           },
@@ -275,16 +295,29 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
-            addBookmarks={undefined}
             card={
                         Object {
                                     "name": "",
-                                    "question": "What Falcon 9 achieving a stable landing at sea?",
+                                    "question": "What was the reason for Falcon 9 first-stage landing test ",
                                     "stats": Object {
-                                      "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
-                              landing at sea in the Atlantic on the drone ship Of Course I Still
-                              Love You in April 2016 after four previous attempts ended in
-                              destruction of the booster upon impact",
+                                      "answer": "Falcon 9 first-stage landing test were a series of 
+                              controlled-descent flight tests conducted by SpaceX between 2013 
+                              and 2016. Since 2017, the first stage of Falcon 9 missions has
+                              been routinely landed if the rocket performance allowed it, 
+                              and if SpaceX choose to recover the stage.
+                        
+                              The program's objective was to reliably execute controlled re-entry,
+                              descent and landing (EDL) of the Falcon 9 first stage into Earth's 
+                              atmosphere after the stage completes the boost phase of an orbital
+                              spaceflight. The first tests aimed to touch down vertically in the
+                              ocean at zero velocity. Later tests attempted to land the rocket
+                              precisely on an autonomous spaceport drone ship (a barge 
+                              commissioned by SpaceX to provide a stable landing surface at sea)
+                              or at Landing Zone 1 (LZ-1), a concrete pad at Cape Canaveral.
+                              The first ground landing at LZ-1 succeeded in December 2015,
+                              and the first landing at sea on a drone ship in April 2016.
+                              The second landed booster, B1021, was the first to fly again
+                              in March 2017, and was recovered a second time.",
                                     },
                                     "type": "questionCard",
                                   }
@@ -302,15 +335,28 @@ ShallowWrapper {
           "key": "0",
           "nodeType": "function",
           "props": Object {
-            "addBookmarks": undefined,
             "card": Object {
               "name": "",
-              "question": "What Falcon 9 achieving a stable landing at sea?",
+              "question": "What was the reason for Falcon 9 first-stage landing test ",
               "stats": Object {
-                "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
-      landing at sea in the Atlantic on the drone ship Of Course I Still
-      Love You in April 2016 after four previous attempts ended in
-      destruction of the booster upon impact",
+                "answer": "Falcon 9 first-stage landing test were a series of 
+      controlled-descent flight tests conducted by SpaceX between 2013 
+      and 2016. Since 2017, the first stage of Falcon 9 missions has
+      been routinely landed if the rocket performance allowed it, 
+      and if SpaceX choose to recover the stage.
+
+      The program's objective was to reliably execute controlled re-entry,
+      descent and landing (EDL) of the Falcon 9 first stage into Earth's 
+      atmosphere after the stage completes the boost phase of an orbital
+      spaceflight. The first tests aimed to touch down vertically in the
+      ocean at zero velocity. Later tests attempted to land the rocket
+      precisely on an autonomous spaceport drone ship (a barge 
+      commissioned by SpaceX to provide a stable landing surface at sea)
+      or at Landing Zone 1 (LZ-1), a concrete pad at Cape Canaveral.
+      The first ground landing at LZ-1 succeeded in December 2015,
+      and the first landing at sea on a drone ship in April 2016.
+      The second landed booster, B1021, was the first to fly again
+      in March 2017, and was recovered a second time.",
               },
               "type": "questionCard",
             },
@@ -340,7 +386,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardsContainer
-    addToBookmarks={[Function]}
     capsules={Array []}
     history={
         Object {
@@ -351,7 +396,6 @@ ShallowWrapper {
     }
     launchpads={Array []}
     missionVideos={Array []}
-    removeBookmark={[Function]}
     rockets={
         Array [
             Object {
@@ -440,7 +484,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardsContainer
-    addToBookmarks={[Function]}
     capsules={Array []}
     history={
         Object {
@@ -451,7 +494,6 @@ ShallowWrapper {
     }
     launchpads={Array []}
     missionVideos={Array []}
-    removeBookmark={[Function]}
     rockets={Array []}
     user={
         Array [
