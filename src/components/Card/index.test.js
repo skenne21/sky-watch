@@ -25,14 +25,14 @@ describe('Card', () => {
   });
 
   it('Should match the snapshot if there is a user', () => {
-     wrapper = shallow(
+    wrapper = shallow(
       <Card
         card={card}
         className='rocket'
         addBookmarks={addBookmarks}
         user={[{}]}
       />
-    )
+    );
     expect(wrapper).toMatchSnapshot();
   });  
 });

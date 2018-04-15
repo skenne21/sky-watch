@@ -8,8 +8,11 @@ import { randomQuestions } from '../../mockData/mockQuestions';
 import './styles.css';
 
 
-export class CapsulesContainer extends Component {
-  
+export class CardsContainer extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   determineCardType = () => {
     const { pathname } = this.props.history.location;
     switch (pathname) {
@@ -20,13 +23,13 @@ export class CapsulesContainer extends Component {
     case '/launchpads':
       return this.createComponent(this.props.launchpads);
     default:
-      return null
+      return null;
     }
   }
 
   createComponent = (cardType) => {
     if (this.props.missionVideos.length) {
-      const { id, title, description } = this.props.missionVideos[3];
+      const { id, title } = this.props.missionVideos[3];
       return (
         <div>
           <div className='iframe-section'>
@@ -73,16 +76,15 @@ export class CapsulesContainer extends Component {
           key={card.name+index} 
           card={card} 
           addBookmarks={this.addBookmarks}
-          className={`${card.type}-card`}
+          classname={`${card.type}-card`}
           user={this.props.user}
-        />)
+        />);
     });
   }
 
   render() {
-    const questions = randomQuestions()
+    const questions = randomQuestions();
     const { user } = this.props;
-    console.log(user)
     return (
       <div className='CapsulesContainer'>
         {
@@ -105,13 +107,19 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   addToBookmarks: bookmark => dispatch(actions.addBookmarks(bookmark)),
   removeBookmark: bookmark => dispatch(actions.removeBookmark(bookmark))
-})
+});
 
-CapsulesContainer.propTypes = {
+CardsContainer.propTypes = {
   capsules: PropTypes.array,
   rockets: PropTypes.array,
   launchpads: PropTypes.array,
-  missionVideos: PropTypes.array
+  missionVideos: PropTypes.array,
+  user: PropTypes.array,
+  addToBookmarks: PropTypes.func,
+  removeBookmark: PropTypes.func,
+  history: PropTypes.object
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CapsulesContainer));
+
+/* eslint-disable max-len*/
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardsContainer));

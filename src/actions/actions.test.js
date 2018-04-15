@@ -48,7 +48,7 @@ describe('Actions', () =>{
       capsules
     };
     expect(actions.addCapsules(capsules)).toEqual(expected);
-  })
+  });
 
   it('Should add launchpads to the store', () => {
     const launchpads = mocks.launchpads;
@@ -59,22 +59,18 @@ describe('Actions', () =>{
     expect(actions.addLaunchPads(launchpads)).toEqual(expected);
   });
 
-  it.skip('Should add bookmarks' , () => {
-
-  });
-
   it('Should add a user', () => {
     const user = {
       name: 'bob',
       email: 'bob@gmail.com',
       id: 1
-    }
+    };
     const expected = {
       type:'ADD_USER',
       user
-    }
+    };
 
-    expect(actions.addUser(user)).toEqual(expected)
+    expect(actions.addUser(user)).toEqual(expected);
   });
 
   it('Should remove a user', () => {
@@ -97,6 +93,7 @@ describe('Actions', () =>{
     const expected = {
       type: "ADD_LAUNCHES",
       launches
-    }
-  })
+    };
+    expect(actions.addLaunches(launches)).toEqual(expected);
+  });
 });

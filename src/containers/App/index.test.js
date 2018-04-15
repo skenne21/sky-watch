@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import { 
   fetchBio, fetchSpaceXVideos } from '../../helpers/apiCalls';
 import { mapStateToProps, mapDispatchToProps } from './index';
 import * as mocks from '../../mockData';
 import * as actions from '../../actions';
+/* eslint-disable no-duplicate-imports*/
 import { App } from './index';
+/* eslint-enable no-duplicate-imports*/
 
 
 jest.mock('../../helpers/apiCalls');
@@ -42,12 +44,12 @@ describe('App', () => {
 
   it('Should call fetchCompanyBio', () => {
     wrapper.instance().fetchData();
-    expect(fetchBio).toHaveBeenCalled()
+    expect(fetchBio).toHaveBeenCalled();
   });
 
   it('Should call fetchCompanyBio', () => {
     wrapper.instance().fetchVideos();
-    expect(fetchSpaceXVideos).toHaveBeenCalled()
+    expect(fetchSpaceXVideos).toHaveBeenCalled();
   });
 
   describe('mapStateToProps', () => {
@@ -100,7 +102,7 @@ describe('App', () => {
     });
 
     it('Should map handleError to dispatch', () => {
-      const error = 'Error Happened'
+      const error = 'Error Happened';
       const expected = actions.addError(error);
       mapped.handleError(error);
       expect(mockedDispatch).toHaveBeenCalledWith(expected);

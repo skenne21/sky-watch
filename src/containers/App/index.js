@@ -70,8 +70,9 @@ App.propTypes = {
   fetchCompanyBio: PropTypes.func,
   fetchMissionVideos: PropTypes.func,
   handleError: PropTypes.func,
-  companyBio: PropTypes.array,
-  missionVideos: PropTypes.array
+  companyBio: PropTypes.object,
+  missionVideos: PropTypes.array,
+  history: PropTypes.object
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

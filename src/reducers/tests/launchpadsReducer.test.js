@@ -11,7 +11,8 @@ describe('launchpadsReducer', () => {
 
   it('Should return an array with launchpads inside', () => {
     const expected = mocks.launchpads;
-    const called = launchpadsReducers(undefined, actions.addLaunchPads(mocks.launchpads));
+    const action = actions.addLaunchPads(mocks.launchpads);
+    const called = launchpadsReducers(undefined, action);
     expect(called).toEqual(expected);
   }); 
 });

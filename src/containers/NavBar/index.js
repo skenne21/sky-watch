@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink, Link, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import * as actions from '../../actions';
 import './styles.css';
 
@@ -24,14 +25,14 @@ export class NavBar extends Component {
             pathname !== '/' ? <NavLink to='/'>HOME</NavLink> : ''
           }
         </div>
-      )
+      );
     } else {
       return (
         <div>
           <NavLink className='signin' to='/signin'>SIGN IN</NavLink>
           <NavLink className='createAccount' to='/signup'>NEW ACCOUNT</NavLink>
         </div>
-      )
+      );
     }
   }
 
@@ -40,7 +41,7 @@ export class NavBar extends Component {
       <div className="NavBar">
         {this.toggleLogin()}
       </div>
-    )
+    );
   }
 }
 
@@ -52,5 +53,10 @@ export const mapDispatchToProps = dispatch => ({
   removeUser: user => dispatch(actions.removeUser(user))
 });
 
+NavBar.propTypes = {
+  removeUser: PropTypes.func,
+  user: PropTypes.object,
+  history: PropTypes.object
+};
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));

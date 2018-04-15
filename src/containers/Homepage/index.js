@@ -13,8 +13,8 @@ import './styles.css';
 
 export class Homepage extends Component {
   constructor(props) {
-    super(props)
-  } 
+    super(props);
+  }
   
   createBio = () => {
     const { 
@@ -26,7 +26,7 @@ export class Homepage extends Component {
     
     const html = this.props.missionVideos[0].id;
     const title = this.props.missionVideos[0].title;
-    const detials = this.props.missionVideos[0].description
+    const detials = this.props.missionVideos[0].description;
     const state = headquarters.state;
     const address = headquarters.address;
 
@@ -97,9 +97,9 @@ export class Homepage extends Component {
   handleLaunches = async () => {
     try {
       const launches = await fetchLaunches();
-      this.props.getLaunches(launches)
+      this.props.getLaunches(launches);
     } catch (error) {
-      this.props.handleError(error.message)
+      this.props.handleError(error.message);
     }
   }
 
@@ -180,7 +180,8 @@ Homepage.propTypes = {
   companyBio: PropTypes.array,
   missionVideos: PropTypes.array,
   capsules: PropTypes.array,
-  launchpads: PropTypes.array
+  launchpads: PropTypes.array,
+  getLaunches: PropTypes.func
 };
 
 // eslint-disable-next-line 

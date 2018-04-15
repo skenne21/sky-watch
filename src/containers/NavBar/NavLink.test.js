@@ -2,16 +2,19 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import * as actions from '../../actions';
 import { mapStateToProps, mapDispatchToProps } from './index';
-import NavBar from './index';
+/* eslint-disable no-duplicate-imports*/
+import { NavBar } from './index';
+/* eslint-enable no-duplicate-imports*/
 
 describe('NavBar', () => {
   let wrapper, removeUser, user;
 
   beforeEach(() => {
     removeUser = jest.fn();
-    user = {}
+    user = {};
     wrapper = shallow(
       <NavBar
+        history={{location: {}}}
         removeUser={removeUser}
         user={user}
       />
@@ -20,10 +23,6 @@ describe('NavBar', () => {
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
-  });
-
-  it.skip('should toggleLogin',() => {
-
   });
 
   describe('mapStateToProps', () => {
@@ -38,7 +37,7 @@ describe('NavBar', () => {
 
       mockedState = {
         user: user
-      }
+      };
     });
 
     it('Should map user to state', () => {
@@ -65,6 +64,6 @@ describe('NavBar', () => {
       mapped.removeUser(user);
       const expected = actions.removeUser(user);
       expect(mockDispatch).toBeCalledWith(expected);
-    })
+    });
   });
-})
+});

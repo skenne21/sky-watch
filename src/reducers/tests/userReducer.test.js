@@ -1,6 +1,5 @@
 import { userReducer } from '../userReducer';
 import * as actions from '../../actions';
-import * as mocks from '../../mockData';
 
 describe('userReducer', () => {
   it('Should retrun a defualt state if action is undefined', () => {
@@ -23,8 +22,7 @@ describe('userReducer', () => {
     };
 
     const called = userReducer(undefined, actions.addUser(user));
-
-    expect(called).toEqual(expected)
+    expect(called).toEqual(expected);
   });
 
   it('Should return a empty object if the action type is "REMOVE_USER', () => {
@@ -37,7 +35,6 @@ describe('userReducer', () => {
     };
 
     const called = userReducer(undefined, actions.removeUser(user));
-
     expect(called).toEqual(expected);
-  })
-})
+  });
+});

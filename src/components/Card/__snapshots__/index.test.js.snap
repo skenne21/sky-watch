@@ -72,7 +72,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="card rocket"
+        className="card undefined"
 >
         <h1>
                 Name: Dragon 1
@@ -140,7 +140,7 @@ ShallowWrapper {
 </p>,
           ],
         ],
-        "className": "card rocket",
+        "className": "card undefined",
       },
       "ref": null,
       "rendered": Array [
@@ -246,7 +246,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="card rocket"
+          className="card undefined"
 >
           <h1>
                     Name: Dragon 1
@@ -314,7 +314,7 @@ ShallowWrapper {
 </p>,
             ],
           ],
-          "className": "card rocket",
+          "className": "card undefined",
         },
         "ref": null,
         "rendered": Array [
@@ -500,7 +500,7 @@ ShallowWrapper {
                 Questions
         </div>
         <div
-                className="card rocket back"
+                className="card undefined back"
         >
                 <h1>
                         Name: Dragon 1
@@ -546,7 +546,7 @@ ShallowWrapper {
             Questions
 </div>,
           <div
-            className="card rocket back"
+            className="card undefined back"
 >
             <h1>
                         Name: Dragon 1
@@ -628,7 +628,7 @@ ShallowWrapper {
 </p>,
               ],
             ],
-            "className": "card rocket back",
+            "className": "card undefined back",
           },
           "ref": null,
           "rendered": Array [
@@ -745,7 +745,7 @@ ShallowWrapper {
                     Questions
           </div>
           <div
-                    className="card rocket back"
+                    className="card undefined back"
           >
                     <h1>
                               Name: Dragon 1
@@ -791,7 +791,7 @@ ShallowWrapper {
               Questions
 </div>,
             <div
-              className="card rocket back"
+              className="card undefined back"
 >
               <h1>
                             Name: Dragon 1
@@ -873,7 +873,7 @@ ShallowWrapper {
 </p>,
                 ],
               ],
-              "className": "card rocket back",
+              "className": "card undefined back",
             },
             "ref": null,
             "rendered": Array [

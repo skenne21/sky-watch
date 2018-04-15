@@ -11,15 +11,16 @@ describe('bookmarksReducer', () => {
 
   it('Should return an array with a bookmark added', () => {
     const expected = [mocks.capsule];
-    const called = bookmarksReducer(undefined, actions.addBookmarks(mocks.capsule));
+    const action = actions.addBookmarks(mocks.capsule);
+    const called = bookmarksReducer(undefined, action);
     expect(called).toEqual(expected);
   });
 
   it('Should return an array with the bookmark removed', () => {
     const expected = [mocks.capsule];
     const bookmarks = mocks.capsule;
-    const called = bookmarksReducer(undefined, actions.addBookmarks(bookmarks));
-    expect(called).toEqual(expected)
-
+    const action = actions.addBookmarks(bookmarks);
+    const called = bookmarksReducer(undefined, action);
+    expect(called).toEqual(expected);
   });
 });

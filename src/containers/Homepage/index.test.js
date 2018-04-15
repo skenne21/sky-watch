@@ -1,9 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as apiCalls from '../../helpers/apiCalls';
 import * as actions from '../../actions';
 import { mapStateToProps, mapDispatchToProps } from './index';
-import { Homepage }from './index';
+/* eslint-disable no-duplicate-imports*/
+import { Homepage } from './index';
+/* eslint-enable no-duplicate-imports*/
 import * as mocks from '../../mockData';
 import { 
   fetchRockets,
@@ -49,7 +50,7 @@ describe('Homepage Container', () => {
 
   it('Should match the snapshot if the bio has length', () => {
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 
   it('Should Match the snapshot if there is no length to the bio', () => {
     wrapper = shallow(
@@ -65,25 +66,25 @@ describe('Homepage Container', () => {
       />
     );
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 
   it('Should call handleRockets when clicked', () => {
-    const navlink = wrapper.find('.rockets').simulate('click')
+    wrapper.find('.rockets').simulate('click');
     expect(fetchRockets).toHaveBeenCalled();
   });
 
   it('Should call handleCapsules when clicked', () => {
-    const navlink = wrapper.find('.capsules').simulate('click')
+    wrapper.find('.capsules').simulate('click');
     expect(fetchCapsules).toHaveBeenCalled();
   });
 
   it('Should call handleLaunchpads when clicked', () => {
-    const navlink = wrapper.find('.launchpad').simulate('click')
+    wrapper.find('.launchpad').simulate('click');
     expect(fetchLaunchpads).toHaveBeenCalled();
   });
 
   it('Should call handleLaunches when clicked', () => {
-    const navlink = wrapper.find('.launches').simulate('click')
+    wrapper.find('.launches').simulate('click');
     expect(fetchLaunchpads).toHaveBeenCalled();
   });
 
@@ -97,7 +98,7 @@ describe('Homepage Container', () => {
         capsules: [],
         launchpads: [],
         user: {}
-      }
+      };
 
       expectedState = {
         companyBio: [],
@@ -106,8 +107,8 @@ describe('Homepage Container', () => {
         capsules: [],
         launchpads: [],
         user: {}
-      }
-    })
+      };
+    });
 
     it('should map companyBio to state', () => {
       const bio = mocks.bio;
@@ -133,7 +134,7 @@ describe('Homepage Container', () => {
       expect(mapped).toEqual(expectedState);
     });
 
-    it('Should map capsules to state' , () => {
+    it('Should map capsules to state', () => {
       const capsules = mocks.capsules;
       mockedState.capsules = capsules;
       const mapped = mapStateToProps(mockedState);
@@ -169,7 +170,7 @@ describe('Homepage Container', () => {
     beforeEach(() => {
       mockedDispatch = jest.fn();
       mapped = mapDispatchToProps(mockedDispatch);
-    })
+    });
 
     it('Should dispatch getRockets with the right params', () => {
       const rockets = mocks.rockets;
@@ -182,9 +183,7 @@ describe('Homepage Container', () => {
     it('Should dispatch getCapsules with the right params', () => {
       const capsules = mocks.capsules;
       mapped.getCapsules(capsules);
-
       const expected = actions.addCapsules(capsules);
-
       expect(mockedDispatch).toHaveBeenCalledWith(expected);
     });
 
@@ -192,16 +191,14 @@ describe('Homepage Container', () => {
       const launchpads = mocks.launchpads;
       mapped.getLaunchpads(launchpads);
       const expected = actions.addLaunchPads(launchpads);
-
       expect(mockedDispatch).toHaveBeenCalledWith(expected);
     });
 
     it('Should dispatch handleError with the right params', ( ) => {
       const error = { message: 'error'};
       mapped.handleError(error.message);
-
       const expected = actions.addError(error.message);
       expect(mockedDispatch).toHaveBeenCalledWith(expected);
-    })
+    });
   });
 });

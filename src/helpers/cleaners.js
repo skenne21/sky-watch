@@ -32,7 +32,7 @@ export const cleanRockets = (rockets) => {
       mass:`Mass: ${rocket.mass.lb} lb`,
       height:`Height: ${rocket.height.feet} ft`,
       boosters:`Boosters: ${rocket.boosters}`,
-      description:`Description: ${rocket.description}`,
+      description:`Description: ${rocket.description}`
     } 
   }));
 };
@@ -57,7 +57,9 @@ export const cleanCapsules = capsules => {
       diameter:`Diameter: ${capsule.diameter.feet} ft`,
       height:`Height: ${capsule.height_w_trunk.feet} ft`,
       mass:`Mass: ${capsule.launch_payload_mass.kg} kg`,
-      heatShield:`Heat Shield Capacity: ${capsule.heat_shield.temp_degrees} deg`,
+      /* eslint-disable max-len */
+      heatShield:`Heat Shield Capacity: ${capsule.heat_shield.temp_degrees} deg`
+      /* eslint-enable max-len */
     }
   }));
 };
@@ -67,7 +69,9 @@ export const cleanLaunchpads = launchpads => {
     name:`Name: ${launchpad.full_name}`,
     type: 'launchpad',
     stats: {
+      /* eslint-disable max-len */
       location:`Location: ${launchpad.location.region},${launchpad.location.name}`,
+      /* eslint-enable max-len */
       details:`${launchpad.details}`,
       status:`Status: ${launchpad.status}`,
       vehicles:`Vehicles Launched: ${launchpad.vehicles_launched.join(', ')}`
@@ -88,11 +92,10 @@ export const cleanLaunches = launches => {
       capsule:`Reuseable Capsule: ${launch.reuse.capsule}`,
       core:`Reuseable Core: ${launch.reuse.core}`,
       sideCores: `Reusable Sidecores: ${launch.reuse.side_core1}`,
-      fairings:`Reusable Fairings: ${launch.reuse.fairings}`,
-
+      fairings:`Reusable Fairings: ${launch.reuse.fairings}`
     }
   }));
-}
+};
 
 export const combineLaunches = (falcon1, falcon9, falconHeavy) => {
   return {
@@ -100,8 +103,8 @@ export const combineLaunches = (falcon1, falcon9, falconHeavy) => {
     falcon9,
     falconHeavy
   };
-}
+};
 
 export const filterLaunches = (launches, id) => {
- return launches.filter(launch => launch.rocket.rocket_id === id);
-}
+  return launches.filter(launch => launch.rocket.rocket_id === id);
+};

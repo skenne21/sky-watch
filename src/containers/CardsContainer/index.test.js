@@ -1,8 +1,10 @@
 import React from 'react';
-import CardsContainer from './index'
+import { CardsContainer } from './index';
 import { shallow } from 'enzyme';
 import * as mocks from '../../mockData';
+/* eslint-disable no-duplicate-imports*/
 import { mapStateToProps, mapDispatchToProps } from './index';
+/* eslint-enable no-duplicate-imports*/
 import * as actions from '../../actions';
 
 describe('CardsContainer', () => {
@@ -34,7 +36,7 @@ describe('CardsContainer', () => {
         removeBookmark={removeBookmark}
         user={[{}]}
       />
-    )
+    );
   });
 
   it('Should match the snapshot', () => {
@@ -42,9 +44,10 @@ describe('CardsContainer', () => {
   });
 
   it('Should create rockets cards if history equals /rockets', () => {
-    history = { location: {pathname: '/rockets'}}
-    rockets = mocks.rockets
-    wrapper = shallow(<CardsContainer
+    history = { location: {pathname: '/rockets'}};
+    rockets = mocks.rockets;
+    wrapper = shallow(
+      <CardsContainer
         history={history}
         capsules={capsules}
         rockets={rockets}
@@ -55,72 +58,63 @@ describe('CardsContainer', () => {
         user={[{}]}
       />
     );
-
-    expect(wrapper).toMatchSnapshot();
-  })
-
-  it('Should create capsules cards if history equals /capsules', () => {
-    history = { location: {pathname: '/capsules'}}
-    capsules = mocks.capsules
-    wrapper = shallow(<CardsContainer
-        history={history}
-        capsules={capsules}
-        rockets={rockets}
-        launchpads={launchpads}
-        missionVideos={missionVideos}
-        addToBookmarks={addToBookmarks}
-        removeBookmark={removeBookmark}
-        user={[{}]}
-      />
-    );
-
-    expect(wrapper).toMatchSnapshot();
-  })
-
-  it('Should create launchpads cards if history equals /launchpads', () => {
-    history = { location: {pathname: '/launchpads'}}
-    launchpads = mocks.launchpads
-    wrapper = shallow(<CardsContainer
-      history={history}
-      capsules={capsules}
-      rockets={rockets}
-      launchpads={launchpads}
-      missionVideos={missionVideos}
-      addToBookmarks={addToBookmarks}
-      removeBookmark={removeBookmark}
-      user={[{}]}
-      />
-    );
-
-    expect(wrapper).toMatchSnapshot();
-  })
-
-  it('Should create question cards if there is not a user' , () => {
-    wrapper = shallow(<CardsContainer
-      history={history}
-      capsules={capsules}
-      rockets={rockets}
-      launchpads={launchpads}
-      missionVideos={missionVideos}
-      addToBookmarks={addToBookmarks}
-      removeBookmark={removeBookmark}
-      user={[]}
-      />
-    );
-
     expect(wrapper).toMatchSnapshot();
   });
-  
-  // it('Should add bookmarks to the store', () => {
 
-  // });
+  it('Should create capsules cards if history equals /capsules', () => {
+    history = { location: {pathname: '/capsules'}};
+    capsules = mocks.capsules;
+    wrapper = shallow(
+      <CardsContainer
+        history={history}
+        capsules={capsules}
+        rockets={rockets}
+        launchpads={launchpads}
+        missionVideos={missionVideos}
+        addToBookmarks={addToBookmarks}
+        removeBookmark={removeBookmark}
+        user={[{}]}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  // it('Should remove bookmarks to the store if it already is in the store', () => {
+  it('Should create launchpads cards if history equals /launchpads', () => {
+    history = { location: {pathname: '/launchpads'}};
+    launchpads = mocks.launchpads;
+    wrapper = shallow(
+      <CardsContainer
+        history={history}
+        capsules={capsules}
+        rockets={rockets}
+        launchpads={launchpads}
+        missionVideos={missionVideos}
+        addToBookmarks={addToBookmarks}
+        removeBookmark={removeBookmark}
+        user={[{}]}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  // });
+  it('Should create question cards if there is not a user', () => {
+    wrapper = shallow(
+      <CardsContainer
+        history={history}
+        capsules={capsules}
+        rockets={rockets}
+        launchpads={launchpads}
+        missionVideos={missionVideos}
+        addToBookmarks={addToBookmarks}
+        removeBookmark={removeBookmark}
+        user={[]}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 
   describe('mapStateToProps', () => {
-    let mockedState, expectedState, mapped;
+    let mockedState, expectedState;
 
     beforeEach(() => {
       mockedState = {
@@ -128,7 +122,7 @@ describe('CardsContainer', () => {
         missionVideos: [],
         launchpads: [],
         rockets: [],
-        bookmarks: [],
+        bookmarks: []
       };
 
       expectedState = {
@@ -136,14 +130,11 @@ describe('CardsContainer', () => {
         missionVideos: [],
         launchpads: [],
         rockets: [],
-        bookmarks: [],
-
+        bookmarks: []
       };
-
-
     });
 
-    it('Should map capsules to state' , () => {
+    it('Should map capsules to state', () => {
       const capsules = mocks.capsules;
       mockedState.capsules = capsules;
       const mapped  = mapStateToProps(mockedState);
@@ -151,7 +142,7 @@ describe('CardsContainer', () => {
       expect(mapped).toEqual(expectedState);
     });
 
-    it('Should map rockets to state' , () => {
+    it('Should map rockets to state', () => {
       const rockets = mocks.rockets;
       mockedState.rockets = rockets;
       const mapped = mapStateToProps(mockedState);
@@ -176,7 +167,6 @@ describe('CardsContainer', () => {
     });
 
     it('Should map bookmarks to state', () => {
-      const bookmarks = mocks.capsules;
       mockedState.bookmarks = mocks.capsule;
       const mapped = mapStateToProps(mockedState);
       expectedState.bookmarks = mocks.capsule;
@@ -189,29 +179,21 @@ describe('CardsContainer', () => {
 
     beforeEach(() => {
       mockDispatch = jest.fn();
-      mapped = mapDispatchToProps(mockDispatch)
+      mapped = mapDispatchToProps(mockDispatch);
     });
 
     it('Should Dispacth addToBookmarks with the right params', () => {
       const bookmark = mocks.capsule;
-
       mapped.addToBookmarks(bookmark);
-
       const expected = actions.addBookmarks(bookmark);
-
       expect(mockDispatch).toHaveBeenCalledWith(expected);
     });
 
     it('Should dispatch removeBookmark with the right params', () => {
       const bookmark = mocks.capsule;
-
       mapped.removeBookmark(bookmark);
-
       const expected = actions.removeBookmark(bookmark);
-
       expect(mockDispatch).toHaveBeenCalledWith(expected);
     });
-
   });
-
-})
+});

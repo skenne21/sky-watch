@@ -8,4 +8,4 @@ export const manageLaunches = launches => {
   const falcon9 =  cleaners.cleanLaunches(infoFalcon9);
   const falconHeavy =  cleaners.cleanLaunches(infoFalconHeavy);
   return cleaners.combineLaunches(falcon1, falcon9, falconHeavy);
-}
+};

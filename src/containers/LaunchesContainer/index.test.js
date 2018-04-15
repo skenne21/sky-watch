@@ -8,17 +8,17 @@ describe('LaunchesContainer', () => {
   let wrapper, randomCard, event;
 
   beforeEach(() => {
-    randomCard = questions[0]
+    randomCard = questions[0];
     wrapper = shallow(
       <LaunchesContainer
         launches={[mocks.launches]}
         user={[]}
-       />
+      />
     );
   });
 
   it('Should match the snapshot if the rockets are empty in state', () => {
-    wrapper.setState({cards: [randomCard]})
+    wrapper.setState({cards: [randomCard]});
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -34,26 +34,27 @@ describe('LaunchesContainer', () => {
     expect(wrapper.state('falconHeavy')).toEqual([]);
   });
 
+  /* eslint-disable max-len */
   it('Should add falcon1 rockets to state when button with className of falcon1 is clicked', () => {
-    event = { target: {name:'falcon1'}}
+  /* eslint-enable max-len */
+    event = { target: {name:'falcon1'}};
     wrapper.instance().handleClick(event);
     expect(wrapper.state('falcon1')).toMatchSnapshot();
   });
 
+  /* eslint-disable max-len */
   it('Should add falcon1 rockets to state when button with className of falcon1 is clicked', () => {
-    const expected = [mocks.launches.falcon1]
-    event = { target: {name:'falcon9'}}
+  /* eslint-enable max-len */
+    event = { target: {name:'falcon9'}};
     wrapper.instance().handleClick(event);
-
-    expect(wrapper.state('falcon9')).toMatchSnapshot()
+    expect(wrapper.state('falcon9')).toMatchSnapshot();
   });
 
+  /* eslint-disable max-len */
   it('Should add falcon1 rockets to state when button with className of falcon1 is clicked', () => {
-    const expected = [mocks.launches.falcon1]
-    event = { target: {name:'falconHeavy'}}
+  /* eslint-enable max-len */
+    event = { target: {name:'falconHeavy'}};
     wrapper.instance().handleClick(event);
-
-    expect(wrapper.state('falconHeavy')).toMatchSnapshot()
+    expect(wrapper.state('falconHeavy')).toMatchSnapshot();
   });
-
 });

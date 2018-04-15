@@ -2,8 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { mapStateToProps, mapDispatchToProps } from './index';
 import * as actions from '../../actions';
-import * as mocks from '../../mockData';
+/* eslint-disable no-duplicate-imports*/
 import  { SignUp } from './index';
+/* eslint-enable no-duplicate-imports*/
 
 describe('SignUp', () => {
   let wrapper, user, addUser, history;
@@ -38,7 +39,7 @@ describe('SignUp', () => {
     expect(wrapper.state('error')).toEqual('');
   });
 
-   describe('mapStateToProps', () => {
+  describe('mapStateToProps', () => {
     it('Should map user to state', () => {
       const mockedState = { user: user };
       const expected = { user: user };

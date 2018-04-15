@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { auth, db } from '../../firebase';
 import * as actions from '../../actions';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 export class SignUp extends Component {
@@ -13,32 +14,28 @@ export class SignUp extends Component {
       email: '',
       password: '',
       error: ''
-    }
-
+    };
   }
 
   handleSubmit = async event => {
     event.preventDefault();
     const { email, password, name } = this.state;
     try  {
-    const authUser = await auth.createUser(email, password)
-    const dbUser = await db.createUser(authUser.uid, name, email)
-    console.log({authUser});
-    console.log({dbUser});
-    debugger
-    const user = {
-      name,
-      email: authUser.email,
-      uid: authUser.uid
-    }
-    this.props.addUser(user)
-    this.setState({
-      name: '',
-      email: '',
-      password: '',
-      error:''
-    })
-    this.props.history.push('/');
+      const authUser = await auth.createUser(email, password);
+      const dbUser = await db.createUser(authUser.uid, name, email);
+      const user = {
+        name,
+        email: authUser.email,
+        uid: authUser.uid
+      };
+      this.props.addUser(user);
+      this.setState({
+        name: '',
+        email: '',
+        password: '',
+        error:''
+      });
+      this.props.history.push('/');
     } catch (error) {
       this.setState({error});
     }
@@ -46,12 +43,12 @@ export class SignUp extends Component {
 
   handleChange = event => {
     const { name, value} = event.target;
-    this.setState({ [name]: value })
+    this.setState({ [name]: value });
   }
 
   render() {
-    const { error } = this.state
-    return(
+    const { error } = this.state;
+    return (
       <form 
         onSubmit={this.handleSubmit}
         className='SignUp-form'
@@ -83,16 +80,22 @@ export class SignUp extends Component {
         <button>Enter Your Account</button>
         {error && <p>{error.message}</p>}
       </form>
-    )
+    );
   }
 }
 
-export const mapStateToProps = ({user}) => ({
+export const mapStateToProps = ({ user }) => ({
   user
-})
+});
 
 export const mapDispatchToProps = dispatch => ({
   addUser: user => dispatch(actions.addUser(user))
-})
+});
+
+SignUp.propTypes = {
+  addUser: PropTypes.func,
+  user: PropTypes.object,
+  history: PropTypes.object
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUp));
