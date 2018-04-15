@@ -1,0 +1,12 @@
+.buttons {
+  margin: 3em;
+  padding: 7px;
+  color: #fff;
+  background-color: transparent;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.launches-buttons {
+  width: 100%;
+}

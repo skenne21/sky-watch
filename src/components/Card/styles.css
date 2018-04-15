@@ -9,6 +9,10 @@
   color: #fff;
 }
 
+/*.cards {
+  width: 85%;
+  background-color: transparent;
+}*/
 
 .card h1 {
   padding: 15px;
@@ -62,7 +66,7 @@
 }
 
 .front p {
-  padding: 5em 0;
+  padding: 3em 0;
   font-size: 2em;
   text-align: center;
 }
@@ -89,5 +93,10 @@
 }
 
 .signinMessage {
+  margin-bottom: 3px;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  position: relative;
+  bottom: 17em;
   color: #fff;
 }

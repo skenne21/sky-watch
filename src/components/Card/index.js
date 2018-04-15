@@ -30,7 +30,7 @@ const Card = ({card, classname, addBookmarks, user}) => {
   const factCards = (card) => {
     return (
       <div 
-        className={`card ${classname}`}
+        className={`${classname}`}
       >
         <h1>{name}</h1>
         {tags}
@@ -39,7 +39,7 @@ const Card = ({card, classname, addBookmarks, user}) => {
   };
 
   return (
-    <div>
+    <div className='card'>
       {
         users.length > 1 ? factCards(card)  : questions(card)
       }

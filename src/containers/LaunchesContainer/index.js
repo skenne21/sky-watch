@@ -5,6 +5,7 @@ import {withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Card from '../../components/Card';
 import { randomQuestions } from '../../mockData/mockQuestions';
+import './styles.css';
 
 export class LaunchesContainer extends Component {
   constructor() {
@@ -43,26 +44,28 @@ export class LaunchesContainer extends Component {
     const { cards } = this.state;
     return (
       <div className='LaunchesContainer'>
-        <button
-          name='falcon1'
-          className='buttons'
-          onClick={this.handleClick}
-        >
-          FALCON 1
-        </button>
-        <button
-          name='falcon9'
-          className='buttons'
-          onClick={this.handleClick}
-        >
-          FALCON 9</button>
-        <button
-          name='falconHeavy'
-          className='buttons'
-          onClick={this.handleClick}
-        >
-          FALCON HEAVY
-        </button>
+        <div className='launches-buttons'>
+          <button
+            name='falcon1'
+            className='buttons'
+            onClick={this.handleClick}
+          >
+            FALCON 1
+          </button>
+          <button
+            name='falcon9'
+            className='buttons'
+            onClick={this.handleClick}
+          >
+            FALCON 9</button>
+          <button
+            name='falconHeavy'
+            className='buttons'
+            onClick={this.handleClick}
+          >
+            FALCON HEAVY
+          </button>
+        </div>
         {
           this.createCards(cards)
         }
