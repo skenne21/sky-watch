@@ -14,8 +14,7 @@ describe('CardsContainer', () => {
   let launchpads; 
   let missionVideos;
   let history;
-  let addToBookmarks;
-  let removeBookmark;
+  
 
   beforeEach(() => {
     history =  { location: { pathname: '/'}};
@@ -23,8 +22,6 @@ describe('CardsContainer', () => {
     rockets = [];
     launchpads = [];
     missionVideos = [];
-    addToBookmarks = jest.fn();
-    removeBookmark = jest.fn();
     wrapper = shallow(
       <CardsContainer
         history={history}
@@ -32,8 +29,6 @@ describe('CardsContainer', () => {
         rockets={rockets}
         launchpads={launchpads}
         missionVideos={missionVideos}
-        addToBookmarks={addToBookmarks}
-        removeBookmark={removeBookmark}
         user={[{}]}
       />
     );
@@ -53,8 +48,6 @@ describe('CardsContainer', () => {
         rockets={rockets}
         launchpads={launchpads}
         missionVideos={missionVideos}
-        addToBookmarks={addToBookmarks}
-        removeBookmark={removeBookmark}
         user={[{}]}
       />
     );
@@ -71,8 +64,6 @@ describe('CardsContainer', () => {
         rockets={rockets}
         launchpads={launchpads}
         missionVideos={missionVideos}
-        addToBookmarks={addToBookmarks}
-        removeBookmark={removeBookmark}
         user={[{}]}
       />
     );
@@ -89,8 +80,6 @@ describe('CardsContainer', () => {
         rockets={rockets}
         launchpads={launchpads}
         missionVideos={missionVideos}
-        addToBookmarks={addToBookmarks}
-        removeBookmark={removeBookmark}
         user={[{}]}
       />
     );
@@ -105,8 +94,6 @@ describe('CardsContainer', () => {
         rockets={rockets}
         launchpads={launchpads}
         missionVideos={missionVideos}
-        addToBookmarks={addToBookmarks}
-        removeBookmark={removeBookmark}
         user={[]}
       />
     );
@@ -122,7 +109,6 @@ describe('CardsContainer', () => {
         missionVideos: [],
         launchpads: [],
         rockets: [],
-        bookmarks: []
       };
 
       expectedState = {
@@ -130,7 +116,6 @@ describe('CardsContainer', () => {
         missionVideos: [],
         launchpads: [],
         rockets: [],
-        bookmarks: []
       };
     });
 
@@ -164,36 +149,6 @@ describe('CardsContainer', () => {
       const mapped = mapStateToProps(mockedState);
       expectedState.launchpads = launchpads;
       expect(mapped).toEqual(expectedState);
-    });
-
-    it('Should map bookmarks to state', () => {
-      mockedState.bookmarks = mocks.capsule;
-      const mapped = mapStateToProps(mockedState);
-      expectedState.bookmarks = mocks.capsule;
-      expect(mapped).toEqual(expectedState);
-    });
-  });
-
-  describe('Dispacth to state', () => {
-    let mapped, mockDispatch;
-
-    beforeEach(() => {
-      mockDispatch = jest.fn();
-      mapped = mapDispatchToProps(mockDispatch);
-    });
-
-    it('Should Dispacth addToBookmarks with the right params', () => {
-      const bookmark = mocks.capsule;
-      mapped.addToBookmarks(bookmark);
-      const expected = actions.addBookmarks(bookmark);
-      expect(mockDispatch).toHaveBeenCalledWith(expected);
-    });
-
-    it('Should dispatch removeBookmark with the right params', () => {
-      const bookmark = mocks.capsule;
-      mapped.removeBookmark(bookmark);
-      const expected = actions.removeBookmark(bookmark);
-      expect(mockDispatch).toHaveBeenCalledWith(expected);
     });
   });
 });

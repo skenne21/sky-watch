@@ -99,7 +99,7 @@ CardsContainer.propTypes = {
   rockets: PropTypes.array,
   launchpads: PropTypes.array,
   missionVideos: PropTypes.array,
-  user: PropTypes.array,
+  user: PropTypes.object,
   history: PropTypes.object
 };
 

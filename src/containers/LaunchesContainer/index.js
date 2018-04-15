@@ -83,7 +83,7 @@ export const mapStateToProps = ({launches, user}) => ({
 
 LaunchesContainer.propTypes = {
   launches: PropTypes.array,
-  user: PropTypes.array
+  user: PropTypes.object
 };
 
 export default withRouter(connect(mapStateToProps, null)(LaunchesContainer));
