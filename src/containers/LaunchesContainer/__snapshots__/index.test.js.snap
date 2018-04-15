@@ -1,0 +1,446 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LaunchesContainer Should add falcon1 rockets to state when button with className of falcon1 is clicked 1`] = `
+Array [
+  Object {
+    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "name": "Flight Number: 1",
+    "stats": Object {
+      "capsule": "Reuseable Capsule: false",
+      "core": "Reuseable Core: false",
+      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+      "fairings": "Reusable Fairings: false",
+      "sideCores": "Reusable Sidecores: false",
+      "site": "Kwajalein Atoll",
+      "sucessful": "Launch Sucess: false",
+    },
+    "type": "launches",
+    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+  },
+  Object {
+    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "name": "Flight Number: 2",
+    "stats": Object {
+      "capsule": "Reuseable Capsule: false",
+      "core": "Reuseable Core: false",
+      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+      "fairings": "Reusable Fairings: false",
+      "sideCores": "Reusable Sidecores: false",
+      "site": "Kwajalein Atoll",
+      "sucessful": "Launch Sucess: false",
+    },
+    "type": "launches",
+    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+  },
+]
+`;
+
+exports[`LaunchesContainer Should add falcon1 rockets to state when button with className of falcon1 is clicked 2`] = `
+Array [
+  Object {
+    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "name": "Flight Number: 1",
+    "stats": Object {
+      "capsule": "Reuseable Capsule: false",
+      "core": "Reuseable Core: false",
+      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+      "fairings": "Reusable Fairings: false",
+      "sideCores": "Reusable Sidecores: false",
+      "site": "Kwajalein Atoll",
+      "sucessful": "Launch Sucess: false",
+    },
+    "type": "launches",
+    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+  },
+  Object {
+    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "name": "Flight Number: 2",
+    "stats": Object {
+      "capsule": "Reuseable Capsule: false",
+      "core": "Reuseable Core: false",
+      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+      "fairings": "Reusable Fairings: false",
+      "sideCores": "Reusable Sidecores: false",
+      "site": "Kwajalein Atoll",
+      "sucessful": "Launch Sucess: false",
+    },
+    "type": "launches",
+    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+  },
+]
+`;
+
+exports[`LaunchesContainer Should add falcon1 rockets to state when button with className of falcon1 is clicked 3`] = `
+Array [
+  Object {
+    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "name": "Flight Number: 2",
+    "stats": Object {
+      "capsule": "Reuseable Capsule: false",
+      "core": "Reuseable Core: false",
+      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+      "fairings": "Reusable Fairings: false",
+      "sideCores": "Reusable Sidecores: false",
+      "site": "Kwajalein Atoll",
+      "sucessful": "Launch Sucess: false",
+    },
+    "type": "launches",
+    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+  },
+]
+`;
+
+exports[`LaunchesContainer Should match the snapshot if the rockets are empty in state 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LaunchesContainer
+    launches={
+        Array [
+            Object {
+              "falcon1": Array [
+                Object {
+                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "name": "Flight Number: 1",
+                  "stats": Object {
+                    "capsule": "Reuseable Capsule: false",
+                    "core": "Reuseable Core: false",
+                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+                    "fairings": "Reusable Fairings: false",
+                    "sideCores": "Reusable Sidecores: false",
+                    "site": "Kwajalein Atoll",
+                    "sucessful": "Launch Sucess: false",
+                  },
+                  "type": "launches",
+                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+                },
+                Object {
+                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "name": "Flight Number: 2",
+                  "stats": Object {
+                    "capsule": "Reuseable Capsule: false",
+                    "core": "Reuseable Core: false",
+                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+                    "fairings": "Reusable Fairings: false",
+                    "sideCores": "Reusable Sidecores: false",
+                    "site": "Kwajalein Atoll",
+                    "sucessful": "Launch Sucess: false",
+                  },
+                  "type": "launches",
+                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+                },
+              ],
+              "falcon9": Array [
+                Object {
+                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "name": "Flight Number: 1",
+                  "stats": Object {
+                    "capsule": "Reuseable Capsule: false",
+                    "core": "Reuseable Core: false",
+                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+                    "fairings": "Reusable Fairings: false",
+                    "sideCores": "Reusable Sidecores: false",
+                    "site": "Kwajalein Atoll",
+                    "sucessful": "Launch Sucess: false",
+                  },
+                  "type": "launches",
+                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+                },
+                Object {
+                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "name": "Flight Number: 2",
+                  "stats": Object {
+                    "capsule": "Reuseable Capsule: false",
+                    "core": "Reuseable Core: false",
+                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+                    "fairings": "Reusable Fairings: false",
+                    "sideCores": "Reusable Sidecores: false",
+                    "site": "Kwajalein Atoll",
+                    "sucessful": "Launch Sucess: false",
+                  },
+                  "type": "launches",
+                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+                },
+              ],
+              "falconHeavy": Array [
+                Object {
+                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "name": "Flight Number: 2",
+                  "stats": Object {
+                    "capsule": "Reuseable Capsule: false",
+                    "core": "Reuseable Core: false",
+                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+                    "fairings": "Reusable Fairings: false",
+                    "sideCores": "Reusable Sidecores: false",
+                    "site": "Kwajalein Atoll",
+                    "sucessful": "Launch Sucess: false",
+                  },
+                  "type": "launches",
+                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+                },
+              ],
+            },
+          ]
+    }
+    user={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="buttons"
+          name="falcon1"
+          onClick={[Function]}
+>
+          FALCON 1
+</button>,
+        <button
+          className="buttons"
+          name="falcon9"
+          onClick={[Function]}
+>
+          FALCON 9
+</button>,
+        <button
+          className="buttons"
+          name="falconHeavy"
+          onClick={[Function]}
+>
+          FALCON HEAVY
+</button>,
+        Array [
+          <Card
+            card={
+                        Object {
+                                    "name": "",
+                                    "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+                                    "stats": Object {
+                                      "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+                               after the fictional Puff the Magic Dragon, from the hit song by 
+                               music group Peter, Paul and Mary. Musk said he used the name 
+                               because many critics considered his goals impossible when he 
+                               founded SpaceX in 2002.",
+                                    },
+                                    "type": "questionCard",
+                                  }
+            }
+            className="questionCard-card"
+            user={Array []}
+/>,
+        ],
+      ],
+      "className": "LaunchesContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "FALCON 1",
+          "className": "buttons",
+          "name": "falcon1",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "FALCON 1",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "FALCON 9",
+          "className": "buttons",
+          "name": "falcon9",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "FALCON 9",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "FALCON HEAVY",
+          "className": "buttons",
+          "name": "falconHeavy",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "FALCON HEAVY",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "card": Object {
+            "name": "",
+            "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+            "stats": Object {
+              "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+       after the fictional Puff the Magic Dragon, from the hit song by 
+       music group Peter, Paul and Mary. Musk said he used the name 
+       because many critics considered his goals impossible when he 
+       founded SpaceX in 2002.",
+            },
+            "type": "questionCard",
+          },
+          "className": "questionCard-card",
+          "user": Array [],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="buttons"
+            name="falcon1"
+            onClick={[Function]}
+>
+            FALCON 1
+</button>,
+          <button
+            className="buttons"
+            name="falcon9"
+            onClick={[Function]}
+>
+            FALCON 9
+</button>,
+          <button
+            className="buttons"
+            name="falconHeavy"
+            onClick={[Function]}
+>
+            FALCON HEAVY
+</button>,
+          Array [
+            <Card
+              card={
+                            Object {
+                                          "name": "",
+                                          "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+                                          "stats": Object {
+                                            "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+                                   after the fictional Puff the Magic Dragon, from the hit song by 
+                                   music group Peter, Paul and Mary. Musk said he used the name 
+                                   because many critics considered his goals impossible when he 
+                                   founded SpaceX in 2002.",
+                                          },
+                                          "type": "questionCard",
+                                        }
+              }
+              className="questionCard-card"
+              user={Array []}
+/>,
+          ],
+        ],
+        "className": "LaunchesContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "FALCON 1",
+            "className": "buttons",
+            "name": "falcon1",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "FALCON 1",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "FALCON 9",
+            "className": "buttons",
+            "name": "falcon9",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "FALCON 9",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "FALCON HEAVY",
+            "className": "buttons",
+            "name": "falconHeavy",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "FALCON HEAVY",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "card": Object {
+              "name": "",
+              "question": "Why Did CEO Elon Musk name the spacecraft Dragon?",
+              "stats": Object {
+                "answer": "Elon Musk has said that he named his spacecraft \\"Dragon\\"
+       after the fictional Puff the Magic Dragon, from the hit song by 
+       music group Peter, Paul and Mary. Musk said he used the name 
+       because many critics considered his goals impossible when he 
+       founded SpaceX in 2002.",
+              },
+              "type": "questionCard",
+            },
+            "className": "questionCard-card",
+            "user": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
