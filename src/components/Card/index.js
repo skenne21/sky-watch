@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 import PropTypes from 'prop-types';
 
-const Card = ({card, classname, addBookmarks, user}) => {
+const Card = ({card, classname, user}) => {
 
   const { name, stats } = card;
   const users = Object.keys(user)
@@ -11,7 +11,6 @@ const Card = ({card, classname, addBookmarks, user}) => {
   });
 
   const questions = card => {
-    console.log(card)
     return (
       <div calssName='questionCard'>
         <div className='question front'>
@@ -50,7 +49,6 @@ const Card = ({card, classname, addBookmarks, user}) => {
 Card.propTypes = {
   card: PropTypes.object,
   classname: PropTypes.string,
-  addBookmarks: PropTypes.object,
   user: PropTypes.object
 };
 

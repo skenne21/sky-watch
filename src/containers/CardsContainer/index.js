@@ -28,7 +28,6 @@ export class CardsContainer extends Component {
   }
 
   createComponent = (cardType) => {
-    console.log({cardType})
     if (this.props.missionVideos.length) {
       const { id, title } = this.props.missionVideos[3];
       return (
@@ -49,9 +48,11 @@ export class CardsContainer extends Component {
             {
               cardType.length ? <p className='current-p'>CURRENT</p> : ''
             }
-            {  
-              this.createCards(cardType)
-            }
+            <div className='main'>
+              {  
+                this.createCards(cardType)
+              }
+            </div>
           </div>
         </div>
       );
@@ -64,7 +65,6 @@ export class CardsContainer extends Component {
         <Card 
           key={card.name+index} 
           card={card} 
-          addBookmarks={this.addBookmarks}
           classname={`${card.type}-card`}
           user={this.props.user}
         />);
@@ -90,14 +90,9 @@ export const mapStateToProps = state => ({
   missionVideos: state.missionVideos,
   launchpads: state.launchpads,
   rockets: state.rockets, 
-  bookmarks: state.bookmarks,
   user: state.user
 });
 
-export const mapDispatchToProps = dispatch => ({
-  addToBookmarks: bookmark => dispatch(actions.addBookmarks(bookmark)),
-  removeBookmark: bookmark => dispatch(actions.removeBookmark(bookmark))
-});
 
 CardsContainer.propTypes = {
   capsules: PropTypes.array,
@@ -105,11 +100,9 @@ CardsContainer.propTypes = {
   launchpads: PropTypes.array,
   missionVideos: PropTypes.array,
   user: PropTypes.array,
-  addToBookmarks: PropTypes.func,
-  removeBookmark: PropTypes.func,
   history: PropTypes.object
 };
 
 
 /* eslint-disable max-len*/
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardsContainer));
+export default withRouter(connect(mapStateToProps, null)(CardsContainer));

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { auth, db } from '../../firebase';
+import { auth } from '../../firebase';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 import './styles.css';
@@ -22,7 +22,6 @@ export class SignUp extends Component {
     const { email, password, name } = this.state;
     try  {
       const authUser = await auth.createUser(email, password);
-      const dbUser = await db.createUser(authUser.uid, name, email);
       const user = {
         name,
         email: authUser.email,

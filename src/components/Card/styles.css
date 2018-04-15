@@ -4,15 +4,9 @@
   width: 26%;
   padding: 2em 0;
   background-color: #ffffff0f;
-  margin: 1.5em;
-  /*height: 230px;*/
+  margin: 1.5em 3em;
   color: #fff;
 }
-
-/*.cards {
-  width: 85%;
-  background-color: transparent;
-}*/
 
 .card h1 {
   padding: 15px;
@@ -98,5 +92,6 @@
   letter-spacing: 2px;
   position: relative;
   bottom: 17em;
+  left: 33em;
   color: #fff;
 }

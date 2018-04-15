@@ -218,16 +218,14 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
-          addBookmarks={undefined}
           card={
                     Object {
                               "name": "",
-                              "question": "What Falcon 9 achieving a stable landing at sea?",
+                              "question": "What Are SpaceX's fleet of Falcon rockets named affter?",
                               "stats": Object {
-                                "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
-                          landing at sea in the Atlantic on the drone ship Of Course I Still
-                          Love You in April 2016 after four previous attempts ended in
-                          destruction of the booster upon impact",
+                                "answer": "the Falcon 9 boosters and smaller Falcon 1 rockets are 
+                          named after the fictional Millenium Falcon spaceship from creator 
+                          George Lucas' \\"Star Wars\\" movies.",
                               },
                               "type": "questionCard",
                             }
@@ -245,15 +243,13 @@ ShallowWrapper {
         "key": "0",
         "nodeType": "function",
         "props": Object {
-          "addBookmarks": undefined,
           "card": Object {
             "name": "",
-            "question": "What Falcon 9 achieving a stable landing at sea?",
+            "question": "What Are SpaceX's fleet of Falcon rockets named affter?",
             "stats": Object {
-              "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
-      landing at sea in the Atlantic on the drone ship Of Course I Still
-      Love You in April 2016 after four previous attempts ended in
-      destruction of the booster upon impact",
+              "answer": "the Falcon 9 boosters and smaller Falcon 1 rockets are 
+      named after the fictional Millenium Falcon spaceship from creator 
+      George Lucas' \\"Star Wars\\" movies.",
             },
             "type": "questionCard",
           },
@@ -275,16 +271,14 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
-            addBookmarks={undefined}
             card={
                         Object {
                                     "name": "",
-                                    "question": "What Falcon 9 achieving a stable landing at sea?",
+                                    "question": "What Are SpaceX's fleet of Falcon rockets named affter?",
                                     "stats": Object {
-                                      "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
-                              landing at sea in the Atlantic on the drone ship Of Course I Still
-                              Love You in April 2016 after four previous attempts ended in
-                              destruction of the booster upon impact",
+                                      "answer": "the Falcon 9 boosters and smaller Falcon 1 rockets are 
+                              named after the fictional Millenium Falcon spaceship from creator 
+                              George Lucas' \\"Star Wars\\" movies.",
                                     },
                                     "type": "questionCard",
                                   }
@@ -302,15 +296,13 @@ ShallowWrapper {
           "key": "0",
           "nodeType": "function",
           "props": Object {
-            "addBookmarks": undefined,
             "card": Object {
               "name": "",
-              "question": "What Falcon 9 achieving a stable landing at sea?",
+              "question": "What Are SpaceX's fleet of Falcon rockets named affter?",
               "stats": Object {
-                "answer": "Falcon 9 flight 23 (CRS-8) finally achieved a stable
-      landing at sea in the Atlantic on the drone ship Of Course I Still
-      Love You in April 2016 after four previous attempts ended in
-      destruction of the booster upon impact",
+                "answer": "the Falcon 9 boosters and smaller Falcon 1 rockets are 
+      named after the fictional Millenium Falcon spaceship from creator 
+      George Lucas' \\"Star Wars\\" movies.",
               },
               "type": "questionCard",
             },

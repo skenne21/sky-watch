@@ -66,9 +66,11 @@ export class LaunchesContainer extends Component {
             FALCON HEAVY
           </button>
         </div>
-        {
-          this.createCards(cards)
-        }
+        <div className='main'>
+          {
+            this.createCards(cards)
+          }
+        </div>
       </div>
     );
   }

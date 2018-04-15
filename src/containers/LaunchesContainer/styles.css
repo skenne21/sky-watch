@@ -10,3 +10,9 @@
 .launches-buttons {
   width: 100%;
 }
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
