@@ -11,15 +11,18 @@ const Card = ({card, classname, addBookmarks, user}) => {
   });
 
   const questions = card => {
+    console.log(card)
     return (
-      <div calssName='card'>
-        <div className='front'>Questions</div>
-        <div 
-          className={`card ${classname} back`}
-        >
-          <h1>{name}</h1>
-          {tags}
+      <div calssName='questionCard'>
+        <div className='question front'>
+          <p>{card.question}</p>
         </div>
+        <div 
+          className={`${classname} question back`}
+        >
+        {tags}
+        </div>
+        <h2 className='signinMessage'>SIGNIN TO VEIW MORE INFROMATION</h2>
       </div>
     );
   };

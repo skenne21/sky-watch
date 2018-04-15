@@ -34,6 +34,60 @@
   height: 80px;
 }
 
-#bookmarked {
-  background-color: green;
+
+
+.question {
+  display: inline-block;
+  min-height: 450px;
+  max-height: 100%;
+  width: 65%;
+  vertical-align: top;
+  padding: 5em 0;
+  background-color: #ffffff0f;
+  margin: 1.5em;
+  color: #fff;
+  
+}
+
+.front:hover {
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.question p {
+  text-align: left;
+  font-size: 1.3em;
+  margin: auto;
+  width: 90%;
+}
+
+.front p {
+  padding: 5em 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.front {
+  position: absolute;
+  top: 14em;
+  right: 12em;
+  height: 500px;
+  width: 70%;
+  background-image: url('../../assets/starman.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 7em;
+  z-index: 3;  
+}
+
+.back {
+  position: absolute;
+  top: 16em;
+  right: 13em;
+  
+}
+
+.signinMessage {
+  color: #fff;
 }
