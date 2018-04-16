@@ -62,7 +62,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": undefined,
-      "className": "CapsulesContainer",
+      "className": "CardsContainer",
     },
     "ref": null,
     "rendered": null,
@@ -75,7 +75,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": undefined,
-        "className": "CapsulesContainer",
+        "className": "CardsContainer",
       },
       "ref": null,
       "rendered": null,
@@ -150,7 +150,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": undefined,
-      "className": "CapsulesContainer",
+      "className": "CardsContainer",
     },
     "ref": null,
     "rendered": null,
@@ -163,7 +163,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": undefined,
-        "className": "CapsulesContainer",
+        "className": "CardsContainer",
       },
       "ref": null,
       "rendered": null,
@@ -196,7 +196,11 @@ ShallowWrapper {
     launchpads={Array []}
     missionVideos={Array []}
     rockets={Array []}
-    user={Array []}
+    user={
+        Array [
+            Object {},
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -210,81 +214,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <Card
-          card={
-                    Object {
-                              "name": "",
-                              "question": "What was the reason for Falcon 9 first-stage landing test ",
-                              "stats": Object {
-                                "answer": "Falcon 9 first-stage landing test were a series of 
-                          controlled-descent flight tests conducted by SpaceX between 2013 
-                          and 2016. Since 2017, the first stage of Falcon 9 missions has
-                          been routinely landed if the rocket performance allowed it, 
-                          and if SpaceX choose to recover the stage.
-                    
-                          The program's objective was to reliably execute controlled re-entry,
-                          descent and landing (EDL) of the Falcon 9 first stage into Earth's 
-                          atmosphere after the stage completes the boost phase of an orbital
-                          spaceflight. The first tests aimed to touch down vertically in the
-                          ocean at zero velocity. Later tests attempted to land the rocket
-                          precisely on an autonomous spaceport drone ship (a barge 
-                          commissioned by SpaceX to provide a stable landing surface at sea)
-                          or at Landing Zone 1 (LZ-1), a concrete pad at Cape Canaveral.
-                          The first ground landing at LZ-1 succeeded in December 2015,
-                          and the first landing at sea on a drone ship in April 2016.
-                          The second landed booster, B1021, was the first to fly again
-                          in March 2017, and was recovered a second time.",
-                              },
-                              "type": "questionCard",
-                            }
-          }
-          classname="questionCard-card"
-          user={Array []}
-/>,
-      ],
-      "className": "CapsulesContainer",
+      "children": null,
+      "className": "CardsContainer",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "0",
-        "nodeType": "function",
-        "props": Object {
-          "card": Object {
-            "name": "",
-            "question": "What was the reason for Falcon 9 first-stage landing test ",
-            "stats": Object {
-              "answer": "Falcon 9 first-stage landing test were a series of 
-      controlled-descent flight tests conducted by SpaceX between 2013 
-      and 2016. Since 2017, the first stage of Falcon 9 missions has
-      been routinely landed if the rocket performance allowed it, 
-      and if SpaceX choose to recover the stage.
-
-      The program's objective was to reliably execute controlled re-entry,
-      descent and landing (EDL) of the Falcon 9 first stage into Earth's 
-      atmosphere after the stage completes the boost phase of an orbital
-      spaceflight. The first tests aimed to touch down vertically in the
-      ocean at zero velocity. Later tests attempted to land the rocket
-      precisely on an autonomous spaceport drone ship (a barge 
-      commissioned by SpaceX to provide a stable landing surface at sea)
-      or at Landing Zone 1 (LZ-1), a concrete pad at Cape Canaveral.
-      The first ground landing at LZ-1 succeeded in December 2015,
-      and the first landing at sea on a drone ship in April 2016.
-      The second landed booster, B1021, was the first to fly again
-      in March 2017, and was recovered a second time.",
-            },
-            "type": "questionCard",
-          },
-          "classname": "questionCard-card",
-          "user": Array [],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
+    "rendered": null,
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -293,81 +227,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <Card
-            card={
-                        Object {
-                                    "name": "",
-                                    "question": "What was the reason for Falcon 9 first-stage landing test ",
-                                    "stats": Object {
-                                      "answer": "Falcon 9 first-stage landing test were a series of 
-                              controlled-descent flight tests conducted by SpaceX between 2013 
-                              and 2016. Since 2017, the first stage of Falcon 9 missions has
-                              been routinely landed if the rocket performance allowed it, 
-                              and if SpaceX choose to recover the stage.
-                        
-                              The program's objective was to reliably execute controlled re-entry,
-                              descent and landing (EDL) of the Falcon 9 first stage into Earth's 
-                              atmosphere after the stage completes the boost phase of an orbital
-                              spaceflight. The first tests aimed to touch down vertically in the
-                              ocean at zero velocity. Later tests attempted to land the rocket
-                              precisely on an autonomous spaceport drone ship (a barge 
-                              commissioned by SpaceX to provide a stable landing surface at sea)
-                              or at Landing Zone 1 (LZ-1), a concrete pad at Cape Canaveral.
-                              The first ground landing at LZ-1 succeeded in December 2015,
-                              and the first landing at sea on a drone ship in April 2016.
-                              The second landed booster, B1021, was the first to fly again
-                              in March 2017, and was recovered a second time.",
-                                    },
-                                    "type": "questionCard",
-                                  }
-            }
-            classname="questionCard-card"
-            user={Array []}
-/>,
-        ],
-        "className": "CapsulesContainer",
+        "children": null,
+        "className": "CardsContainer",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "0",
-          "nodeType": "function",
-          "props": Object {
-            "card": Object {
-              "name": "",
-              "question": "What was the reason for Falcon 9 first-stage landing test ",
-              "stats": Object {
-                "answer": "Falcon 9 first-stage landing test were a series of 
-      controlled-descent flight tests conducted by SpaceX between 2013 
-      and 2016. Since 2017, the first stage of Falcon 9 missions has
-      been routinely landed if the rocket performance allowed it, 
-      and if SpaceX choose to recover the stage.
-
-      The program's objective was to reliably execute controlled re-entry,
-      descent and landing (EDL) of the Falcon 9 first stage into Earth's 
-      atmosphere after the stage completes the boost phase of an orbital
-      spaceflight. The first tests aimed to touch down vertically in the
-      ocean at zero velocity. Later tests attempted to land the rocket
-      precisely on an autonomous spaceport drone ship (a barge 
-      commissioned by SpaceX to provide a stable landing surface at sea)
-      or at Landing Zone 1 (LZ-1), a concrete pad at Cape Canaveral.
-      The first ground landing at LZ-1 succeeded in December 2015,
-      and the first landing at sea on a drone ship in April 2016.
-      The second landed booster, B1021, was the first to fly again
-      in March 2017, and was recovered a second time.",
-              },
-              "type": "questionCard",
-            },
-            "classname": "questionCard-card",
-            "user": Array [],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
+      "rendered": null,
       "type": "div",
     },
   ],
@@ -449,7 +313,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": undefined,
-      "className": "CapsulesContainer",
+      "className": "CardsContainer",
     },
     "ref": null,
     "rendered": null,
@@ -462,7 +326,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": undefined,
-        "className": "CapsulesContainer",
+        "className": "CardsContainer",
       },
       "ref": null,
       "rendered": null,
@@ -514,7 +378,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": null,
-      "className": "CapsulesContainer",
+      "className": "CardsContainer",
     },
     "ref": null,
     "rendered": null,
@@ -527,7 +391,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": null,
-        "className": "CapsulesContainer",
+        "className": "CardsContainer",
       },
       "ref": null,
       "rendered": null,

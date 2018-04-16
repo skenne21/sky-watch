@@ -94,7 +94,7 @@ describe('CardsContainer', () => {
         rockets={rockets}
         launchpads={launchpads}
         missionVideos={missionVideos}
-        user={[]}
+        user={[{}]}
       />
     );
     expect(wrapper).toMatchSnapshot();

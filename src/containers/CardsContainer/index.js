@@ -76,7 +76,7 @@ export class CardsContainer extends Component {
     const { user } = this.props;
     const users = Object.keys(user)
     return (
-      <div className='CapsulesContainer'>
+      <div className='CardsContainer'>
         {
           users.length ? this.determineCardType() : this.createCards(questions)
         }

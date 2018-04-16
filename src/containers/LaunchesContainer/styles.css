@@ -1,6 +1,6 @@
 .buttons {
-  margin: 3em;
-  padding: 7px;
+  margin: 2em;
+  padding: 8px;
   color: #fff;
   background-color: transparent;
   font-size: 1.2em;
@@ -15,4 +15,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+}
+
+.signinMessage {
+  margin-bottom: 3px;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  /*position: relative;
+  bottom: 17em;
+  left: 33em;*/
+  color: #fff;
 }

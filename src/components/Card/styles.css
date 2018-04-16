@@ -1,3 +1,8 @@
+.base {
+  display: inline-block;
+  width: 26%;
+}
+
 .card {
   display: inline-block;
   vertical-align: top;
@@ -69,19 +74,19 @@
   position: absolute;
   top: 14em;
   right: 12em;
-  height: 500px;
+  height: 550px;
   width: 70%;
   background-image: url('../../assets/starman.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
-  padding-top: 7em;
+  padding-top: 4em;
   z-index: 3;  
 }
 
 .back {
   position: absolute;
-  top: 16em;
+  top: 14em;
   right: 13em;
   
 }
@@ -90,8 +95,8 @@
   margin-bottom: 3px;
   font-size: 0.9em;
   letter-spacing: 2px;
-  position: relative;
+  /*position: relative;
   bottom: 17em;
-  left: 33em;
+  left: 33em;*/
   color: #fff;
 }

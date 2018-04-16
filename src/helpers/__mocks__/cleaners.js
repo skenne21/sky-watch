@@ -17,7 +17,7 @@ export const cleanCapsules = jest.fn()
 
 export const cleanLaunchpads = jest.fn()
   .mockImplementation(() => mocks.launchpads);
-
+  
 export const cleanLaunches = jest.fn()
   .mockImplementation(() => mocks.launch);
 
