@@ -38,3 +38,12 @@
   display: block;
   padding-top: 8px;
 }
+
+@media screen and (max-width: 420px) {
+  .NavBar {
+    font-size: 0.7em;
+    width: 35%;
+  }
+
+  
+}

@@ -16,3 +16,20 @@ h1 span {
   padding-right: 10px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 420px) {
+  .header {
+    height: 16em;
+  }
+  h1 {
+    width: 100%;
+    padding: 2.2em;
+  }
+
+  .signin {
+    margin: 1px;
+  }
+
+ 
+  
+}

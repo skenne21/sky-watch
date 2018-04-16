@@ -119,3 +119,42 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 420px) {
+  .Homepage {
+    display: inline-grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+  }
+
+  .rockets,
+  .launchpads,
+  .capsules,
+  .launches {
+    height: 300px;
+    padding-top: 3.5em;
+  }
+
+  .homepage-video {
+    padding: 0;
+  }
+
+  .text-box_homepage {
+    margin: 2em auto;
+    width: 95%;
+  }
+
+  iframe {
+    width: 85%;
+    height: 300px;
+  }
+
+  .bio .text-box {
+    width: 85%;
+    height: 430px;
+  }
+
+  .bio .title {
+    font-size: 2em;
+  }
+}

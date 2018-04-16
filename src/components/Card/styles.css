@@ -95,8 +95,30 @@
   margin-bottom: 3px;
   font-size: 0.9em;
   letter-spacing: 2px;
-  /*position: relative;
-  bottom: 17em;
-  left: 33em;*/
   color: #fff;
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .question {
+    margin: auto;
+    width: 85%;
+  }
+
+  .front {
+    font-size: 1em;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .back {
+    position: absolute;
+    top: 290px;
+    right: 20px;
+  }
 }
