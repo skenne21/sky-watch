@@ -4,14 +4,25 @@
   padding-bottom: 7em;
 }
 
-.cards_text-box { 
+.cards_text-box {
+  position: absolute;
+  top: 10em;
+  left: 20%;
   height: 60px;
-  width: 46%;
+  width: 60%; 
+}
+
+.iframe-section {
+  padding: 5em 0;
+}
+
+iframe {
+  margin-top: 2em;
+  width: 60%;
+  border: none;
 }
 
 .cards_h2 {
-  margin: 3em;
-  padding-top: 1em;
   font-size: 1.5em;
 }
 
@@ -20,7 +31,7 @@
   color: #fff;
   text-align: left;
   margin: 0;
-  padding-left: 3.5em;
+  padding-left: 1.5em;
 }
 
 .main {

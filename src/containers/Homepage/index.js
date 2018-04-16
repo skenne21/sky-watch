@@ -43,9 +43,9 @@ export class Homepage extends Component {
           <p className='button-text'>WATCH FALCON HEAVY LAUNCH</p>
           <a className='videoButton' href="#homepage-video">▽</a>   
         </seciton>
-        <section className='homepage-video' id='homepage-video'>
+        <section className='homepage-video'>
           <div className='text-box_homepage'>
-            <h2 className='title'>{title}</h2>
+            <h2 className='title'  id='homepage-video'>{title}</h2>
             <p>{detials}</p>
           </div>
           <iframe 

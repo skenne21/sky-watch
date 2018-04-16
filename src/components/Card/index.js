@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Card = ({card, classname, user}) => {
 
-  const { name, stats } = card;
+  const { name, stats, details } = card;
   const users = Object.keys(user)
   const tags = Object.keys(stats).map( (stat, index) => {
     return <p key={stat+index}>{stats[stat]}</p>;
@@ -33,8 +33,12 @@ const Card = ({card, classname, user}) => {
         <div 
           className={`${classname}`}
         >
-          <h1>{name}</h1>
-          {tags}
+          <h1 className="card-h1">{name}</h1>
+          <h2 className='details'>{details}</h2>
+          <div className='stats'>
+            <h3>STATS: </h3>
+            {tags}
+          </div>
         </div>
       );
     }
