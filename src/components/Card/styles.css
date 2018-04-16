@@ -98,6 +98,19 @@
   color: #fff;
 }
 
+@media screen and (max-width: 1000px) {
+  .front {
+    top: 17em;
+    right: 8em;
+  }
+
+  .back {
+    top: 17em;
+    right: 8em;
+  }
+  
+}
+
 @media screen and (max-width: 420px) {
   .card {
     width: 100%;
@@ -105,6 +118,7 @@
   }
 
   .question {
+    padding: 0.5em 0;
     margin: auto;
     width: 85%;
   }
@@ -112,13 +126,17 @@
   .front {
     font-size: 1em;
     position: relative;
-    top: 0;
-    right: 0;
+    top: -10px;
+    right: -4px;
   }
 
   .back {
     position: absolute;
-    top: 290px;
+    top:280px;
     right: 20px;
+  }
+
+  .question p {
+    font-size: 0.8em;
   }
 }

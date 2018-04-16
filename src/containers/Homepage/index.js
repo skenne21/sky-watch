@@ -32,7 +32,18 @@ export class Homepage extends Component {
 
     return (
       <div className='Homepage'>
-        <section className='homepage-video'>
+        <seciton className='main-header'>
+          <h1>WELCOME TO SKY WATCH</h1>
+          <div className='text-box'>
+            <h2 className='subHeader'>SpaceX is an interactive educational site getting users excited about SpaceX innovative technologies.</h2>
+            <p className='bio'>{`${name} was founded by ${founder}. ${summary} SpaceX is located
+            in ${address}, ${state}`}
+            </p>
+          </div>
+          <p className='button-text'>WATCH FALCON HEAVY LAUNCH</p>
+          <a className='videoButton' href="#homepage-video">▽</a>   
+        </seciton>
+        <section className='homepage-video' id='homepage-video'>
           <div className='text-box_homepage'>
             <h2 className='title'>{title}</h2>
             <p>{detials}</p>
@@ -45,14 +56,6 @@ export class Homepage extends Component {
             title="Homepage iframe"
             allowFullScreen
           />
-        </section>
-        <section className='bio'>
-          <div className='text-box'>
-            <h2 className='title'>{name}</h2>
-            <h3>Founder: {founder}</h3>
-            <h3>Location: {`Location: ${address}, ${state}`}</h3>
-            <p>About: {summary}</p>
-          </div>
         </section>
       </div>
     );

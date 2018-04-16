@@ -21,26 +21,29 @@ const Card = ({card, classname, user}) => {
         >
         {tags}
         </div>
-        <h2 className='signinMessage'>SIGNIN TO VEIW MORE INFROMATION</h2>
       </div>
     );
   };
   
-  const factCards = (card) => {
-    return (
-      <div 
-        className={`${classname}`}
-      >
-        <h1>{name}</h1>
-        {tags}
-      </div>
-    );
+  const createCards = (card) => {
+    if(card.type ==='questionCard') {
+      return questions(card)
+    } else {
+      return (
+        <div 
+          className={`${classname}`}
+        >
+          <h1>{name}</h1>
+          {tags}
+        </div>
+      );
+    }
   };
 
   return (
     <div className='card'>
       {
-        users.length > 1 ? factCards(card)  : questions(card)
+        createCards(card)
       }
     </div>
   );

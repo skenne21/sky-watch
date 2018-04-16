@@ -7,10 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./assets/nathan-anderson.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #6B5F6B;
   height: 100%;
   font-family: sans-serif;
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {withRouter } from 'react-router-dom';
-// import * as actions from '../../actions';
+import {withRouter, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Card from '../../components/Card';
 import { randomQuestions } from '../../mockData/mockQuestions';
@@ -24,6 +23,8 @@ export class LaunchesContainer extends Component {
       const launches = this.props.launches[0][name];
       this.setState({ [name] : launches});
       this.setState({cards: launches });
+    } else {
+      return (<p>PLEASE SIGN IN TO VEIW MORE INFORMATION</p>)
     }
   }
 

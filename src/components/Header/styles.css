@@ -17,6 +17,19 @@ h1 span {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1000px) {
+  .header {
+    height: 10em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 1.5em;
+    padding: 4em;
+  }
+}
+
 @media screen and (max-width: 420px) {
   .header {
     height: 16em;
@@ -29,7 +42,5 @@ h1 span {
   .signin {
     margin: 1px;
   }
-
- 
   
 }

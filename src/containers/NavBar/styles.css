@@ -39,6 +39,19 @@
   padding-top: 8px;
 }
 
+@media screen and (max-width: 1000px) {
+  .NavBar {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .NavBar {
+    width: 100%;
+    text-align: right;
+  }
+}
+
 @media screen and (max-width: 420px) {
   .NavBar {
     font-size: 0.7em;

@@ -29,3 +29,17 @@
   justify-content: left;
 }
 
+@media screen and (max-width: 420px) {
+  .cards_text-box {
+    width: 90%;
+    height: 100%;
+  }
+
+  .cards_h2 {
+    margin: 1em;
+  }
+
+  .current-p {
+    padding-left: 0.7em;
+  }
+}

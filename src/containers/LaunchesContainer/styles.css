@@ -21,8 +21,12 @@
   margin-bottom: 3px;
   font-size: 0.9em;
   letter-spacing: 2px;
-  /*position: relative;
-  bottom: 17em;
-  left: 33em;*/
   color: #fff;
+}
+
+@media screen and (max-width: 420px) {
+  .buttons {
+    width: 80%;
+    margin: 0.7em;
+  }
 }
