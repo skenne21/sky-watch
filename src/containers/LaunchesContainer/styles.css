@@ -15,6 +15,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  position: relative;
+  top: -43px;
+  right: 2%;
 }
 
 .signinMessage {
@@ -23,6 +26,7 @@
   letter-spacing: 2px;
   color: #fff;
 }
+ 
 
 @media screen and (max-width: 420px) {
   .buttons {

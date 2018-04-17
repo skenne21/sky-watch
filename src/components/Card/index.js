@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'
 
 const Card = ({card, classname, user}) => {
 
@@ -12,15 +13,18 @@ const Card = ({card, classname, user}) => {
 
   const questions = card => {
     return (
-      <div calssName='questionCard'>
+      <div className='questionCard'>
+        <Link className='link' to='/signin'>SIGNIN TO SEE MORE INFORMATION</Link>
         <div className='question front'>
+          <h2>Q:</h2>
           <p>{card.question}</p>
           <p id='flip-button'>☛</p>
         </div>
         <div 
           className={`${classname} question back`}
         >
-        {tags}
+          <h2>A:</h2>
+          {tags}
         </div>
       </div>
     );
@@ -57,7 +61,8 @@ const Card = ({card, classname, user}) => {
 Card.propTypes = {
   card: PropTypes.object,
   classname: PropTypes.string,
-  user: PropTypes.object
+  user: PropTypes.object,
+  history: PropTypes.object
 };
 
 export default Card;

@@ -18,6 +18,7 @@ export class LaunchesContainer extends Component {
   }
 
   handleClick = event => {
+    console.log('hello')
     const { name } = event.target;
     if (this.props.launches.length) {
       const launches = this.props.launches[0][name];

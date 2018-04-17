@@ -85,9 +85,9 @@
 }
 
 .front p {
-  padding: 3em 0;
+  padding: 2em 0;
   font-size: 2em;
-  text-align: center;
+  text-align: left;
 }
 
 .front {
@@ -104,24 +104,32 @@
   z-index: 3;  
 }
 
+.front h2 {
+  font-size: 3em;
+  color: #754c5d;
+}
+
+.back h2 {
+  font-size: 3em;
+  color: #754c5d;
+}
+
 #flip-button {
-  color: #fff;
+  color: #754c5d;
   font-size: 4em;
   position: absolute;
-  left: 75%;
+  left: 90%;
   bottom: 0em;
   padding: 0;
   width: 40%;
 }
-
 
 .back {
   width: 65%;
   position: absolute;
   top: 14em;
   right: 13em;
-  height: 550px;
-  
+  height: 550px;  
 }
 
 .signinMessage {
@@ -130,6 +138,14 @@
   letter-spacing: 2px;
   color: #fff;
 }
+
+.link {
+  color: #fff;
+  font-size: 1.2em;
+  /*padding: 2px;*/
+}
+
+    
 
 @media screen and (max-width: 1000px) {
   .front {
@@ -140,8 +156,7 @@
   .back {
     top: 17em;
     right: 8em;
-  }
-  
+  }  
 }
 
 @media screen and (max-width: 420px) {
