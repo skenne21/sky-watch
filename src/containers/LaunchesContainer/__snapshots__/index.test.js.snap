@@ -225,7 +225,6 @@ ShallowWrapper {
                                       }
                     }
                     classname="questionCard-card"
-                    user={Array []}
           />
 </div>,
       ],
@@ -332,7 +331,6 @@ ShallowWrapper {
                                         }
               }
               classname="questionCard-card"
-              user={Array []}
 />,
           ],
           "className": "main",
@@ -357,7 +355,6 @@ ShallowWrapper {
                 "type": "questionCard",
               },
               "classname": "questionCard-card",
-              "user": Array [],
             },
             "ref": null,
             "rendered": null,
@@ -420,7 +417,6 @@ ShallowWrapper {
                                               }
                         }
                         classname="questionCard-card"
-                        user={Array []}
             />
 </div>,
         ],
@@ -527,7 +523,6 @@ ShallowWrapper {
                                               }
                 }
                 classname="questionCard-card"
-                user={Array []}
 />,
             ],
             "className": "main",
@@ -552,7 +547,6 @@ ShallowWrapper {
                   "type": "questionCard",
                 },
                 "classname": "questionCard-card",
-                "user": Array [],
               },
               "ref": null,
               "rendered": null,

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import * as actions from '../../actions';
 import Card from '../../components/Card';
 import { randomQuestions } from '../../mockData/mockQuestions';
 import './styles.css';
@@ -66,7 +65,6 @@ export class CardsContainer extends Component {
           key={card.name+index} 
           card={card} 
           classname={`${card.type}-card`}
-          user={this.props.user}
         />);
     });
   }
@@ -74,7 +72,7 @@ export class CardsContainer extends Component {
   render() {
     const questions = randomQuestions();
     const { user } = this.props;
-    const users = Object.keys(user)
+    const users = Object.keys(user);
     return (
       <div className='CardsContainer'>
         {
@@ -99,7 +97,7 @@ CardsContainer.propTypes = {
   rockets: PropTypes.array,
   launchpads: PropTypes.array,
   missionVideos: PropTypes.array,
-  user: PropTypes.object,
+  user: PropTypes.array,
   history: PropTypes.object
 };
 

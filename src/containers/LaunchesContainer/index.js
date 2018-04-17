@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {withRouter, Link } from 'react-router-dom';
+import {withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Card from '../../components/Card';
 import { randomQuestions } from '../../mockData/mockQuestions';
@@ -24,7 +24,7 @@ export class LaunchesContainer extends Component {
       this.setState({ [name] : launches});
       this.setState({cards: launches });
     } else {
-      return (<p>PLEASE SIGN IN TO VEIW MORE INFORMATION</p>)
+      return (<p>PLEASE SIGN IN TO VEIW MORE INFORMATION</p>);
     }
   }
 
@@ -35,7 +35,6 @@ export class LaunchesContainer extends Component {
           key={index+card.name}
           card={card}
           classname={`${card.type}-card`}
-          user={this.props.user}
         />
       );
     });
@@ -43,7 +42,6 @@ export class LaunchesContainer extends Component {
 
   render() {
     const { cards } = this.state;
-    const { user, launches } = this.props;
     return (
       <div className='LaunchesContainer'>
         <div className='launches-buttons'>
@@ -78,14 +76,12 @@ export class LaunchesContainer extends Component {
   }
 }
 
-export const mapStateToProps = ({launches, user}) => ({
-  launches,
-  user
+export const mapStateToProps = ({ launches }) => ({
+  launches
 });
 
 LaunchesContainer.propTypes = {
-  launches: PropTypes.array,
-  user: PropTypes.object
+  launches: PropTypes.array
 };
 
 export default withRouter(connect(mapStateToProps, null)(LaunchesContainer));

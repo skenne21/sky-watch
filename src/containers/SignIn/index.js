@@ -49,7 +49,7 @@ export class SignIn extends Component {
   }
 
   render() {
-    const { error, email, password,  } = this.state;
+    const { error, email, password  } = this.state;
     return (
       <form 
         onSubmit={this.handleSubmit}

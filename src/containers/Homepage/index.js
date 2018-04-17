@@ -35,9 +35,17 @@ export class Homepage extends Component {
         <seciton className='main-header'>
           <h1>WELCOME TO SKY WATCH</h1>
           <div className='text-box'>
-            <h2 className='subHeader'>SpaceX is an interactive educational site getting users excited about SpaceX innovative technologies.</h2>
-            <p className='bio'>{`${name} was founded by ${founder}. ${summary} SpaceX is located
-            in ${address}, ${state}`}
+            <h2 className='subHeader'>
+              {
+                `SpaceX is an interactive educational site getting users
+                excited about SpaceX innovative technologies.`
+              }
+            </h2>
+            <p className='bio'>
+              {
+                `${name} was founded by ${founder}. 
+                ${summary} SpaceX is located in ${address}, ${state}`
+              }
             </p>
           </div>
           <p className='button-text'>WATCH FALCON HEAVY LAUNCH</p>

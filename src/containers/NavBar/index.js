@@ -22,7 +22,10 @@ export class NavBar extends Component {
         <div>
           <button onClick ={this.removeUser}>SignOut</button>
           {
-            pathname !== '/' ? <NavLink className='home' to='/'>HOME</NavLink> : ''
+            pathname !== '/' ?
+              <NavLink className='home' to='/'>HOME</NavLink> 
+              : 
+              ''
           }
         </div>
       );

@@ -49,10 +49,12 @@ describe('SignIn', () => {
   });
 
   it('Should call hangleChange and set change to state', () => {
-    const event = { target: {
-      name: 'email',
-      value: 'bob@gmail.com'
-    }};
+    const event = { 
+      target: {
+        name: 'email',
+        value: 'bob@gmail.com'
+      }
+    };
 
     expect(wrapper.state('email')).toEqual('');
     wrapper.instance().handleChange(event);

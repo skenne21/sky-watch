@@ -189,7 +189,7 @@ export const cleanRocket = {
     diameter:5.5,
     height:73,
     mass:66460
-  },
+  }
 };
 
 export const rockets = [
@@ -223,39 +223,6 @@ export const rockets = [
     "type": "rocket"
   }
 ];
-
-// export const rockets =  [
-//   {
-//     "name": "Name: Falcon 1", 
-//     "stats": {
-//       "active": "Active: false",
-//       "boosters": "Boosters: 0",
-//       "costLaunch": "Cost To Launch:6700000", 
-//       "country": "Launch From: Republic of the Marshall Islands", 
-//       "description": "Description: The Falcon 1 was an expendable", 
-//       "diameter": "Diameter 5.5 ft", 
-//       "fristFlight": "Frist Flight: 03, 24, 2006", 
-//       "height": 
-//       "Height: 73 ft", 
-//       "mass": "Mass: 66460 lb"
-//     }, 
-//     "type": "rocket"
-//   }, {
-//     "name": "Name: Falcon 9", 
-//     "stats": {
-//       "active": "Active: true",
-//       "boosters": "Boosters: 0",
-//       "costLaunch": "Cost To Launch:6700000", 
-//       "country": "Launch From: United States", 
-//       "description": "Description: The Falcon 1 was an expendable", 
-//       "diameter": "Diameter 5.5 ft",
-//       "fristFlight": "Frist Flight: 03, 24, 2006", 
-//       "height": "Height: 73 ft", 
-//       "mass": "Mass: 1207920 lb"
-//     }, 
-//     "type": "rocket"
-//   }
-// ];
 
 export const rawCapsules = [
   {
@@ -784,7 +751,7 @@ export const semiClean = [
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll", "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches", 
+    "type": "launches" 
   }, {
     "details": "Successful first stage...",
     "name": "Flight Number: 2",
@@ -796,7 +763,7 @@ export const semiClean = [
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches",
+    "type": "launches"
   }, {
     "details": "Engine failure at 33 seconds and loss of vehicle",
     "name": "Flight Number: 1",
@@ -808,7 +775,7 @@ export const semiClean = [
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches",
+    "type": "launches"
   }, {
     "name": "Flight Number: 2",
     "details": "Successful first stage burn and transition...",
@@ -820,7 +787,7 @@ export const semiClean = [
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches",
+    "type": "launches"
   }, {
     "name": "Flight Number: 1",
     "details": "Successful first stage...",
@@ -832,7 +799,7 @@ export const semiClean = [
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches",
+    "type": "launches"
   }
 ];
     
@@ -935,5 +902,5 @@ export const indivLaunches = {
     "sideCores": "Reusable Sidecores: false",
     "sucessful": "Launch Sucess: false"
   }, 
-  "type": "launches",
-}
+  "type": "launches"
+};

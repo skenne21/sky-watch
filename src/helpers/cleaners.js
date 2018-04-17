@@ -32,7 +32,7 @@ export const cleanRockets = (rockets) => {
       diameter:`Diameter ${rocket.diameter.feet} ft`,
       mass:`Mass: ${rocket.mass.lb} lb`,
       height:`Height: ${rocket.height.feet} ft`,
-      boosters:`Boosters: ${rocket.boosters}`,
+      boosters:`Boosters: ${rocket.boosters}`
     } 
   }));
 };

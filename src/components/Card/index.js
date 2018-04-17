@@ -1,12 +1,10 @@
 import React from 'react';
 import './styles.css';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-const Card = ({card, classname, user}) => {
-
+const Card = ({card, classname}) => {
   const { name, stats, details } = card;
-  const users = Object.keys(user)
   const tags = Object.keys(stats).map( (stat, index) => {
     return <p key={stat+index}>{stats[stat]}</p>;
   });
@@ -14,7 +12,12 @@ const Card = ({card, classname, user}) => {
   const questions = card => {
     return (
       <div className='questionCard'>
-        <Link className='link' to='/signin'>SIGNIN TO SEE MORE INFORMATION</Link>
+        <Link 
+          className='link'
+          to='/signin'
+        >
+          SIGNIN TO SEE MORE INFORMATION
+        </Link>
         <div className='question front'>
           <h2>Q:</h2>
           <p>{card.question}</p>
@@ -31,8 +34,8 @@ const Card = ({card, classname, user}) => {
   };
   
   const createCards = (card) => {
-    if(card.type ==='questionCard') {
-      return questions(card)
+    if (card.type ==='questionCard') {
+      return questions(card);
     } else {
       return (
         <div 
@@ -61,7 +64,6 @@ const Card = ({card, classname, user}) => {
 Card.propTypes = {
   card: PropTypes.object,
   classname: PropTypes.string,
-  user: PropTypes.object,
   history: PropTypes.object
 };
 

@@ -4,12 +4,12 @@ import * as mocks from '../mockData';
 describe('Actions', () =>{
   describe('ADD_COMPANY_BIO', () => {
     it('Should add a company bio', () => {
-    const bio = mocks.bio;
-    const expected = {
-      type: 'ADD_COMPANY_BIO',
-      bio
-    };
-     expect(actions.addCompanyBio(bio)).toEqual(expected);
+      const bio = mocks.bio;
+      const expected = {
+        type: 'ADD_COMPANY_BIO',
+        bio
+      };
+      expect(actions.addCompanyBio(bio)).toEqual(expected);
     });
   });
 
@@ -79,7 +79,7 @@ describe('Actions', () =>{
         type:'ADD_USER',
         user
       };
-    expect(actions.addUser(user)).toEqual(expected);
+      expect(actions.addUser(user)).toEqual(expected);
     });
   });
 
