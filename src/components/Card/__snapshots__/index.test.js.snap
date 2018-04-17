@@ -75,27 +75,39 @@ ShallowWrapper {
       "children": <div
         className="undefined"
 >
-        <h1>
+        <h1
+                className="card-h1"
+        >
                 Name: Dragon 1
         </h1>
-        <p>
-                Crew Capacity: 0
-        </p>
-        <p>
-                Diameter: 12 ft
-        </p>
-        <p>
-                Heat Shield Capacity: 3000 deg
-        </p>
-        <p>
-                Height: 23.6 ft
-        </p>
-        <p>
-                Mass: 3000 kg
-        </p>
-        <p>
-                 Years in Orbit: 2
-        </p>
+        <h2
+                className="details"
+        />
+        <div
+                className="stats"
+        >
+                <h3>
+                        STATS: 
+                </h3>
+                <p>
+                        Crew Capacity: 0
+                </p>
+                <p>
+                        Diameter: 12 ft
+                </p>
+                <p>
+                        Heat Shield Capacity: 3000 deg
+                </p>
+                <p>
+                        Height: 23.6 ft
+                </p>
+                <p>
+                        Mass: 3000 kg
+                </p>
+                <p>
+                         Years in Orbit: 2
+                </p>
+        </div>
 </div>,
       "className": "card",
     },
@@ -106,29 +118,39 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
+          <h1
+            className="card-h1"
+>
             Name: Dragon 1
 </h1>,
-          Array [
+          <h2
+            className="details"
+/>,
+          <div
+            className="stats"
+>
+            <h3>
+                        STATS: 
+            </h3>
             <p>
-              Crew Capacity: 0
-</p>,
+                        Crew Capacity: 0
+            </p>
             <p>
-              Diameter: 12 ft
-</p>,
+                        Diameter: 12 ft
+            </p>
             <p>
-              Heat Shield Capacity: 3000 deg
-</p>,
+                        Heat Shield Capacity: 3000 deg
+            </p>
             <p>
-              Height: 23.6 ft
-</p>,
+                        Height: 23.6 ft
+            </p>
             <p>
-              Mass: 3000 kg
-</p>,
+                        Mass: 3000 kg
+            </p>
             <p>
-               Years in Orbit: 2
-</p>,
-          ],
+                         Years in Orbit: 2
+            </p>
+</div>,
         ],
         "className": "undefined",
       },
@@ -140,6 +162,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Name: Dragon 1",
+            "className": "card-h1",
           },
           "ref": null,
           "rendered": "Name: Dragon 1",
@@ -147,69 +170,129 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "crew0",
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Crew Capacity: 0",
+            "children": undefined,
+            "className": "details",
           },
           "ref": null,
-          "rendered": "Crew Capacity: 0",
-          "type": "p",
+          "rendered": null,
+          "type": "h2",
         },
         Object {
           "instance": null,
-          "key": "diameter1",
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Diameter: 12 ft",
+            "children": Array [
+              <h3>
+                STATS: 
+</h3>,
+              Array [
+                <p>
+                  Crew Capacity: 0
+</p>,
+                <p>
+                  Diameter: 12 ft
+</p>,
+                <p>
+                  Heat Shield Capacity: 3000 deg
+</p>,
+                <p>
+                  Height: 23.6 ft
+</p>,
+                <p>
+                  Mass: 3000 kg
+</p>,
+                <p>
+                   Years in Orbit: 2
+</p>,
+              ],
+            ],
+            "className": "stats",
           },
           "ref": null,
-          "rendered": "Diameter: 12 ft",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "heatShield2",
-          "nodeType": "host",
-          "props": Object {
-            "children": "Heat Shield Capacity: 3000 deg",
-          },
-          "ref": null,
-          "rendered": "Heat Shield Capacity: 3000 deg",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "height3",
-          "nodeType": "host",
-          "props": Object {
-            "children": "Height: 23.6 ft",
-          },
-          "ref": null,
-          "rendered": "Height: 23.6 ft",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "mass4",
-          "nodeType": "host",
-          "props": Object {
-            "children": "Mass: 3000 kg",
-          },
-          "ref": null,
-          "rendered": "Mass: 3000 kg",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "yearInOrbit5",
-          "nodeType": "host",
-          "props": Object {
-            "children": " Years in Orbit: 2",
-          },
-          "ref": null,
-          "rendered": " Years in Orbit: 2",
-          "type": "p",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "STATS: ",
+              },
+              "ref": null,
+              "rendered": "STATS: ",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": "crew0",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Crew Capacity: 0",
+              },
+              "ref": null,
+              "rendered": "Crew Capacity: 0",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "diameter1",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Diameter: 12 ft",
+              },
+              "ref": null,
+              "rendered": "Diameter: 12 ft",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "heatShield2",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Heat Shield Capacity: 3000 deg",
+              },
+              "ref": null,
+              "rendered": "Heat Shield Capacity: 3000 deg",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "height3",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Height: 23.6 ft",
+              },
+              "ref": null,
+              "rendered": "Height: 23.6 ft",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "mass4",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Mass: 3000 kg",
+              },
+              "ref": null,
+              "rendered": "Mass: 3000 kg",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "yearInOrbit5",
+              "nodeType": "host",
+              "props": Object {
+                "children": " Years in Orbit: 2",
+              },
+              "ref": null,
+              "rendered": " Years in Orbit: 2",
+              "type": "p",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",
@@ -225,27 +308,39 @@ ShallowWrapper {
         "children": <div
           className="undefined"
 >
-          <h1>
+          <h1
+                    className="card-h1"
+          >
                     Name: Dragon 1
           </h1>
-          <p>
-                    Crew Capacity: 0
-          </p>
-          <p>
-                    Diameter: 12 ft
-          </p>
-          <p>
-                    Heat Shield Capacity: 3000 deg
-          </p>
-          <p>
-                    Height: 23.6 ft
-          </p>
-          <p>
-                    Mass: 3000 kg
-          </p>
-          <p>
-                     Years in Orbit: 2
-          </p>
+          <h2
+                    className="details"
+          />
+          <div
+                    className="stats"
+          >
+                    <h3>
+                              STATS: 
+                    </h3>
+                    <p>
+                              Crew Capacity: 0
+                    </p>
+                    <p>
+                              Diameter: 12 ft
+                    </p>
+                    <p>
+                              Heat Shield Capacity: 3000 deg
+                    </p>
+                    <p>
+                              Height: 23.6 ft
+                    </p>
+                    <p>
+                              Mass: 3000 kg
+                    </p>
+                    <p>
+                               Years in Orbit: 2
+                    </p>
+          </div>
 </div>,
         "className": "card",
       },
@@ -256,29 +351,39 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h1>
+            <h1
+              className="card-h1"
+>
               Name: Dragon 1
 </h1>,
-            Array [
+            <h2
+              className="details"
+/>,
+            <div
+              className="stats"
+>
+              <h3>
+                            STATS: 
+              </h3>
               <p>
-                Crew Capacity: 0
-</p>,
+                            Crew Capacity: 0
+              </p>
               <p>
-                Diameter: 12 ft
-</p>,
+                            Diameter: 12 ft
+              </p>
               <p>
-                Heat Shield Capacity: 3000 deg
-</p>,
+                            Heat Shield Capacity: 3000 deg
+              </p>
               <p>
-                Height: 23.6 ft
-</p>,
+                            Height: 23.6 ft
+              </p>
               <p>
-                Mass: 3000 kg
-</p>,
+                            Mass: 3000 kg
+              </p>
               <p>
-                 Years in Orbit: 2
-</p>,
-            ],
+                             Years in Orbit: 2
+              </p>
+</div>,
           ],
           "className": "undefined",
         },
@@ -290,6 +395,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Name: Dragon 1",
+              "className": "card-h1",
             },
             "ref": null,
             "rendered": "Name: Dragon 1",
@@ -297,69 +403,129 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "crew0",
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Crew Capacity: 0",
+              "children": undefined,
+              "className": "details",
             },
             "ref": null,
-            "rendered": "Crew Capacity: 0",
-            "type": "p",
+            "rendered": null,
+            "type": "h2",
           },
           Object {
             "instance": null,
-            "key": "diameter1",
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Diameter: 12 ft",
+              "children": Array [
+                <h3>
+                  STATS: 
+</h3>,
+                Array [
+                  <p>
+                    Crew Capacity: 0
+</p>,
+                  <p>
+                    Diameter: 12 ft
+</p>,
+                  <p>
+                    Heat Shield Capacity: 3000 deg
+</p>,
+                  <p>
+                    Height: 23.6 ft
+</p>,
+                  <p>
+                    Mass: 3000 kg
+</p>,
+                  <p>
+                     Years in Orbit: 2
+</p>,
+                ],
+              ],
+              "className": "stats",
             },
             "ref": null,
-            "rendered": "Diameter: 12 ft",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": "heatShield2",
-            "nodeType": "host",
-            "props": Object {
-              "children": "Heat Shield Capacity: 3000 deg",
-            },
-            "ref": null,
-            "rendered": "Heat Shield Capacity: 3000 deg",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": "height3",
-            "nodeType": "host",
-            "props": Object {
-              "children": "Height: 23.6 ft",
-            },
-            "ref": null,
-            "rendered": "Height: 23.6 ft",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": "mass4",
-            "nodeType": "host",
-            "props": Object {
-              "children": "Mass: 3000 kg",
-            },
-            "ref": null,
-            "rendered": "Mass: 3000 kg",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": "yearInOrbit5",
-            "nodeType": "host",
-            "props": Object {
-              "children": " Years in Orbit: 2",
-            },
-            "ref": null,
-            "rendered": " Years in Orbit: 2",
-            "type": "p",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "STATS: ",
+                },
+                "ref": null,
+                "rendered": "STATS: ",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": "crew0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Crew Capacity: 0",
+                },
+                "ref": null,
+                "rendered": "Crew Capacity: 0",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": "diameter1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Diameter: 12 ft",
+                },
+                "ref": null,
+                "rendered": "Diameter: 12 ft",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": "heatShield2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Heat Shield Capacity: 3000 deg",
+                },
+                "ref": null,
+                "rendered": "Heat Shield Capacity: 3000 deg",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": "height3",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Height: 23.6 ft",
+                },
+                "ref": null,
+                "rendered": "Height: 23.6 ft",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": "mass4",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Mass: 3000 kg",
+                },
+                "ref": null,
+                "rendered": "Mass: 3000 kg",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": "yearInOrbit5",
+                "nodeType": "host",
+                "props": Object {
+                  "children": " Years in Orbit: 2",
+                },
+                "ref": null,
+                "rendered": " Years in Orbit: 2",
+                "type": "p",
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "div",

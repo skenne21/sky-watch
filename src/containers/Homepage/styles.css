@@ -192,7 +192,7 @@
 background-image: url('../../assets/launch.jpg');  
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 900px) {
   .Homepage {
     display: inline-grid;
     grid-template-columns: 100%;
@@ -207,6 +207,17 @@ background-image: url('../../assets/launch.jpg');
     padding-top: 3.5em;
   }
 
+ /* .launchpad {
+    padding-top: 0;
+    padding-bottom: 1.3em;
+    height: 150px;
+  }*/
+
+  .rockets,
+  .launchpad {
+    background-position: bottom; 
+  }
+
   .homepage-video {
     padding: 0;
   }
@@ -214,6 +225,8 @@ background-image: url('../../assets/launch.jpg');
   .text-box_homepage {
     margin: 2em auto;
     width: 95%;
+    height: 270px;
+    font-size: 1.2em
   }
 
   iframe {
@@ -228,5 +241,28 @@ background-image: url('../../assets/launch.jpg');
 
   .bio .title {
     font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-header {
+    height: 800px;
+  }
+
+  .main-header p {
+    font-size: 1em;
+  }
+
+  .main-header h2 {
+    padding-top: 0;
+    height: 40%;
+  }
+
+  .text-box {
+    height: 480px;
+  }
+
+  .button-text {
+    left: 18%;
   }
 }
