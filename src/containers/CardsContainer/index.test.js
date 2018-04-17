@@ -3,9 +3,8 @@ import { CardsContainer } from './index';
 import { shallow } from 'enzyme';
 import * as mocks from '../../mockData';
 /* eslint-disable no-duplicate-imports*/
-import { mapStateToProps, mapDispatchToProps } from './index';
+import { mapStateToProps } from './index';
 /* eslint-enable no-duplicate-imports*/
-import * as actions from '../../actions';
 
 describe('CardsContainer', () => {
   let wrapper;
@@ -108,14 +107,14 @@ describe('CardsContainer', () => {
         capsules: [],
         missionVideos: [],
         launchpads: [],
-        rockets: [],
+        rockets: []
       };
 
       expectedState = {
         capsules: [],
         missionVideos: [],
         launchpads: [],
-        rockets: [],
+        rockets: []
       };
     });
 

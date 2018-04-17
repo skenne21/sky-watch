@@ -26,6 +26,6 @@ describe('manageLaunches', () => {
   it('should call combineLaunches with the right params',  () => {
     const launches = mocks.rawLaunches;
     manageLaunches(launches);
-    expect(cleanLaunches).toHaveBeenCalled();
+    expect(combineLaunches).toHaveBeenCalled();
   });
 });

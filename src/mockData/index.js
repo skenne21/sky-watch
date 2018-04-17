@@ -182,80 +182,47 @@ export const cleanRocket = {
   costLaunch:6700000,
   country:"Republic of the Marshall Islands",
   fristFight:"03, 24, 2006",
+  details:"The Falcon 1 was an expendable ...",
   name:"Falcon 1",
   stats: {
     boosters:0,
     diameter:5.5,
     height:73,
     mass:66460
-  },
-  summary:"The Falcon 1 was an expendable ..."
+  }
 };
 
 export const rockets = [
   {
     "name": "Name: Falcon 1",
+    "details": "The Falcon 1 was an expendable launch system privately",
     "stats": {
       "active": "Active: false",
       "boosters": "Boosters: 0",
       "costLaunch": "Cost To Launch:6700000",
       "country": "Launch From: Republic of the Marshall Islands",
-      "description": "Description: The Falcon 1 was an expendable launch system privately",
       "diameter": "Diameter 5.5 ft",
-      "fristFlight": "Frist Flight: 03, 24, 2006",
+      "fristFlight": "First Flight: 03, 24, 2006",
       "height": "Height: 73 ft",
       "mass": "Mass: 66460 lb"
     }, 
     "type": "rocket"
   }, {
     "name": "Name: Falcon 9",
+    "details": "The Falcon 1 was an expendable launch system privately",
     "stats": {
       "active": "Active: true",
       "boosters": "Boosters: 0",
       "costLaunch": "Cost To Launch:6700000",
       "country": "Launch From: United States",
-      "description": "Description: The Falcon 1 was an expendable launch system privately",
       "diameter": "Diameter 5.5 ft",
-      "fristFlight": "Frist Flight: 03, 24, 2006",
+      "fristFlight": "First Flight: 03, 24, 2006",
       "height": "Height: 73 ft",
       "mass": "Mass: 1207920 lb"
     }, 
     "type": "rocket"
   }
 ];
-
-// export const rockets =  [
-//   {
-//     "name": "Name: Falcon 1", 
-//     "stats": {
-//       "active": "Active: false",
-//       "boosters": "Boosters: 0",
-//       "costLaunch": "Cost To Launch:6700000", 
-//       "country": "Launch From: Republic of the Marshall Islands", 
-//       "description": "Description: The Falcon 1 was an expendable", 
-//       "diameter": "Diameter 5.5 ft", 
-//       "fristFlight": "Frist Flight: 03, 24, 2006", 
-//       "height": 
-//       "Height: 73 ft", 
-//       "mass": "Mass: 66460 lb"
-//     }, 
-//     "type": "rocket"
-//   }, {
-//     "name": "Name: Falcon 9", 
-//     "stats": {
-//       "active": "Active: true",
-//       "boosters": "Boosters: 0",
-//       "costLaunch": "Cost To Launch:6700000", 
-//       "country": "Launch From: United States", 
-//       "description": "Description: The Falcon 1 was an expendable", 
-//       "diameter": "Diameter 5.5 ft",
-//       "fristFlight": "Frist Flight: 03, 24, 2006", 
-//       "height": "Height: 73 ft", 
-//       "mass": "Mass: 1207920 lb"
-//     }, 
-//     "type": "rocket"
-//   }
-// ];
 
 export const rawCapsules = [
   {
@@ -374,18 +341,18 @@ export const rawLaunchpads = [
 
 export const launchpads = [
   {
+    "details": "SpaceX original launch site...", 
     "name": "Name: Kwajalein Atoll Omelek Island", 
     "stats": {
-      "details": "SpaceX original launch site...", 
       "location": "Location: Marshall Islands,Omelek Island", 
       "status": "Status: retired", 
       "vehicles": "Vehicles Launched: Falcon 1"
     }, 
     "type": "launchpad"
   }, {
+    "details": "SpaceX east coast landing...",
     "name": "Name: Cape Canaveral Air Force Station, Space Launch Complex 13", 
     "stats": {
-      "details": "SpaceX east coast landing...",
       "location": "Location: Florida,Cape Canaveral", 
       "status": "Status: active", 
       "vehicles": "Vehicles Launched: Falcon 9"
@@ -775,74 +742,64 @@ export const rawLaunch = {
 
 export const semiClean = [
   {
-    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "details": "Engine failure at 33 seconds and loss of vehicle",
     "name": "Flight Number: 1",
     "stats": {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll", "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches", 
-    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88"
+    "type": "launches" 
   }, {
-    "image": "https://www.spacexnow.com/",
+    "details": "Successful first stage...",
     "name": "Flight Number: 2",
     "stats": {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Successful first stage...",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches",
-    "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
+    "type": "launches"
   }, {
-    "image": "https://www.spacexnow.com/",
+    "details": "Engine failure at 33 seconds and loss of vehicle",
     "name": "Flight Number: 1",
     "stats": {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches",
-    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88"
+    "type": "launches"
   }, {
-    "image": "https://www.spacexnow.com/patches/falcon1-2.png",
     "name": "Flight Number: 2",
+    "details": "Successful first stage burn and transition...",
     "stats": {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Successful first stage burn and transition...",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches",
-    "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
+    "type": "launches"
   }, {
-    "image": "https://www.spacexnow.com/patches/falcon1-2.png",
     "name": "Flight Number: 1",
+    "details": "Successful first stage...",
     "stats": {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Successful first stage...",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false"
     }, 
-    "type": "launches",
-    "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
+    "type": "launches"
   }
 ];
     
@@ -851,12 +808,10 @@ export const launches = {
     {
       name: "Flight Number: 1",
       type: "launches",
-      image: "https://www.spacexnow.com/patches/falcon1-1.png",
-      video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
       stats : {
         site: "Kwajalein Atoll",
         sucessful: "Launch Sucess: false",
-        details: "Details: Engine failure at 33 seconds and loss of vehicle",
         capsule: "Reuseable Capsule: false",
         core: "Reuseable Core: false",
         sideCores: "Reusable Sidecores: false",
@@ -865,12 +820,10 @@ export const launches = {
     }, {
       name: "Flight Number: 2",
       type: "launches",
-      image: "https://www.spacexnow.com/patches/falcon1-1.png",
-      video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
       stats : {
         site: "Kwajalein Atoll",
         sucessful: "Launch Sucess: false",
-        details: "Details: Engine failure at 33 seconds and loss of vehicle",
         capsule: "Reuseable Capsule: false",
         core: "Reuseable Core: false",
         sideCores: "Reusable Sidecores: false",
@@ -882,12 +835,10 @@ export const launches = {
     {
       name: "Flight Number: 1",
       type: "launches",
-      image: "https://www.spacexnow.com/patches/falcon1-1.png",
-      video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
       stats : {
         site: "Kwajalein Atoll",
         sucessful: "Launch Sucess: false",
-        details: "Details: Engine failure at 33 seconds and loss of vehicle",
         capsule: "Reuseable Capsule: false",
         core: "Reuseable Core: false",
         sideCores: "Reusable Sidecores: false",
@@ -896,12 +847,10 @@ export const launches = {
     }, {
       name: "Flight Number: 2",
       type: "launches",
-      image: "https://www.spacexnow.com/patches/falcon1-1.png",
-      video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+      details: "Details: Engine failure at 33 seconds and loss of vehicle",
       stats : {
         site: "Kwajalein Atoll",
         sucessful: "Launch Sucess: false",
-        details: "Details: Engine failure at 33 seconds and loss of vehicle",
         capsule: "Reuseable Capsule: false",
         core: "Reuseable Core: false",
         sideCores: "Reusable Sidecores: false",
@@ -931,12 +880,10 @@ export const launches = {
 export const launch = {
   name: "Flight Number: 2",
   type: "launches",
-  image: "https://www.spacexnow.com/patches/falcon1-1.png",
-  video: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
+  details: "Details: Engine failure at 33 seconds and loss of vehicle",
   stats : {
     ite: "Kwajalein Atoll",
     sucessful: "Launch Sucess: false",
-    details: "Details: Engine failure at 33 seconds and loss of vehicle",
     capsule: "Reuseable Capsule: false",
     core: "Reuseable Core: false",
     sideCores: "Reusable Sidecores: false",
@@ -945,17 +892,15 @@ export const launch = {
 };
 
 export const indivLaunches = {
-  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
   "name": "Flight Number: 2",
+  "details": "Details: Engine failure at 33 seconds and loss of vehicle",
   "stats": {
     "capsule": "Reuseable Capsule: false",
     "core": "Reuseable Core: false",
-    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
     "fairings": "Reusable Fairings: false",
     "ite": "Kwajalein Atoll",
     "sideCores": "Reusable Sidecores: false",
     "sucessful": "Launch Sucess: false"
   }, 
-  "type": "launches",
-  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88"
-}
+  "type": "launches"
+};

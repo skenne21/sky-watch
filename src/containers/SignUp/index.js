@@ -27,7 +27,7 @@ export class SignUp extends Component {
         email: authUser.email,
         uid: authUser.uid
       };
-      this.handleUser(user)
+      this.handleUser(user);
     } catch (error) {
       this.setState({error});
     }
