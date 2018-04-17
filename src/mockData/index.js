@@ -773,79 +773,6 @@ export const rawLaunch = {
   "details": "Successful first stage burn and..."
 };
 
-// export const semiClean =  [
-//   {
-//     "image": "https://www.spacexnow.com/patches/falcon1-1.png",
-//     "name": "Flight Number: 1", 
-//     "stats": {
-//       "capsule": "Reuseable Capsule: false",
-//       "core": "Reuseable Core: false", 
-//       "details": "Details: Engine failure at 33 seconds and loss of vehicle", 
-//       "fairings": "Reusable Fairings: false", 
-//       "sideCores": "Reusable Sidecores: false", 
-//       "site": "Kwajalein Atoll", "sucessful": "Launch Sucess: false"
-//     }, 
-//     "type": "launches", 
-//     "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88"
-//   }, {
-//     "image": "https://www.spacexnow.com/patches/falcon1-2.png",
-//     "name": "Flight Number: 2",
-//     "stats": {
-//       "capsule": "Reuseable Capsule: false",
-//       "core": "Reuseable Core: false",
-//       "details": "Details: Successful first stage...",
-//       "fairings": "Reusable Fairings: false",
-//       "sideCores": "Reusable Sidecores: false",
-//       "site": "Kwajalein Atoll", 
-//       "sucessful": "Launch Sucess: false"
-//     },
-//     "type": "launches",
-//     "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
-//   }, {
-//     "image": "https://www.spacexnow.com/patches/falcon1-1.png",
-//     "name": "Flight Number: 1",
-//     "stats": {
-//       "capsule": "Reuseable Capsule: false",
-//       "core": "Reuseable Core: false", "details":
-//       "Details: Engine failure at 33 seconds and loss of vehicle",
-//       "fairings": "Reusable Fairings: false",
-//       "sideCores": "Reusable Sidecores: false",
-//       "site": "Kwajalein Atoll",
-//       "sucessful": "Launch Sucess: false"
-//     }, 
-//     "type": "launches",
-//     "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88"
-//   }, {
-//     "image": "https://www.spacexnow.com/patches/falcon1-2.png",
-//     "name": "Flight Number: 2",
-//     "stats": {
-//       "capsule": "Reuseable Capsule: false",
-//       "core": "Reuseable Core: false",
-//       "details": "Details: Successful first stage...",
-//       "fairings": "Reusable Fairings: false",
-//       "sideCores": "Reusable Sidecores: false",
-//       "site": "Kwajalein Atoll",
-//       "sucessful": "Launch Sucess: false"
-//     }, 
-//     "type": "launches",
-//     "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
-//   }, {
-//     "image": "https://www.spacexnow.com/patches/falcon1-2.png",
-//     "name": "Flight Number: 1",
-//     "stats": {
-//       "capsule": "Reuseable Capsule: false",
-//       "core": "Reuseable Core: false",
-//       "details": "Details: Successful first...",
-//       "fairings": "Reusable Fairings: false",
-//       "sideCores": "Reusable Sidecores: false",
-//       "site": "Kwajalein Atoll",
-//       "sucessful": "Launch Sucess: false"
-//     }, 
-//     "type": "launches",
-//     "video": "https://www.youtube.com/watch?v=YMvQsmLv44o"
-//   }
-// ];
-
 export const semiClean = [
   {
     "image": "https://www.spacexnow.com/patches/falcon1-1.png",
@@ -1016,3 +943,19 @@ export const launch = {
     fairings: "Reusable Fairings: false"
   }
 };
+
+export const indivLaunches = {
+  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+  "name": "Flight Number: 2",
+  "stats": {
+    "capsule": "Reuseable Capsule: false",
+    "core": "Reuseable Core: false",
+    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
+    "fairings": "Reusable Fairings: false",
+    "ite": "Kwajalein Atoll",
+    "sideCores": "Reusable Sidecores: false",
+    "sucessful": "Launch Sucess: false"
+  }, 
+  "type": "launches",
+  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88"
+}

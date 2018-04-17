@@ -27,13 +27,13 @@ export class SignUp extends Component {
         email: authUser.email,
         uid: authUser.uid
       };
-      this.resetState(user)
+      this.handleUser(user)
     } catch (error) {
       this.setState({error});
     }
   }
 
-  resetState = (user) => {
+  handleUser = (user) => {
     this.setState({
       name: '',
       email: '',

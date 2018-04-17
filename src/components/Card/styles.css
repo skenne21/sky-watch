@@ -1,18 +1,44 @@
+.base {
+  display: inline-block;
+  width: 26%;
+}
+
 .card {
   display: inline-block;
   vertical-align: top;
   width: 26%;
   padding: 2em 0;
   background-color: #ffffff0f;
-  margin: 1.5em 3em;
+  margin: 4em 3em;
   color: #fff;
 }
 
 .card h1 {
+  width: 90%;
+  text-align: left;
+  color:#3b4346eb;
   padding: 15px;
+  margin: auto;
+}
+
+.card h2 {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  color: #161B1D;
+  padding-bottom: 0.5em;
+  font-weight: normal;
+}
+
+.card h3 {
+  text-align: left;
+  margin: auto;
+  width: 80%;
+  padding-top: 1em;
 }
 
 .card p {
+  font-size: 1.2em;
   letter-spacing: 2px;
   text-align: left;
   margin: 12px auto;
@@ -32,8 +58,6 @@
   height: 80px;
 }
 
-
-
 .question {
   display: inline-block;
   min-height: 450px;
@@ -43,13 +67,11 @@
   padding: 5em 0;
   background-color: #ffffff0f;
   margin: 1.5em;
-  color: #fff;
-  
+  color: #fff;  
 }
 
 .front:hover {
   opacity: 0;
-  transition: 1s ease;
 }
 
 .question p {
@@ -60,38 +82,131 @@
 }
 
 .front p {
-  padding: 3em 0;
+  padding: 2em 0;
   font-size: 2em;
-  text-align: center;
+  text-align: left;
 }
 
 .front {
+  transition: 1s ease;
   position: absolute;
   top: 14em;
-  right: 12em;
-  height: 500px;
-  width: 70%;
+  right: 13em;
+  height: 550px;
   background-image: url('../../assets/starman.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
-  padding-top: 7em;
+  padding-top: 4em;
   z-index: 3;  
 }
 
-.back {
+.front h2 {
+  font-size: 3em;
+  color: #754c5d;
+}
+
+.back h2 {
+  font-size: 3em;
+  color: #754c5d;
+}
+
+#flip-button {
+  color: #754c5d;
+  font-size: 4em;
   position: absolute;
-  top: 16em;
+  left: 90%;
+  bottom: 0em;
+  padding: 0;
+  width: 40%;
+}
+
+.back {
+  width: 65%;
+  position: absolute;
+  top: 14em;
   right: 13em;
-  
+  height: 550px;  
 }
 
 .signinMessage {
   margin-bottom: 3px;
   font-size: 0.9em;
   letter-spacing: 2px;
-  position: relative;
-  bottom: 17em;
-  left: 33em;
   color: #fff;
+}
+
+.link {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+    
+
+@media screen and (max-width: 1300px) {
+  .question {
+    width: 85%;
+  }
+  .front {
+    top: 17em;
+    right: 8em;
+  }
+
+  .back {
+    padding-top: 0; 
+    top: 17em;
+    right: 8em;
+  }
+
+  .card {
+    width: 30%;
+    margin: 3.5em auto;
+  }  
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 45%;
+  }
+
+  .front {
+    top: 21em;
+    right: 3em;
+  }
+
+  .back {
+    top: 21em;
+    right: 3em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 85%;
+  }
+
+  .front {
+    top: 21em;
+    right: 20px;
+  }
+
+  .back {
+    top: 21em;
+    right: 20px;
+  }
+
+  #flip-button {
+    left: 75%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .question p {
+    font-size: 0.8em;
+  }
 }

@@ -4,14 +4,25 @@
   padding-bottom: 7em;
 }
 
-.cards_text-box { 
+.cards_text-box {
+  position: absolute;
+  top: 10em;
+  left: 20%;
   height: 60px;
-  width: 46%;
+  width: 60%; 
+}
+
+.iframe-section {
+  padding: 5em 0;
+}
+
+iframe {
+  margin-top: 2em;
+  width: 60%;
+  border: none;
 }
 
 .cards_h2 {
-  margin: 3em;
-  padding-top: 1em;
   font-size: 1.5em;
 }
 
@@ -20,7 +31,7 @@
   color: #fff;
   text-align: left;
   margin: 0;
-  padding-left: 3.5em;
+  padding-left: 1.5em;
 }
 
 .main {
@@ -29,3 +40,32 @@
   justify-content: left;
 }
 
+/*@media screen and (max-width: 1000px) {
+  .ca
+}*/
+
+@media screen and (max-width: 900px) {
+  .cards_text-box {
+    display: none;
+  }
+
+  iframe {
+    height: 300px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cards_text-box {
+    width: 90%;
+    height: 100%;
+  }
+
+  .cards_h2 {
+    margin: 1em;
+  }
+
+  .current-p {
+    padding-left: 0.7em;
+  }
+}

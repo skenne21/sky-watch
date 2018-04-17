@@ -23,8 +23,9 @@ export const cleanRockets = (rockets) => {
   return rockets.map(rocket => ({
     name:`Name: ${rocket.name}`,
     type: 'rocket',
+    details:`${rocket.description}`,
     stats: {
-      fristFlight:`Frist Flight: ${cleanDate(rocket.first_flight)}`,
+      fristFlight:`First Flight: ${cleanDate(rocket.first_flight)}`,
       active:`Active: ${rocket.active}`,
       costLaunch:`Cost To Launch:${rocket.cost_per_launch}`,
       country:`Launch From: ${rocket.country}`,
@@ -32,7 +33,6 @@ export const cleanRockets = (rockets) => {
       mass:`Mass: ${rocket.mass.lb} lb`,
       height:`Height: ${rocket.height.feet} ft`,
       boosters:`Boosters: ${rocket.boosters}`,
-      description:`Description: ${rocket.description}`
     } 
   }));
 };
@@ -68,11 +68,11 @@ export const cleanLaunchpads = launchpads => {
   return launchpads.map(launchpad => ({
     name:`Name: ${launchpad.full_name}`,
     type: 'launchpad',
+    details:`${launchpad.details}`,
     stats: {
       /* eslint-disable max-len */
       location:`Location: ${launchpad.location.region},${launchpad.location.name}`,
       /* eslint-enable max-len */
-      details:`${launchpad.details}`,
       status:`Status: ${launchpad.status}`,
       vehicles:`Vehicles Launched: ${launchpad.vehicles_launched.join(', ')}`
     }
@@ -83,12 +83,10 @@ export const cleanLaunches = launches => {
   return launches.map(launch => ({
     name: `Flight Number: ${launch.flight_number}`,
     type: 'launches',
-    image: launch.links.mission_patch,
-    video: launch.links.video_link,
+    details:`${launch.details}`,
     stats: {
       site:`${launch.launch_site.site_name}`,
       sucessful:`Launch Sucess: ${launch.launch_success}`,
-      details:`Details: ${launch.details}`,
       capsule:`Reuseable Capsule: ${launch.reuse.capsule}`,
       core:`Reuseable Core: ${launch.reuse.core}`,
       sideCores: `Reusable Sidecores: ${launch.reuse.side_core1}`,

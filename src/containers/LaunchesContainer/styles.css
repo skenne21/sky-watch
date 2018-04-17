@@ -1,6 +1,6 @@
 .buttons {
-  margin: 3em;
-  padding: 7px;
+  margin: 2em;
+  padding: 8px;
   color: #fff;
   background-color: transparent;
   font-size: 1.2em;
@@ -15,4 +15,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  position: relative;
+  top: -43px;
+  right: 2%;
+}
+
+.signinMessage {
+  margin-bottom: 3px;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  color: #fff;
+}
+ 
+
+@media screen and (max-width: 600px) {
+  .buttons {
+    width: 80%;
+    margin: 0.7em;
+  }
 }

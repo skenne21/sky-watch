@@ -4,45 +4,75 @@
   grid-template-rows: 25% 25% 25% 25%;
 }
 
-.bio {
+.main-header {
   display: inline-grid;
-  grid-column: 1 /3;
-  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  grid-row: 1/ 3;
+  position: relative;
   width: 100%;
-  height: 500px;
+  height: 670px;
+  background-image: url('../../assets/nathan-anderson.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-header h1 {
+  padding: 1.3em 0;
+  width:65%;
+  margin: 25px auto;
+}
+
+.main-header h2 {
+  padding-top: 1.3em;
+  height: 50%;
+  width: 75%;
+  margin: 10px auto;
+  color: #754c5d;
+  text-align: left;
+}
+
+.text-box {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  height: 360px;
+  width: 90%;
+  background-color: #ffffff0f;
 }
 
 .homepage-video {
   display: inline-grid;
   grid-column: 1 / 3;
-  grid-row: 1 / 2;
+  grid-row: 4 / 5;
   width: 100%;
-  padding-top: 8em;
+  padding-top: 3em;
   padding-left: 3em;
 }
 
+.bio {
+  padding: 0;
+  width: 75%;
+  margin: 2px auto;
+  font-size: 1.3em;
+  color: #fff;
+  text-align: left;
+}
+
 .iframe {
+  width: 90%;
+  border: none;
   margin: auto;
 }
 
 .text-box_homepage {
   background-color: #ffffff0f;
-  width: 65.5%;
+  width: 90%;
+  font-size: 1.3em;
   margin: auto;
   height: 230px;
   color: #fff;
 }
-
-
-.text-box {
-  background-color: #ffffff0f;
-  width: 65.5%;
-  margin: auto;
-  height: 230px;
-  color: #fff;
-}
-
-
 
 .text-box_homepage p {
   text-align: left;
@@ -50,8 +80,22 @@
   width: 85%;
 }
 
-.bio .text-box {
-  height: 350px;
+.videoButton {
+  position: absolute;
+  bottom: 1em;
+  left: 45%;
+  font-size: 3em;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+.button-text {
+  color: #fff;
+  position: absolute;
+  bottom: 6em;
+  left: 35%; 
 }
 
 .bio .title {
@@ -60,8 +104,8 @@
 }
 
 .title {
-  padding-top: 2em;
-  color: #945972;
+  padding-top: 1em;
+  color: #3b4346eb;
   font-weight: bold;
 }
 
@@ -82,40 +126,143 @@
 .launchpad,
 .capsules,
 .launches {
-  height: 375px;
-  color: #303D63;
+  /*height: 375px;*/
+  color: #3b4346eb;
   font-family: bold;
   font-size: 2.5em;
   padding-top: 4em;
 }
 
-
 .rockets {
   padding-top: 5em;
-  background-image: url('../../assets/rockets-2.jpeg');
+  background: linear-gradient(
+    rgba(132, 132, 132, 0.51),
+    rgba(62, 59, 59, 0.49)),
+    url('../../assets/rockets-2.jpeg');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
 }
 
+.rockets:hover {
+  background-image: url('../../assets/rockets-2.jpeg');
+}
+
 .launchpad {
   padding-top: 4.3em;
-  background-image: url('../../assets/space-x-ocean-landing.jpg');
+  background: linear-gradient(
+    rgba(132, 132, 132, 0.51),
+    rgba(62, 59, 59, 0.49)),
+    url('../../assets/space-x-ocean-landing.jpg');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 }
 
+.launchpad:hover {
+  background-image: url('../../assets/space-x-ocean-landing.jpg');
+
+}
+
 .capsules {
-  background-image: url('../../assets/capsules.jpg');
+  background: linear-gradient(
+    rgba(132, 132, 132, 0.51),
+    rgba(62, 59, 59, 0.49)),
+    url('../../assets/capsules.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.capsules:hover {
+  background-image: url('../../assets/capsules.jpg');
+}
+
+
 .launches {
-  background-image: url('../../assets/launch.jpg');
+  background: linear-gradient(
+    rgba(132, 132, 132, 0.51),
+    rgba(62, 59, 59, 0.49)),
+    url('../../assets/launch.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.launches:hover {
+background-image: url('../../assets/launch.jpg');  
+}
+
+@media screen and (max-width: 900px) {
+  .Homepage {
+    display: inline-grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+  }
+
+  .rockets,
+  .launchpads,
+  .capsules,
+  .launches {
+    height: 300px;
+    padding-top: 3.5em;
+  }
+
+ /* .launchpad {
+    padding-top: 0;
+    padding-bottom: 1.3em;
+    height: 150px;
+  }*/
+
+  .rockets,
+  .launchpad {
+    background-position: bottom; 
+  }
+
+  .homepage-video {
+    padding: 0;
+  }
+
+  .text-box_homepage {
+    margin: 2em auto;
+    width: 95%;
+    height: 270px;
+    font-size: 1.2em
+  }
+
+  iframe {
+    width: 85%;
+    height: 300px;
+  }
+
+  .bio .text-box {
+    width: 85%;
+    height: 430px;
+  }
+
+  .bio .title {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-header {
+    height: 800px;
+  }
+
+  .main-header p {
+    font-size: 1em;
+  }
+
+  .main-header h2 {
+    padding-top: 0;
+    height: 40%;
+  }
+
+  .text-box {
+    height: 480px;
+  }
+
+  .button-text {
+    left: 18%;
+  }
 }

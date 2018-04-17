@@ -1,10 +1,11 @@
 import React from 'react';
 import './styles.css';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'
 
 const Card = ({card, classname, user}) => {
 
-  const { name, stats } = card;
+  const { name, stats, details } = card;
   const users = Object.keys(user)
   const tags = Object.keys(stats).map( (stat, index) => {
     return <p key={stat+index}>{stats[stat]}</p>;
@@ -12,35 +13,46 @@ const Card = ({card, classname, user}) => {
 
   const questions = card => {
     return (
-      <div calssName='questionCard'>
+      <div className='questionCard'>
+        <Link className='link' to='/signin'>SIGNIN TO SEE MORE INFORMATION</Link>
         <div className='question front'>
+          <h2>Q:</h2>
           <p>{card.question}</p>
+          <p id='flip-button'>☛</p>
         </div>
         <div 
           className={`${classname} question back`}
         >
-        {tags}
+          <h2>A:</h2>
+          {tags}
         </div>
-        <h2 className='signinMessage'>SIGNIN TO VEIW MORE INFROMATION</h2>
       </div>
     );
   };
   
-  const factCards = (card) => {
-    return (
-      <div 
-        className={`${classname}`}
-      >
-        <h1>{name}</h1>
-        {tags}
-      </div>
-    );
+  const createCards = (card) => {
+    if(card.type ==='questionCard') {
+      return questions(card)
+    } else {
+      return (
+        <div 
+          className={`${classname}`}
+        >
+          <h1 className="card-h1">{name}</h1>
+          <h2 className='details'>{details}</h2>
+          <div className='stats'>
+            <h3>STATS: </h3>
+            {tags}
+          </div>
+        </div>
+      );
+    }
   };
 
   return (
     <div className='card'>
       {
-        users.length > 1 ? factCards(card)  : questions(card)
+        createCards(card)
       }
     </div>
   );
@@ -49,7 +61,8 @@ const Card = ({card, classname, user}) => {
 Card.propTypes = {
   card: PropTypes.object,
   classname: PropTypes.string,
-  user: PropTypes.object
+  user: PropTypes.object,
+  history: PropTypes.object
 };
 
 export default Card;

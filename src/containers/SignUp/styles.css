@@ -17,8 +17,24 @@
 }
 
 .SignUp-form button {
+  width: 75%;
   height: 45px;
   background-color: transparent;
   color: #fff;
   font-size: 2em;
+}
+
+@media screen and (max-width: 900px) {
+  .SignUp-form {
+    width: 90%;
+  }
+
+  .SignUp-form button {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .SignUp-form {
+    width: 90%;
+  }
 }

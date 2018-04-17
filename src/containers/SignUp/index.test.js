@@ -39,6 +39,17 @@ describe('SignUp', () => {
     expect(wrapper.state('error')).toEqual('');
   });
 
+  it('Should call hangleChange and set change to state', () => {
+    const event = { target: {name:'name', value:'bob'}};
+    expect(wrapper.state('name')).toEqual('')
+    wrapper.instance().hangleChange(event);
+    expect(wrapper.state('name')).toEqual('bob')
+  });
+
+  it('Should handleSubmit and set user', () => {
+    
+  });
+
   describe('mapStateToProps', () => {
     it('Should map user to state', () => {
       const mockedState = { user: user };
