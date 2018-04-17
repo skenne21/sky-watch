@@ -43,6 +43,7 @@ export class LaunchesContainer extends Component {
 
   render() {
     const { cards } = this.state;
+    const { user, launches } = this.props;
     return (
       <div className='LaunchesContainer'>
         <div className='launches-buttons'>
@@ -69,7 +70,7 @@ export class LaunchesContainer extends Component {
         </div>
         <div className='main'>
           {
-            this.createCards(cards)
+            this.createCards(cards) 
           }
         </div>
       </div>

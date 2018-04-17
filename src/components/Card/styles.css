@@ -70,13 +70,11 @@
   padding: 5em 0;
   background-color: #ffffff0f;
   margin: 1.5em;
-  color: #fff;
-  
+  color: #fff;  
 }
 
 .front:hover {
   opacity: 0;
-  transition: 1s ease;
 }
 
 .question p {
@@ -93,11 +91,11 @@
 }
 
 .front {
+  transition: 1s ease;
   position: absolute;
   top: 14em;
-  right: 12em;
+  right: 13em;
   height: 550px;
-  width: 70%;
   background-image: url('../../assets/starman.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -106,10 +104,23 @@
   z-index: 3;  
 }
 
+#flip-button {
+  color: #fff;
+  font-size: 4em;
+  position: absolute;
+  left: 75%;
+  bottom: 0em;
+  padding: 0;
+  width: 40%;
+}
+
+
 .back {
+  width: 65%;
   position: absolute;
   top: 14em;
   right: 13em;
+  height: 550px;
   
 }
 

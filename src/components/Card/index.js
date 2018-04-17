@@ -15,6 +15,7 @@ const Card = ({card, classname, user}) => {
       <div calssName='questionCard'>
         <div className='question front'>
           <p>{card.question}</p>
+          <p id='flip-button'>☛</p>
         </div>
         <div 
           className={`${classname} question back`}
