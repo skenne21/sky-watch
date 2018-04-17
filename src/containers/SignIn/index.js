@@ -26,17 +26,21 @@ export class SignIn extends Component {
         email: authUser.email,
         uid: authUser.uid
       };
-      this.props.addUser(user);
-      this.setState({
-        name: '',
-        email: '',
-        password: '',
-        error:''
-      });
-      this.props.history.push('/');
+      this.handleUser(user);
     } catch (error) {
       this.setState({error});
     }
+  }
+
+  handleUser = (user) => {
+    this.setState({
+      name: '',
+      email: '',
+      password: '',
+      error:''
+    });
+    this.props.addUser(user);
+    this.props.history.push('/');
   }
 
   handleChange = event => {

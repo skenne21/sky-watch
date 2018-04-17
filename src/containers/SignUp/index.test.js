@@ -10,7 +10,7 @@ describe('SignUp', () => {
   let wrapper, user, addUser, history;
 
   beforeEach(() => {
-    history = {};
+    history = { push: jest.fn()};
     addUser= jest.fn();
     user = { name: 'bob', id: 1, email: 'h@aol.com'};
 
@@ -40,14 +40,38 @@ describe('SignUp', () => {
   });
 
   it('Should call hangleChange and set change to state', () => {
-    const event = { target: {name:'name', value:'bob'}};
-    expect(wrapper.state('name')).toEqual('')
-    wrapper.instance().hangleChange(event);
-    expect(wrapper.state('name')).toEqual('bob')
+    const event = { target: {
+      name: 'email',
+      value: 'bob@gmail.com'
+    }};
+
+    expect(wrapper.state('email')).toEqual('');
+    wrapper.instance().handleChange(event);
+    expect(wrapper.state('email')).toEqual('bob@gmail.com');  
   });
 
-  it('Should handleSubmit and set user', () => {
-    
+  it('Should handleUser and reset state', () => {
+    const user = {
+      name:'bob',
+      email: 'bob@gmail.com', 
+      password: 'password'
+    };
+
+    wrapper.setState({
+      name:'bob',
+      email: 'bob@gmail.com', 
+      password: 'password'
+    });
+
+    expect(wrapper.state('email')).toEqual('bob@gmail.com');
+    expect(wrapper.state('password')).toEqual('password');
+    expect(wrapper.state('name')).toEqual('bob');
+
+    wrapper.instance().handleUser(user);
+
+    expect(wrapper.state('email')).toEqual('');
+    expect(wrapper.state('password')).toEqual('');
+    expect(wrapper.state('name')).toEqual('');
   });
 
   describe('mapStateToProps', () => {
