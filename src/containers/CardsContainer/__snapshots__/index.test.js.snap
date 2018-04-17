@@ -108,9 +108,9 @@ ShallowWrapper {
     launchpads={
         Array [
             Object {
+              "details": "SpaceX original launch site...",
               "name": "Name: Kwajalein Atoll Omelek Island",
               "stats": Object {
-                "details": "SpaceX original launch site...",
                 "location": "Location: Marshall Islands,Omelek Island",
                 "status": "Status: retired",
                 "vehicles": "Vehicles Launched: Falcon 1",
@@ -118,9 +118,9 @@ ShallowWrapper {
               "type": "launchpad",
             },
             Object {
+              "details": "SpaceX east coast landing...",
               "name": "Name: Cape Canaveral Air Force Station, Space Launch Complex 13",
               "stats": Object {
-                "details": "SpaceX east coast landing...",
                 "location": "Location: Florida,Cape Canaveral",
                 "status": "Status: active",
                 "vehicles": "Vehicles Launched: Falcon 9",
@@ -263,30 +263,30 @@ ShallowWrapper {
     rockets={
         Array [
             Object {
+              "details": "The Falcon 1 was an expendable launch system privately",
               "name": "Name: Falcon 1",
               "stats": Object {
                 "active": "Active: false",
                 "boosters": "Boosters: 0",
                 "costLaunch": "Cost To Launch:6700000",
                 "country": "Launch From: Republic of the Marshall Islands",
-                "description": "Description: The Falcon 1 was an expendable launch system privately",
                 "diameter": "Diameter 5.5 ft",
-                "fristFlight": "Frist Flight: 03, 24, 2006",
+                "fristFlight": "First Flight: 03, 24, 2006",
                 "height": "Height: 73 ft",
                 "mass": "Mass: 66460 lb",
               },
               "type": "rocket",
             },
             Object {
+              "details": "The Falcon 1 was an expendable launch system privately",
               "name": "Name: Falcon 9",
               "stats": Object {
                 "active": "Active: true",
                 "boosters": "Boosters: 0",
                 "costLaunch": "Cost To Launch:6700000",
                 "country": "Launch From: United States",
-                "description": "Description: The Falcon 1 was an expendable launch system privately",
                 "diameter": "Diameter 5.5 ft",
-                "fristFlight": "Frist Flight: 03, 24, 2006",
+                "fristFlight": "First Flight: 03, 24, 2006",
                 "height": "Height: 73 ft",
                 "mass": "Mass: 1207920 lb",
               },

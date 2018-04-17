@@ -3,34 +3,30 @@
 exports[`LaunchesContainer Should add falcon1 rockets to state when button with className of falcon1 is clicked 1`] = `
 Array [
   Object {
-    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
     "name": "Flight Number: 1",
     "stats": Object {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false",
     },
     "type": "launches",
-    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
   },
   Object {
-    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
     "name": "Flight Number: 2",
     "stats": Object {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false",
     },
     "type": "launches",
-    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
   },
 ]
 `;
@@ -38,34 +34,30 @@ Array [
 exports[`LaunchesContainer Should add falcon1 rockets to state when button with className of falcon1 is clicked 2`] = `
 Array [
   Object {
-    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
     "name": "Flight Number: 1",
     "stats": Object {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false",
     },
     "type": "launches",
-    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
   },
   Object {
-    "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
     "name": "Flight Number: 2",
     "stats": Object {
       "capsule": "Reuseable Capsule: false",
       "core": "Reuseable Core: false",
-      "details": "Details: Engine failure at 33 seconds and loss of vehicle",
       "fairings": "Reusable Fairings: false",
       "sideCores": "Reusable Sidecores: false",
       "site": "Kwajalein Atoll",
       "sucessful": "Launch Sucess: false",
     },
     "type": "launches",
-    "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
   },
 ]
 `;
@@ -100,66 +92,58 @@ ShallowWrapper {
             Object {
               "falcon1": Array [
                 Object {
-                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "details": "Details: Engine failure at 33 seconds and loss of vehicle",
                   "name": "Flight Number: 1",
                   "stats": Object {
                     "capsule": "Reuseable Capsule: false",
                     "core": "Reuseable Core: false",
-                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
                     "fairings": "Reusable Fairings: false",
                     "sideCores": "Reusable Sidecores: false",
                     "site": "Kwajalein Atoll",
                     "sucessful": "Launch Sucess: false",
                   },
                   "type": "launches",
-                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
                 },
                 Object {
-                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "details": "Details: Engine failure at 33 seconds and loss of vehicle",
                   "name": "Flight Number: 2",
                   "stats": Object {
                     "capsule": "Reuseable Capsule: false",
                     "core": "Reuseable Core: false",
-                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
                     "fairings": "Reusable Fairings: false",
                     "sideCores": "Reusable Sidecores: false",
                     "site": "Kwajalein Atoll",
                     "sucessful": "Launch Sucess: false",
                   },
                   "type": "launches",
-                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
                 },
               ],
               "falcon9": Array [
                 Object {
-                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "details": "Details: Engine failure at 33 seconds and loss of vehicle",
                   "name": "Flight Number: 1",
                   "stats": Object {
                     "capsule": "Reuseable Capsule: false",
                     "core": "Reuseable Core: false",
-                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
                     "fairings": "Reusable Fairings: false",
                     "sideCores": "Reusable Sidecores: false",
                     "site": "Kwajalein Atoll",
                     "sucessful": "Launch Sucess: false",
                   },
                   "type": "launches",
-                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
                 },
                 Object {
-                  "image": "https://www.spacexnow.com/patches/falcon1-1.png",
+                  "details": "Details: Engine failure at 33 seconds and loss of vehicle",
                   "name": "Flight Number: 2",
                   "stats": Object {
                     "capsule": "Reuseable Capsule: false",
                     "core": "Reuseable Core: false",
-                    "details": "Details: Engine failure at 33 seconds and loss of vehicle",
                     "fairings": "Reusable Fairings: false",
                     "sideCores": "Reusable Sidecores: false",
                     "site": "Kwajalein Atoll",
                     "sucessful": "Launch Sucess: false",
                   },
                   "type": "launches",
-                  "video": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
                 },
               ],
               "falconHeavy": Array [
