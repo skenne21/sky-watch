@@ -40,6 +40,21 @@ iframe {
   justify-content: left;
 }
 
+/*@media screen and (max-width: 1000px) {
+  .ca
+}*/
+
+@media screen and (max-width: 900px) {
+  .cards_text-box {
+    display: none;
+  }
+
+  iframe {
+    height: 300px;
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 420px) {
   .cards_text-box {
     width: 90%;

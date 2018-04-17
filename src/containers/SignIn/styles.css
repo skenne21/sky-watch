@@ -24,6 +24,16 @@
   font-size: 2em;
 }
 
+@media screen and (max-width: 900px) {
+  .Signin-form {
+    width: 90%;
+  }
+  
+  .Signin-form button {
+    font-size: 1.2em;
+  }
+
+}
 @media screen and (max-width: 420px) {
   .Signin-form {
     width: 90%;

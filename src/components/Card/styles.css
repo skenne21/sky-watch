@@ -9,7 +9,7 @@
   width: 26%;
   padding: 2em 0;
   background-color: #ffffff0f;
-  margin: 1.5em 3em;
+  margin: 4em 3em;
   color: #fff;
 }
 
@@ -38,7 +38,6 @@
 }
 
 .card p {
-  /*vertical-align: bottom;*/
   font-size: 1.2em;
   letter-spacing: 2px;
   text-align: left;
@@ -58,8 +57,6 @@
   width: 80px;
   height: 80px;
 }
-
-
 
 .question {
   display: inline-block;
@@ -142,46 +139,71 @@
 .link {
   color: #fff;
   font-size: 1.2em;
-  /*padding: 2px;*/
 }
 
     
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300px) {
+  .question {
+    width: 85%;
+  }
   .front {
     top: 17em;
     right: 8em;
   }
 
   .back {
+    padding-top: 0; 
     top: 17em;
     right: 8em;
+  }
+
+  .card {
+    width: 30%;
+    margin: 3.5em auto;
   }  
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 45%;
+  }
+
+  .front {
+    top: 21em;
+    right: 3em;
+  }
+
+  .back {
+    top: 21em;
+    right: 3em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 85%;
+  }
+
+  .front {
+    top: 21em;
+    right: 20px;
+  }
+
+  .back {
+    top: 21em;
+    right: 20px;
+  }
+
+  #flip-button {
+    left: 75%;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .card {
     width: 100%;
     margin: 0;
-  }
-
-  .question {
-    padding: 0.5em 0;
-    margin: auto;
-    width: 85%;
-  }
-
-  .front {
-    font-size: 1em;
-    position: relative;
-    top: -10px;
-    right: -4px;
-  }
-
-  .back {
-    position: absolute;
-    top:280px;
-    right: 20px;
   }
 
   .question p {
