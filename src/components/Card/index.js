@@ -39,7 +39,7 @@ const Card = ({card, classname}) => {
     } else {
       return (
         <div 
-          className={`${classname}`}
+          className={`card ${classname}`}
         >
           <h1 className="card-h1">{name}</h1>
           <h2 className='details'>{details}</h2>
@@ -53,7 +53,7 @@ const Card = ({card, classname}) => {
   };
 
   return (
-    <div className='card'>
+    <div className='card-box'>
       {
         createCards(card)
       }
