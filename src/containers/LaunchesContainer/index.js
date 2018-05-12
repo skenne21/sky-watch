@@ -24,7 +24,7 @@ export class LaunchesContainer extends Component {
       this.setState({ [name] : launches});
       this.setState({cards: launches });
     } else {
-      return (<p>PLEASE SIGN IN TO VEIW MORE INFORMATION</p>);
+      return (<p className='launch-link'>PLEASE SIGN IN TO VEIW MORE INFORMATION</p>);
     }
   }
 

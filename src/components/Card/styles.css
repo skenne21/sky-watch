@@ -95,7 +95,7 @@
 .front {
   transition: 1s ease;
   position: absolute;
-  top: 16em;
+  top: 12em;
   right: 13em;
   height: 550px;
   background-image: url('../../assets/starman.png');
@@ -130,7 +130,7 @@
   padding: 0;
   width: 65%;
   position: absolute;
-  top: 16em;
+  top: 12em;
   right: 13em;
   height: 550px;  
 }
