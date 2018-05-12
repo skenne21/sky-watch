@@ -13,7 +13,7 @@
   display: block;
   color: #FFF;
   text-decoration: none;
-  margin: 10px;
+  margin: 20px 0 -1px;
 }
 
 .createAccount {
@@ -29,6 +29,7 @@
   border: none;
   font-size: 1.2em;
   letter-spacing: 2px;
+  margin: 20px 0 -1px;
 }
 
 .home {

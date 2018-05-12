@@ -24,9 +24,9 @@
 }
 
 .main-header h2 {
-  padding-top: 1.3em;
+  padding-top: 2.6em;
   height: 50%;
-  width: 75%;
+  width: 85%;
   margin: 10px auto;
   color: #754c5d;
   text-align: left;
@@ -207,12 +207,6 @@ background-image: url('../../assets/launch.jpg');
     padding-top: 3.5em;
   }
 
- /* .launchpad {
-    padding-top: 0;
-    padding-bottom: 1.3em;
-    height: 150px;
-  }*/
-
   .rockets,
   .launchpad {
     background-position: bottom; 
@@ -225,7 +219,7 @@ background-image: url('../../assets/launch.jpg');
   .text-box_homepage {
     margin: 2em auto;
     width: 95%;
-    height: 270px;
+    height: 100%;
     font-size: 1.2em
   }
 

@@ -95,7 +95,7 @@
 .front {
   transition: 1s ease;
   position: absolute;
-  top: 7em;
+  top: 12em;
   right: 13em;
   height: 550px;
   background-image: url('../../assets/starman.png');
@@ -130,7 +130,7 @@
   padding: 0;
   width: 65%;
   position: absolute;
-  top: 7em;
+  top: 12em;
   right: 13em;
   height: 550px;  
 }
@@ -149,7 +149,7 @@
 .link {
   position: relative;
   top:-80px;
-  left: 130%;
+  left: 1%;
   color: #fff;
   font-size: 1.2em;
 }
@@ -203,17 +203,23 @@
   }
 
   .front {
-    top: 9em;
-    right: 20px;
+    top: 20em;
+    right: 0px;
   }
 
   .back {
-    top: 9em;
-    right: 20px;
+    top: 20em;
+    right: 0px;
   }
 
   #flip-button {
     left: 75%;
+  }
+
+  .card-box {
+    padding: 2em 0;
+    margin: 20px 10px;
+    width: 95%;
   }
 }
 
