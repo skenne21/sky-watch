@@ -1,6 +1,8 @@
 # Sky Watch
 
-## [Sabrina Kennedy](https://github.com/skenne21);
+[Link to Repo](https://github.com/skenne21);
+[Live Appilcation](http://skenne21-sky-watch.surge.sh/)
+
 
 
 ## Synopsis:
@@ -48,5 +50,5 @@ In the future I would like to create a page that allows users to view current la
 ![card page screenshot](./src/assets/card-page.png)
 
 #### QuestionCard
-![question card](./src/assets/
+![question card](./src/assets/question-card.png)
 
