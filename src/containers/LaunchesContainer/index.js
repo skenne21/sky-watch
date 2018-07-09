@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Card from '../../components/Card';
+import LaunchCard from '../../components/LaunchCards/';
+// import Card from '../../components/Card';
 import { randomQuestions } from '../../mockData/mockQuestions';
 import './styles.css';
 
@@ -29,11 +30,12 @@ export class LaunchesContainer extends Component {
   }
 
   createCards = (cards) => {
+    console.log(this.props.launches)
     return cards.map((card, index) => {
       return (
-        <Card 
+        <LaunchCard 
           key={index+card.name}
-          card={card}
+          launch={card}
           classname={`${card.type}-card`}
         />
       );

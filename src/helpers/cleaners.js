@@ -80,9 +80,13 @@ export const cleanLaunchpads = launchpads => {
 };
 
 export const cleanLaunches = launches => {
+  console.log(launches)                          
   return launches.map(launch => ({
-    name: `Flight Number: ${launch.flight_number}`,
+    name: `${launch.mission_name}, Flight Number: ${launch.flight_number}`,
     type: 'launches',
+    year: `${launch.launch_year}`
+    image: `${launch.links.mission_patch}`,
+    fightTime: unixTimeStampConvert(launch.launch_date_unix),
     details:`${launch.details}`,
     stats: {
       site:`${launch.launch_site.site_name}`,
@@ -106,3 +110,14 @@ export const combineLaunches = (falcon1, falcon9, falconHeavy) => {
 export const filterLaunches = (launches, id) => {
   return launches.filter(launch => launch.rocket.rocket_id === id);
 };
+
+
+
+const unixTimeStampConvert = unix => {
+  const date = new Date(unix * 1000);
+  const hour = date.getHours();
+  const mintues = '0' + date.getMinutes();
+  const seconds = '0' + date.getSeconds();
+  const newTime = `${hour} : ${mintues} : ${seconds}`;
+  return newTime;
+}
