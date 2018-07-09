@@ -8,6 +8,8 @@ import {
 import * as actions from '../../actions/';
 import { withRouter, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import SpaceXBio from '../../components/SpaceXBio/';
+import HompageVideo from '../../components/HompageVideo';
 import './styles.css';
 
 
@@ -17,54 +19,15 @@ export class Homepage extends Component {
   }
   
   createBio = () => {
-    const { 
-      name,
-      founder,
-      headquarters,
-      summary 
-    } = this.props.companyBio[0]; 
-    
-    const html = this.props.missionVideos[0].id;
-    const title = this.props.missionVideos[0].title;
-    const detials = this.props.missionVideos[0].description;
-    const state = headquarters.state;
-    const address = headquarters.address;
-
+    console.log()
     return (
       <div className='Homepage'>
-        <seciton className='main-header'>
-          <h1>WELCOME TO SKY WATCH</h1>
-          <div className='text-box'>
-            <h2 className='subHeader'>
-              {
-                `SpaceX is an interactive educational site getting users
-                excited about SpaceX innovative technologies.`
-              }
-            </h2>
-            <p className='bio'>
-              {
-                `${name} was founded by ${founder}. 
-                ${summary} SpaceX is located in ${address}, ${state}`
-              }
-            </p>
-          </div>
-          <p className='button-text'>WATCH FALCON HEAVY LAUNCH</p>
-          <a className='videoButton' href="#homepage-video">▽</a>   
-        </seciton>
-        <section className='homepage-video'>
-          <div className='text-box_homepage'>
-            <h2 className='title'  id='homepage-video'>{title}</h2>
-            <p>{detials}</p>
-          </div>
-          <iframe 
-            className='iframe'
-            src={`https://www.youtube.com/embed/${html}?start=1320&autoplay=1`}
-            height='600px'
-            width='65%'
-            title="Homepage iframe"
-            allowFullScreen
-          />
-        </section>
+        <SpaceXBio 
+          bio = { this.props.companyBio[0] }
+        />
+        <HompageVideo 
+          video = { this.props.missionVideos[0] }
+        />
       </div>
     );
   }
