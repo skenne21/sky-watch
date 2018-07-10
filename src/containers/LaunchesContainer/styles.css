@@ -1,3 +1,16 @@
+.LaunchesContainer .front {
+  position: absolute;
+  top: 1em;
+  right: 13em;
+
+}
+
+.LaunchesContainer .back {
+  position: absolute;
+  top: 1em;
+  right: 13em;
+}
+
 .buttons {
   margin: 2em;
   padding: 8px;
@@ -17,7 +30,8 @@
   justify-content: left;
   position: relative;
   top: -43px;
-  right: 2%;
+  right: -1%;
+  margin: 1em auto;
 }
 
 .signinMessage {
@@ -27,9 +41,6 @@
   color: #fff;
 }
 
-.launch-link {
-
-}
  
 
 @media screen and (max-width: 600px) {
