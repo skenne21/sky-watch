@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import LaunchCard from '../../components/LaunchCards/';
 // import Card from '../../components/Card';
@@ -14,23 +14,31 @@ export class LaunchesContainer extends Component {
       falcon1: [],
       falcon9: [],
       falconHeavy: [],
+      isactive: false,
       cards: [...randomQuestions()]
     };
   }
 
   handleClick = event => {
     const { name } = event.target;
+
     if (this.props.launches.length) {
       const launches = this.props.launches[0][name];
       this.setState({ [name] : launches});
-      this.setState({cards: launches });
+      this.setState({ cards: launches, isactive: true });
     } else {
-      return (<p className='launch-link'>PLEASE SIGN IN TO VEIW MORE INFORMATION</p>);
+      return (
+        <Link 
+          className='link'
+          to='/signin'
+        >
+          SIGNIN TO SEE MORE INFORMATION
+        </Link>
+      )
     }
   }
 
   createCards = (cards) => {
-    console.log(this.props.launches)
     return cards.map((card, index) => {
       return (
         <LaunchCard 
@@ -42,8 +50,28 @@ export class LaunchesContainer extends Component {
     });
   }
 
+  createQuestion = (card) => {
+    const { question, stats } = card[0];
+
+    return (
+      <div className='questionCard'>
+        <div className='question front'>
+          <h2>Q:</h2>
+          <p>{question}</p>
+          <p id='flip-button'>☛</p>
+        </div>
+        <div 
+          className='question back'
+        >
+          <h2>A:</h2>
+          {stats.answer}
+        </div>
+      </div>
+    )
+  }
+
   render() {
-    const { cards } = this.state;
+    const { cards, isactive } = this.state;
     return (
       <div className='LaunchesContainer'>
         <div className='launches-buttons'>
@@ -70,7 +98,7 @@ export class LaunchesContainer extends Component {
         </div>
         <div className='main'>
           {
-            this.createCards(cards) 
+            isactive ? this.createCards(cards) : this.createQuestion(cards)
           }
         </div>
       </div>

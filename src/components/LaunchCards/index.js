@@ -2,12 +2,6 @@ import React from 'react';
 
 const LaunchCard = ({ launch, className }) => {
   const { name, stats, details, fightTime, year, image } = launch;
-  console.log(image)
-  const cardBackground = {
-    width: "100%",
-    height: "400px",
-    backgroundImage: { image }
-  }
 
   return (
     <div className={className}>
