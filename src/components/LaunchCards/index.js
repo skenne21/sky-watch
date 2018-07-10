@@ -1,10 +1,11 @@
 import React from 'react';
+import './styles.css';
 
 const LaunchCard = ({ launch, className }) => {
   const { name, stats, details, fightTime, year, image } = launch;
-
+ 
   return (
-    <div className={className}>
+    <div className='LaunchCard'>
       <h1>{name}</h1>
       <h2>{year}</h2>
       <h3>{stats.site}</h3>

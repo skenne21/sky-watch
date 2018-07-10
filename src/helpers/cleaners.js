@@ -88,7 +88,7 @@ export const cleanLaunches = launches => {
     year: `Year: ${launch.launch_year}`,
     image: `${launch.links.mission_patch}`,
     fightTime: unixTimeStampConvert(launch.launch_date_unix),
-    details:`${launch.details}`,
+    details: cleanDeails(launch.details),
     stats: {
       site:`Launch Site: ${launch.launch_site.site_name}`,
       sucessful:`Overall Launch Sucess: ${launch.launch_success}`,
@@ -112,7 +112,13 @@ export const filterLaunches = (launches, id) => {
   return launches.filter(launch => launch.rocket.rocket_id === id);
 };
 
+const cleanDeails = details => {
+  if (details === null) {
+    details = '';
+  }
 
+  return details;
+}
 
 const unixTimeStampConvert = unix => {
   const date = new Date(unix * 1000);

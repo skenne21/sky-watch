@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import LaunchCard from '../../components/LaunchCards/';
-// import Card from '../../components/Card';
 import { randomQuestions } from '../../mockData/mockQuestions';
 import './styles.css';
 
