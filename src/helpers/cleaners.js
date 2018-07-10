@@ -79,18 +79,19 @@ export const cleanLaunchpads = launchpads => {
   }));
 };
 
+
 export const cleanLaunches = launches => {
   console.log(launches)                          
   return launches.map(launch => ({
     name: `${launch.mission_name}, Flight Number: ${launch.flight_number}`,
     type: 'launches',
-    year: `${launch.launch_year}`
+    year: `Year: ${launch.launch_year}`,
     image: `${launch.links.mission_patch}`,
     fightTime: unixTimeStampConvert(launch.launch_date_unix),
     details:`${launch.details}`,
     stats: {
-      site:`${launch.launch_site.site_name}`,
-      sucessful:`Launch Sucess: ${launch.launch_success}`,
+      site:`Launch Site: ${launch.launch_site.site_name}`,
+      sucessful:`Overall Launch Sucess: ${launch.launch_success}`,
       capsule:`Reuseable Capsule: ${launch.reuse.capsule}`,
       core:`Reuseable Core: ${launch.reuse.core}`,
       sideCores: `Reusable Sidecores: ${launch.reuse.side_core1}`,
@@ -118,6 +119,6 @@ const unixTimeStampConvert = unix => {
   const hour = date.getHours();
   const mintues = '0' + date.getMinutes();
   const seconds = '0' + date.getSeconds();
-  const newTime = `${hour} : ${mintues} : ${seconds}`;
+  const newTime = `Flight Time ${hour} : ${mintues} : ${seconds}`;
   return newTime;
 }
